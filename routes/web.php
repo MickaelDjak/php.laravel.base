@@ -6,7 +6,12 @@ Route::view('/', 'home');
 
 Route::view('/contact', 'contact');
 
-Route::get('/post/{id?}', function ($id = null) {
+Route::get('/post/{id}/{name?}', function ($id, $name ='undefined') {
+
+    return response()->json([
+        $id,
+        $name
+    ]);
     $data =  [
         null => [
             'title' => 'hello undefined'
@@ -23,6 +28,9 @@ Route::get('/post/{id?}', function ($id = null) {
         'data' => $data[$id]
     ]);
 });
+
+
+Route::resource('/news', 'News');
 
 Auth::routes();
 
