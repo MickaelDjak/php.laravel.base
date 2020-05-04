@@ -1,0 +1,27 @@
+html {
+    font-family: 'Miriam Libre', sans-serif;
+    line-height: 1.5;
+}
+
+.logo {
+    height: auto;
+    width: 200px;
+}
+
+.about {
+    padding-top: 50px;
+}
+
+
+@import "./components/banner" ;
+@import "./components/footer" ;
+@import "./components/quote";
+@import "./components/main_points";
+@import "./components/login";
+@import "./components/cosial";
+@import "./components/separator";
+@import "./components/news_panel";
+@import "./components/wide-article-link";
+@import "./components/news-card";
+@import "./components/events";
+@import "./components/pagintaion";
