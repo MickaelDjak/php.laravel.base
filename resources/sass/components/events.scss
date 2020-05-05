@@ -2,6 +2,10 @@ $card-product-hover-price-color: $primary-color;
 $card-product-hover-font-size: 1.5rem;
 $card-product-hover-title-font-size: 1.4rem;
 
+.event-section {
+    margin-top: 30px;
+}
+
 .card-product-hover-title {
     font-size: $card-product-hover-title-font-size;
     font-weight: 400;
@@ -28,7 +32,7 @@ $card-product-hover-title-font-size: 1.4rem;
 .card-product-hover-icons {
     position: absolute;
     top: 0;
-    bottom: 0;
+    hanv: 0;
     left: 0;
     right: 0;
     padding: 0.5rem;

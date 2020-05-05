@@ -33,163 +33,167 @@ $post-item-border-bottom-color: $light-gray !default;
 /// @type Number
 $post-item-border-bottom-width: rem-calc(1) !default;
 
-/// Adds styles for post-list's elements in small screen and it also could be used for bigger screen in small areas
-@mixin small-posts-list {
-    .posts-list{
-        .post-title{
-            font-size: rem-calc(18);
-        }
 
-        .post-meta{
-            font-size: rem-calc(12);
-        }
+.blog-post {
+    margin: 30px 0 30px;
 
-        .post-summary{
-            font-size: rem-calc(12);
+    .blog-post-summary {
+        padding: 1rem;
+
+        p {
+            text-overflow: ellipsis;
+            overflow: hidden
         }
-        .post-read-more{
-            display: none;
-        }
+    }
+
+    .blog-post-meta {
+        padding: 1rem;
     }
 }
 
 
-.posts-panel{
-    @include grid-col-row();
-    float: none !important;
-    margin: $panel-margin;
-    background-color: $panel-container-background-color;
-    border-radius: $panel-container-radius;
-    box-shadow: rem-calc(0 0 4 0) rgba(0,0,0,.2);
+/// Adds styles for post-list's elements in small screen and it also could be used for bigger screen in small areas
+@mixin small-posts-list {
+    .posts-list {
+        .post-title {
+            font-size: rem-calc(18);
+        }
 
-    .panel-header{
-        @include grid-col-row();
-        border-bottom: $panel-header-border-bottom-width solid $panel-header-border-bottom-color;
+        .post-meta {
+            font-size: rem-calc(12);
+        }
 
-        .panel-title{
-            margin: 0;
-            padding: rem-calc(15 0);
-            color: $panel-header-color;
-            font-size: $panel-header-font-size;
+        .post-summary {
+            font-size: rem-calc(12);
+
+            p {
+                text-overflow: ellipsis;
+                height: 99px;
+                overflow: hidden
+            }
         }
     }
+}
 
-    .panel-content{
-        padding: rem-calc(15 0);
-    }
-
-    .pinned-post, .posts-list{
+.posts-panel {
+    .pinned-post, .posts-list {
         @include grid-col-row($gutters: 0);
     }
 
-    .posts-list{
-        .post-item:not(:last-child){
+    .posts-list {
+        .post-item:not(:last-child) {
             border-bottom: $post-item-border-bottom-width solid $post-item-border-bottom-color;
         }
     }
 
-    .post-item{
+    .post-item {
         @include grid-row();
         padding: rem-calc(15 0);
 
-        .post-thumbnail{
+        .post-thumbnail {
             display: block;
             @include grid-column($columns: 4);
 
-            img{
+            img {
                 width: 100%;
                 height: auto;
             }
         }
 
-        .post-text{
+        .post-text {
             @include grid-column($columns: 8);
 
-            p{
+            p {
                 margin: 0;
             }
         }
-        .post-title{
+
+        .post-title {
             font-size: rem-calc(26);
         }
-        .post-meta{
+
+        .post-meta {
             color: $dark-gray;
             font-size: rem-calc(14);
         }
-        .meta{
+
+        .meta {
             display: inline-block;
             margin-#{$global-right}: rem-calc(15);
         }
-        .meta-icon, .meta-text{
+
+        .meta-icon, .meta-text {
             display: inline-block;
             padding-#{$global-right}: rem-calc(5);
         }
 
-        .post-summary{
+        .post-summary {
 
         }
 
-        .post-read-more{
+        .post-read-more {
             display: block;
             font-size: rem-calc(14);
 
-            .fa{
+            .fa {
                 padding: rem-calc(0 5)
             }
         }
     }
 
-    .pinned-post{
-        .post-item{
+    .pinned-post {
+        .post-item {
             border-bottom: $post-item-border-bottom-width solid $post-item-border-bottom-color;
         }
-        .post-thumbnail{
+
+        .post-thumbnail {
             display: block;
             @include grid-col-row();
-            img{
+
+            img {
                 width: 100%;
                 height: auto;
             }
         }
 
-        .post-text{
+        .post-text {
             @include grid-col-row();
             margin-top: rem-calc(15);
         }
     }
 
-    @include breakpoint(small only){
+    @include breakpoint(small only) {
         @include small-posts-list;
     }
 
-    @include breakpoint(medium only){
-        .posts-list{
-            .post-title{
+    @include breakpoint(medium only) {
+        .posts-list {
+            .post-title {
                 font-size: rem-calc(20);
             }
 
-            .post-meta{
+            .post-meta {
                 font-size: rem-calc(14);
             }
 
-            .post-summary{
+            .post-summary {
                 font-size: rem-calc(14);
             }
         }
     }
 
     // Grid styles
-    &.grid{
-        .pinned-post, .posts-list{
+    &.grid {
+        .pinned-post, .posts-list {
             @include grid-column($columns: 6, $gutters: 0);
 
-            @include breakpoint(small only){
+            @include breakpoint(small only) {
                 @include grid-col-row($gutters: 0);
             }
         }
 
-        .pinned-post{
-            .post-item{
+        .pinned-post {
+            .post-item {
                 border: 0;
             }
         }

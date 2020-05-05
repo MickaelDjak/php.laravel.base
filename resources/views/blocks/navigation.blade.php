@@ -14,12 +14,7 @@
 
         <div class="top-bar-right">
             <ul class="menu">
-                <li><a href="{{ url('/') }}">Главная</a></li>
-                <li><a href="{{ url('/news') }}">Новости</a></li>
-                <li><a href="{{ url('/posts') }}">Блог</a></li>
-                <li><a href="{{ url('/podcasts') }}">Подкасты</a></li>
-                <li><a href="{{ url('/events') }}">События</a></li>
-                <li><a href="{{ url('/about') }}">О нас</a></li>
+                @include('blocks.section_links')
                 @guest
                     <li>
                         <a class="nav-link" href="{{ route('login') }}">{{ __('Войти') }}</a>

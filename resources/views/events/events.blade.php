@@ -1,7 +1,5 @@
-<div class="row large-up-3">
+<div class="row large-up-3 event-section">
     @for ($i = 0; $i < 10; $i++)
-        <div class="column">
-            @include("events.one")
-        </div>
+        @include("events.one")
     @endfor
 </div>

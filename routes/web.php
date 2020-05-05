@@ -3,10 +3,14 @@
 use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'home')->name('home');
-Route::view('/news', 'news')->name('news');
 Route::view('/posts', 'posts')->name('posts');
-Route::view('/events', 'events')->name('events');
+Route::view('/posts/page', 'posts/page')->name('post_page');
 Route::view('/podcasts', 'podcasts')->name('podcasts');
+Route::view('/podcasts/page', 'posts/page')->name('podcast_page');
+Route::view('/news', 'news')->name('news');
+Route::view('/news/page', 'posts/page')->name('news_page');
+Route::view('/events', 'events')->name('events');
+Route::view('/events/page', 'posts/page')->name('event_page');
 Route::view('/about', 'about')->name('about');
 
 //

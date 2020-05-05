@@ -1,5 +1,5 @@
 html {
-    font-family: 'Miriam Libre', sans-serif;
+    font-family: "Miriam Libre", sans-serif;
     line-height: 1.5;
 }
 
@@ -13,15 +13,21 @@ html {
 }
 
 
-@import "./components/banner" ;
-@import "./components/footer" ;
 @import "./components/quote";
 @import "./components/main_points";
 @import "./components/login";
 @import "./components/cosial";
 @import "./components/separator";
 @import "./components/news_panel";
-@import "./components/wide-article-link";
 @import "./components/news-card";
+@import "./components/event-card";
 @import "./components/events";
 @import "./components/pagintaion";
+
+// review
+@import "./components/post-article";
+@import "./components/podcast-card";
+@import "./components/author-data";
+@import "./components/social-link";
+@import "./components/banner";
+@import "./components/footer";

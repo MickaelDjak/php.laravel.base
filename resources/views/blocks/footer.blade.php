@@ -7,7 +7,6 @@
             <ul class="menu marketing-site-footer-menu-social align-center">
                 <li><a href="#"><i class="fa fa-2x fa-youtube-square" aria-hidden="true"></i></a></li>
                 <li><a href="#"><i class="fa fa-2x fa-facebook-square" aria-hidden="true"></i></a></li>
-                <li><a href="#"><i class="fa fa-2x fa-twitter-square" aria-hidden="true"></i></a></li>
             </ul>
         </div>
         <div class="medium-4 columns">
@@ -40,12 +39,7 @@
             </div>
             <div class="column">
                 <ul class="menu marketing-site-footer-bottom-links">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Works</a></li>
-                    <li><a href="#">News</a></li>
-                    <li><a href="#">Contact</a></li>
+                    @include('blocks.section_links')
                 </ul>
             </div>
         </div>

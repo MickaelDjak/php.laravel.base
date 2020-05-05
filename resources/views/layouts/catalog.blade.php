@@ -10,13 +10,13 @@
     @show
 
     <div class="row" id="content">
-        <div class="small-8 medium-9 large-10 columns">
+        <div class="small-7 medium-8 large-9 columns">
             @yield('content')
         </div>
 
-        <div class="small-4 medium-3 large-2 columns" data-sticky-container>
-            <div class="sticky" data-sticky data-anchor="content" data-margin-top="5">
-                @include('blocks.sidebar')
+        <div class="small-5 medium-4 large-3 columns" data-sticky-container>
+            <div class="sticky" data-sticky data-anchor="content" data-margin-top="6">
+                    @include('blocks.sidebar')
             </div>
         </div>
     </div>
