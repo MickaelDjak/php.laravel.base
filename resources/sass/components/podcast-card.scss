@@ -1,4 +1,8 @@
 .podcast-card {
+    background: url("/img/banners/podcast-1-l.png") top right no-repeat;
+    background-size: cover;
+    background-position: center center;
+
     background-color: $white;
     padding: 1rem 1rem 0.5rem;
     border: 1px solid $medium-gray;

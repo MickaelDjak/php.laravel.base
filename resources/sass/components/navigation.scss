@@ -1,0 +1,86 @@
+$marketing-site-footer-bg: #2c3840;
+
+.gnc-navigation {
+    background: $marketing-site-footer-bg;
+    color: lighten($marketing-site-footer-bg, 40%);
+    padding: 0;
+
+    .gnc-navigation-logo {
+        width: auto;
+        height: 55px;
+    }
+
+    .gnc-navigation-data {
+        padding: 2rem 0 2rem;
+    }
+
+    .gnc-navigation-menu-links {
+        justify-content: flex-end;
+
+        a {
+            color: lighten($marketing-site-footer-bg, 40%);
+        }
+
+        @include breakpoint(medium down) {
+            justify-content: center;
+        }
+    }
+
+    .gnc-navigation-title {
+        color: $white;
+        margin-bottom: 1rem;
+        font-size: 1.25rem;
+    }
+
+    .gnc-navigation-block {
+        display: flex;
+        margin-bottom: 0.25rem;
+
+        .fa {
+            font-size: 2rem;
+            color: darken($marketing-site-footer-bg, 20%);
+        }
+
+        p {
+            margin-left: 1rem;
+            line-height: 1.125rem;
+        }
+    }
+
+    .gnc-navigation-right {
+        background: darken($marketing-site-footer-bg, 20%);
+        padding: 1rem 0;
+
+        @include breakpoint(medium down) {
+            text-align: center;
+        }
+    }
+
+
+    .gnc-navigation-top {
+        //background: darken($marketing-site-footer-bg, 20%);
+        padding: 1rem 0;
+
+        p,
+        .menu {
+            margin-bottom: 0;
+        }
+
+
+        @include breakpoint(medium down) {
+            text-align: center;
+        }
+
+        .gnc-navigation-menu-links {
+            justify-content: flex-end;
+
+            a {
+                color: $white;
+            }
+
+            @include breakpoint(medium down) {
+                justify-content: center;
+            }
+        }
+    }
+}

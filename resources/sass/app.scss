@@ -1,11 +1,6 @@
-// Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 
-// Variables
-//@import 'variables';
-
-// Foundation
-@import "~foundation-sites/scss/foundation";
-@include foundation-everything(false);
+@import "foundation/index";
+@include foundation-run(false);
 
 @import "./index";

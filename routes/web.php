@@ -2,16 +2,14 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::view('/', 'home')->name('home');
-Route::view('/posts', 'posts')->name('posts');
-Route::view('/posts/page', 'posts/page')->name('post_page');
-Route::view('/podcasts', 'podcasts')->name('podcasts');
-Route::view('/podcasts/page', 'posts/page')->name('podcast_page');
-Route::view('/news', 'news')->name('news');
-Route::view('/news/page', 'posts/page')->name('news_page');
-Route::view('/events', 'events')->name('events');
-Route::view('/events/page', 'posts/page')->name('event_page');
-Route::view('/about', 'about')->name('about');
+Route::view('/', 'pages.home')->name('home');
+Route::view('/posts', 'pages.posts')->name('posts');
+Route::view('/posts/page', 'pages.page')->name('post_page');
+Route::view('/podcasts', 'pages.podcasts')->name('podcasts');
+Route::view('/podcasts/page', 'pages.page')->name('podcast_page');
+Route::view('/events', 'pages.events')->name('events');
+Route::view('/events/page', 'pages.page')->name('event_page');
+Route::view('/about', 'pages.about')->name('about');
 
 //
 //Route::get('/post/{id}/{name?}', function ($id, $name ='undefined') {

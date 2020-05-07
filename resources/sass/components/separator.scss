@@ -1,17 +1,4 @@
-$sidelines-text-padding: 0.5em !default;
-$sidelines-line-thickness: 1px !default;
-$sidelines-line-length: 9999px !default;
-$sidelines-line-color: null !default;
-$sidelines-line-style: solid !default;
-$sidelines-double-line: false !default;
-$sidelines-double-line-spacing: 0.5em !default;
-
-@mixin sidelines(
-    $text-padding: $sidelines-text-padding,
-    $line-thickness: $sidelines-line-thickness,
-    $line-length: $sidelines-line-length,
-    $line-style: $sidelines-line-style
-) {
+.type-sidelines {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -20,35 +7,13 @@ $sidelines-double-line-spacing: 0.5em !default;
     white-space: nowrap;
 
     span {
-        order: 1;
-        display: inline-block;
-        position: relative;
-        padding-left: $text-padding;
-        padding-right: $text-padding;
-
-        // &:after {
-        //     content: '';
-        //     position: absolute;
-        //     order: 1;
-        //     width: $line-length;
-        //     bottom: 0;
-        //     border-top-style: $line-style;
-        //     border-top-width: $line-thickness;
-        //     height: 2px;
-        //     margin-bottom: .25rem;
-        //     margin-left: .625rem;
-        //     margin-right: .625rem;
-        //     flex: 1 1 0%;
-        //     background-color: #e8e8e8;
-        // }
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 
     a {
-        order: 3;
+        padding-left: 1rem;
+        padding-right: 1rem;
         font-size: 0.5em;
     }
-}
-
-.type-sidelines {
-    @include sidelines();
 }
