@@ -60,26 +60,26 @@
 //  55. Top Bar
 //  56. Xy Grid
 
+$gnc-active-link: #5aa11b;
+$gnc-navigation-background: #2c3840;
+$primary: #1b576a;
+$secondary: #71b9b1;
+$success: #3adb76;
+$warning: #ffae00;
+$alert: #cc4b37;
 // 1. Global
 // ---------
 
 $global-font-size: 100%;
 $global-width: rem-calc(1200);
 $global-lineheight: 1.5;
-$foundation-palette: (
-    primary: #1779ba,
-    secondary: #767676,
-    success: #3adb76,
-    warning: #ffae00,
-    alert: #cc4b37,
-);
 
 $foundation-palette: (
-    primary: #1b576a,
-    secondary: #71b9b1,
-    success: #3adb76,
-    warning: #ffae00,
-    alert: #cc4b37,
+    primary: $primary,
+    secondary: $secondary,
+    success: $success,
+    warning: $warning,
+    alert: $alert,
 );
 
 $light-gray: #e6e6e6;
@@ -89,7 +89,9 @@ $black: #0a0a0a;
 $white: #fefefe;
 $body-background: $white;
 $body-font-color: $black;
-$body-font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+$body-font-family-body: 'Lato', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+$body-font-family-head: 'Montserrat', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+
 $body-antialiased: true;
 $global-margin: 1rem;
 $global-padding: 1rem;
@@ -145,11 +147,11 @@ $block-grid-max: 8;
 // 4. Base Typography
 // ------------------
 
-$header-font-family: $body-font-family;
-$header-font-weight: $global-weight-normal;
+$header-font-family: $body-font-family-head;
+$header-font-weight: 700;
 $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
-$header-color: inherit;
+$header-color: $primary;
 $header-lineheight: 1.4;
 $header-margin-bottom: 0.5rem;
 $header-styles: (
@@ -177,10 +179,10 @@ $paragraph-lineheight: 1.6;
 $paragraph-margin-bottom: 1rem;
 $paragraph-text-rendering: optimizeLegibility;
 $enable-code-inline: true;
-$anchor-color: $primary-color;
-$anchor-color-hover: scale-color($anchor-color, $lightness: +25%);
+$anchor-color: inherit;
+$anchor-color-hover: $gnc-active-link;// scale-color($anchor-color, $lightness: +25%);
 $anchor-text-decoration: none;
-$anchor-text-decoration-hover: none;
+$anchor-text-decoration-hover: $gnc-active-link;// none;
 $hr-width: $global-width;
 $hr-border: 1px solid $medium-gray;
 $hr-margin: rem-calc(20) auto;
@@ -355,7 +357,7 @@ $callout-link-tint: 30%;
 
 $card-background: $white;
 $card-font-color: $body-font-color;
-$card-divider-background: $light-gray;
+$card-divider-background: $secondary;
 $card-border: 1px solid $light-gray;
 $card-shadow: none;
 $card-border-radius: $global-radius;
@@ -415,7 +417,7 @@ $dropdown-sizes: (
 // 18. Dropdown Menu
 // -----------------
 
-$dropdownmenu-arrows: true;
+$dropdownmenu-arrows: false;
 $dropdownmenu-arrow-color: $anchor-color;
 $dropdownmenu-arrow-size: 6px;
 $dropdownmenu-arrow-padding: 1.5rem;
@@ -424,9 +426,9 @@ $dropdownmenu-background: null;
 $dropdownmenu-submenu-background: $white;
 $dropdownmenu-padding: $global-menu-padding;
 $dropdownmenu-nested-margin: 0;
-$dropdownmenu-submenu-padding: $dropdownmenu-padding;
-$dropdownmenu-border: 1px solid $medium-gray;
-$dropdown-menu-item-color-active: get-color(primary);
+$dropdownmenu-submenu-padding: $gnc-active-link; // $dropdownmenu-padding;
+$dropdownmenu-border:  1px solid $primary;
+$dropdown-menu-item-color-active: inherit; // get-color(primary);
 $dropdown-menu-item-background-active: transparent;
 
 // 19. Flexbox Utilities

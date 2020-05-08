@@ -129,7 +129,7 @@
         </div>
 
         <div class="columns small-12 medium-3 article-content">
-            @include('blocks.sidebar.articl_navigation')
+            @include('blocks.sidebar.articl')
 
             @include('blocks.tags.tag')
         </div>

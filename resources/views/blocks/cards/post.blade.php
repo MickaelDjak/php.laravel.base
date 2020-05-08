@@ -23,10 +23,4 @@
 
         <a href="{{ route('post_page') }}" class="post-read-more">Читать детальнее ...</a>
     </div>
-
-    <div class="blog-post-meta">
-        <span class="meta">
-            @include('blocks.author.author_social')
-        </span>
-    </div>
 </div>

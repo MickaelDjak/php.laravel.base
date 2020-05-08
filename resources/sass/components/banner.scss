@@ -3,7 +3,7 @@ $full-width-testimonial-quote-color: $warning-color;
 $full-width-testimonial-vertical-padding: 2rem;
 
 .full-width-testimonial {
-    background: url('/img/banner/12941.jpg') top right no-repeat;
+    background: url('/img/banners/main.jpg') top right no-repeat;
     background-size: cover;
     background-position: center center;
 }
@@ -24,8 +24,8 @@ $full-width-testimonial-vertical-padding: 2rem;
 .full-width-testimonial-section {
     padding-top: $full-width-testimonial-vertical-padding;
     padding-bottom: $full-width-testimonial-vertical-padding;
+    margin-bottom: 2rem;
     display: flex;
-
     flex-direction: column;
 
     .full-width-testimonial-text {

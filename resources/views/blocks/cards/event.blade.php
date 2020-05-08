@@ -11,15 +11,9 @@
             quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
             consequat longshoreman... </p>
 
-        @include('blocks.author.author')
+
 
         <a href="#" class="round button small">Читать детальнее</a>
-    </div>
-
-    <div class="marketing-site-content-section-img small-order-1 medium-order-2">
-        <a href="{{ route('event_page') }}">
-            <img src="{{ $src }}" alt="" />
-        </a>
     </div>
 </div>
 

@@ -1,7 +1,7 @@
 @extends('layouts.catalog')
 
 @section('content')
-    @include('podcast.podcast')
+    @include('preachings.preachings')
 @endsection
 
 @section('pagination')

@@ -1,8 +1,8 @@
-<div class="podcast-card">
+<div class="gnc-preaching-card">
     <div class="row align-middle">
-        <div class="columns podcast-card--summary">
+        <div class="columns gnc-preaching--summary">
             <h4>
-                <a href="{{ route('podcast_page') }}">
+                <a href="{{ route('preaching_page') }}">
                     Honing its dynamic pricing formula, Vacasa wants to make homeowners more cash than Airbnb
                 </a>
             </h4>
@@ -14,13 +14,7 @@
                 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
                 consequat longshoreman... </p>
 
-            <a href="{{ route('podcast_page') }}" class="read-more">Слушать</a>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="small-12 columns podcast-card--meta">
-            @include('blocks.author.author_social')
+            <a href="{{ route('preaching_page') }}" class="read-more">Слушать</a>
         </div>
     </div>
 </div>

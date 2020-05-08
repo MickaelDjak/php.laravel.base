@@ -5,24 +5,13 @@
 @endsection
 
 @section('content')
-
-
-
-    @component('blocks.title.title', ['link' => url('/posts')])
+s    @component('blocks.title.title', ['link' => url('/#')])
         @slot('name')
-            @lang('navigation.blog')
+            Служение
         @endslot
     @endcomponent
 
-    @include('posts.home')
-
-    @component('blocks.title.title', ['link' => url('/podcast')])
-        @slot('name')
-            @lang('navigation.podcast')
-        @endslot
-    @endcomponent
-
-    @include("podcast.home")
+    @include('blocks.services.index')
 
     @component('blocks.title.title', ['link' => url('/events')])
         @slot('name')
@@ -32,22 +21,20 @@
 
     @include('events.home')
 
-    <div class="hero-section">
-        <div class="hero-section-text">
-            <a href="{{ url('/about') }}"><h1>@lang('navigation.about_as')</h1></a>
-            <h5>Вероучение</h5>
-            <h5>Служения</h5>
-            <h5>История церквей</h5>
-            <h5>Фотогалереи</h5>
-            <h5>Контакты</h5>
-        </div>
-    </div>
-
-    @component('blocks.title.title', ['link' => '#'])
+    @component('blocks.title.title', ['link' => url('/posts')])
         @slot('name')
-            @lang('navigation.resources')
+            @lang('navigation.blog')
         @endslot
     @endcomponent
 
-    @include('blocks.resource.list')
+    @include('posts.home')
+
+    @component('blocks.title.title', ['link' => url('/preachings')])
+        @slot('name')
+            @lang('navigation.preaching')
+        @endslot
+    @endcomponent
+
+    @include("preachings.home")
+
 @endsection

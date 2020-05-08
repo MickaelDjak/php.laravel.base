@@ -5,8 +5,8 @@ use Illuminate\Support\Facades\Route;
 Route::view('/', 'pages.home')->name('home');
 Route::view('/posts', 'pages.posts')->name('posts');
 Route::view('/posts/page', 'pages.page')->name('post_page');
-Route::view('/podcasts', 'pages.podcasts')->name('podcasts');
-Route::view('/podcasts/page', 'pages.page')->name('podcast_page');
+Route::view('/preachings', 'pages.preachings')->name('preachings');
+Route::view('/preachings/page', 'pages.page')->name('preaching_page');
 Route::view('/events', 'pages.events')->name('events');
 Route::view('/events/page', 'pages.page')->name('event_page');
 Route::view('/about', 'pages.about')->name('about');
@@ -20,7 +20,7 @@ Route::view('/about', 'pages.about')->name('about');
 //    ]);
 //    $data =  [
 //        null => [
-//            'title' => 'hello undefined'
+//            'title' => 'hello undefined'/img/banners/preachings-1.png
 //        ],
 //        1 => [
 //            'title' => 'hello 1'

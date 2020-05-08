@@ -18,8 +18,8 @@
             </div>
 
             <div class="small-5 medium-4 large-3 columns" data-sticky-container>
-                <div class="sticky" data-sticky data-anchor="content" data-margin-top="6">
-                        @include('blocks.sidebar.sidebar')
+                <div class="sticky" data-sticky data-anchor="content" data-margin-top="8">
+                        @include('blocks.sidebar.catalog')
                 </div>
             </div>
         </div>
