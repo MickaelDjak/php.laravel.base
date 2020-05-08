@@ -1,0 +1,16 @@
+<section class="tag-cloud-section">
+    <h5 class="tag-cloud-title">Теги</h5>
+    <div class="tag-cloud">
+        <a class="tag-cloud-individual-tag" href="#">Peanut Butter<i class="fa fa-times-circle" aria-hidden="true"></i></a>
+        <a class="tag-cloud-individual-tag" href="#">Jelly Jam<i class="fa fa-times-circle" aria-hidden="true"></i></a>
+        <a class="tag-cloud-individual-tag" href="#">Grapes<i class="fa fa-times-circle" aria-hidden="true"></i></a>
+        <a class="tag-cloud-individual-tag" href="#">Bread<i class="fa fa-times-circle" aria-hidden="true"></i></a>
+        <a class="tag-cloud-individual-tag" href="#">Bananas<i class="fa fa-times-circle" aria-hidden="true"></i></a>
+        <a class="tag-cloud-individual-tag" href="#">Chicken Salad<i class="fa fa-times-circle" aria-hidden="true"></i></a>
+        <a class="tag-cloud-individual-tag" href="#">LEmonaide<i class="fa fa-times-circle" aria-hidden="true"></i></a>
+        <a class="tag-cloud-individual-tag" href="#">Cheese<i class="fa fa-times-circle" aria-hidden="true"></i></a>
+        <a class="tag-cloud-individual-tag" href="#">Mayonaisse<i class="fa fa-times-circle" aria-hidden="true"></i></a>
+        <a class="tag-cloud-individual-tag" href="#">Lettuce<i class="fa fa-times-circle" aria-hidden="true"></i></a>
+    </div>
+</section>
+

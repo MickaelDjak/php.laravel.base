@@ -8,26 +8,28 @@
     @include('blocks.social_bar.social_bar')
 
     @section('navigation')
-        @include('blocks.navigation.top')
+        @include('blocks.header.header')
     @show
 
-    <div class="row" id="content">
-        <div class="small-7 medium-8 large-9 columns">
-            @yield('content')
-        </div>
+    <div id="content">
+        <div class="row">
+            <div class="small-7 medium-8 large-9 columns">
+                @yield('content')
+            </div>
 
-        <div class="small-5 medium-4 large-3 columns" data-sticky-container>
-            <div class="sticky" data-sticky data-anchor="content" data-margin-top="6">
-                    @include('blocks.sidebar.sidebar')
+            <div class="small-5 medium-4 large-3 columns" data-sticky-container>
+                <div class="sticky" data-sticky data-anchor="content" data-margin-top="6">
+                        @include('blocks.sidebar.sidebar')
+                </div>
             </div>
         </div>
+
+            @yield('pagination')
+
     </div>
 
-    @section('pagination')
-        <div class="row column">
-            @include('blocks.pagination.pagination')
-        </div>
-    @show
+
+
 
     @include('blocks.footer.footer')
 

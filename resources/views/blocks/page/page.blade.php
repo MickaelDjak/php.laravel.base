@@ -5,20 +5,28 @@
         </div>
     </div>
 
-    <div class="row large-8 columns align-center">
-        <div class="post-article-title">
+    <div class="row  align-center">
+        <div class="large-12 columns post-article-title">
             <h3 class="article-title">
                 Familiarity Bias is Holding You Back: It’s Time to Embrace Arrow Functions
             </h3>
         </div>
     </div>
 
-    <div class="row large-8 columns align-center">
-        @include('blocks.author.author_social')
+    <div class="row align-center">
+        <div class="large-12 columns">
+            @include('blocks.marker.marker')
+        </div>
+    </div>
+
+    <div class="row align-center">
+        <div class="large-12 columns">
+            @include('blocks.author.author_social')
+        </div>
     </div>
 
     <div class="row post-article-content">
-        <div class="large-offset-1 large-10 columns article-content">
+        <div class="columns large-9  article-content">
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate accusantium unde culpa est
                 dolorem earum in numquam accusamus, recusandae dolorum. Aperiam nesciunt iste numquam
@@ -119,5 +127,22 @@
                 nesciunt similique atque veniam ipsa.
             </p>
         </div>
+
+        <div class="columns large-3 article-content">
+            @include('blocks.sidebar.articl_navigation')
+
+            @include('blocks.tags.tag')
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="columns large-9">
+
+            @include('blocks.comments.list')
+
+            @include('blocks.comments.form')
+
+        </div>
     </div>
 </div>
+

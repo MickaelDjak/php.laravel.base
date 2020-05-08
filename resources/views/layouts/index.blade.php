@@ -8,12 +8,14 @@
     @include('blocks.social_bar.social_bar')
 
     @section('navigation')
-        @include('blocks.navigation.top')
+        @include('blocks.header.header')
     @show
 
     @yield('banner')
 
     @yield('content')
+
+    @yield('pagination')
 
     @include('blocks.footer.footer')
 

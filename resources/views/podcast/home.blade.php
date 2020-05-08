@@ -1,5 +1,7 @@
-<div class="row medium-12 large-10 column align-center">
+<div class="row align-center">
     @for ($i = 0; $i < 3; $i++)
-        @include("blocks.cards.podcast")
+        <div class="column  medium-12 large-10 ">
+            @include("blocks.cards.podcast")
+        </div>
     @endfor
 </div>

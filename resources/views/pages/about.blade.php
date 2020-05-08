@@ -1,4 +1,4 @@
-@extends('layouts.index')
+@extends('layouts.catalog')
 
 @section('content')
     <div class="row about">

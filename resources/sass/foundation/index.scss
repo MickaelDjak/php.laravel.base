@@ -20,8 +20,6 @@
 // import and modify the default settings through
 // @import 'settings/settings';
 
-
-
 // --- Components ---
 // Utilities
 @import '~foundation-sites/scss/util/util';
@@ -80,79 +78,82 @@
 
 @import 'settings';
 
-@mixin foundation-run(
-    $flex: true,
-    $prototype: false,
-    $xy-grid: $xy-grid
-) {
-    @if $flex {
-        $global-flexbox: true !global;
-    }
+// work with flex model
+$flex: true;
+$prototype: true;
+$xy-grid: false;
 
+
+@if $flex {
+    $global-flexbox: true !global;
+}
+
+@if $xy-grid {
+    $xy-grid: true !global;
+}
+
+// Global styles
+@include foundation-global-styles;
+@include foundation-forms;
+@include foundation-typography;
+
+// Grids
+@if not $flex {
+    @include foundation-grid;
+} @else {
     @if $xy-grid {
-        $xy-grid: true !global;
+        @include foundation-xy-grid-classes;
+    } @else {
+        @include foundation-flex-grid;
     }
+}
 
-    // Global styles
-    @include foundation-global-styles;
-    @include foundation-forms;
-    @include foundation-typography;
+// Generic components
+@include foundation-button;
+@include foundation-button-group;
+@include foundation-close-button;
+@include foundation-label;
+@include foundation-progress-bar;
+@include foundation-slider;
+@include foundation-switch;
+@include foundation-table;
+// Basic components
+@include foundation-badge;
+@include foundation-breadcrumbs;
+@include foundation-callout;
+@include foundation-card;
+@include foundation-dropdown;
+@include foundation-pagination;
+@include foundation-tooltip;
 
-    // Grids
-    @if not $flex {
-        @include foundation-grid;
-    }
-    @else {
-        @if $xy-grid {
-            @include foundation-xy-grid-classes;
-        }
-        @else {
-            @include foundation-flex-grid;
-        }
-    }
+// Containers
+@include foundation-accordion;
+@include foundation-media-object;
+@include foundation-orbit;
+@include foundation-responsive-embed;
+@include foundation-tabs;
+@include foundation-thumbnail;
+// Menu-based containers
+@include foundation-menu;
+@include foundation-menu-icon;
+@include foundation-accordion-menu;
+@include foundation-drilldown-menu;
+@include foundation-dropdown-menu;
 
-    // Generic components
-    @include foundation-button;
-    @include foundation-button-group;
-    @include foundation-close-button;
-    @include foundation-label;
-    @include foundation-progress-bar;
-    @include foundation-slider;
-    @include foundation-switch;
-    @include foundation-table;
-    // Basic components
-    @include foundation-badge;
-    @include foundation-breadcrumbs;
-    @include foundation-callout;
-    @include foundation-card;
-    @include foundation-dropdown;
-    @include foundation-pagination;
-    @include foundation-tooltip;
+// Layout components
+@include foundation-off-canvas;
+@include foundation-reveal;
+@include foundation-sticky;
+@include foundation-title-bar;
+@include foundation-top-bar;
 
-    // Containers
-    @include foundation-accordion;
-    @include foundation-media-object;
-    @include foundation-orbit;
-    @include foundation-responsive-embed;
-    @include foundation-tabs;
-    @include foundation-thumbnail;
-    // Menu-based containers
-    @include foundation-menu;
-    @include foundation-menu-icon;
-    @include foundation-accordion-menu;
-    @include foundation-drilldown-menu;
-    @include foundation-dropdown-menu;
+// Helpers
+@include foundation-float-classes;
+@if $flex {
+    @include foundation-flex-classes;
+}
 
-    // Layout components
-    @include foundation-off-canvas;
-    @include foundation-reveal;
-    @include foundation-sticky;
-    @include foundation-title-bar;
-    @include foundation-top-bar;
-
-    // Helpers
-    @include foundation-float-classes;
-    @if $flex { @include foundation-flex-classes; }
-    @include foundation-visibility-classes;
-    @if $prototype { @include foundation-prototype-classes; }
+@include foundation-visibility-classes;
+@if $prototype {
+    @include foundation-prototype-classes;
 }

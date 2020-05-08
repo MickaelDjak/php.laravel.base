@@ -6,25 +6,48 @@
 
 @section('content')
 
-    @include('home.header', ['name' => 'Блог'])
+
+
+    @component('blocks.title.title', ['link' => url('/posts')])
+        @slot('name')
+            @lang('navigation.blog')
+        @endslot
+    @endcomponent
 
     @include('posts.home')
 
-    @include('home.header', ['name' => 'Подкасты'])
+    @component('blocks.title.title', ['link' => url('/podcast')])
+        @slot('name')
+            @lang('navigation.podcast')
+        @endslot
+    @endcomponent
 
     @include("podcast.home")
 
-    @include('home.header', ['name' => 'События'])
+    @component('blocks.title.title', ['link' => url('/events')])
+        @slot('name')
+            @lang('navigation.events')
+        @endslot
+    @endcomponent
 
     @include('events.home')
 
-    @include('home.header', ['name' => 'Ресурсы'])
+    <div class="hero-section">
+        <div class="hero-section-text">
+            <a href="{{ url('/about') }}"><h1>@lang('navigation.about_as')</h1></a>
+            <h5>Вероучение</h5>
+            <h5>Служения</h5>
+            <h5>История церквей</h5>
+            <h5>Фотогалереи</h5>
+            <h5>Контакты</h5>
+        </div>
+    </div>
 
-    <section class="row small-up-1 medium-up-2 large-up-3">
-        @for ($i = 0; $i < 3; $i++)
-            <div class="column">
-                @include("home.link")
-            </div>
-        @endfor
-    </section>
+    @component('blocks.title.title', ['link' => '#'])
+        @slot('name')
+            @lang('navigation.resources')
+        @endslot
+    @endcomponent
+
+    @include('blocks.resource.list')
 @endsection
