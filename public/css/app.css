@@ -8112,6 +8112,7 @@ html {
   width: 11.25rem;
   background-color: #333333;
   position: fixed;
+  z-index: 10000;
   left: -8.75rem;
 }
 
@@ -8384,15 +8385,17 @@ html {
 .full-width-testimonial-section {
   padding-top: 2rem;
   padding-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .full-width-testimonial-section .full-width-testimonial-text {
   font-weight: 300;
   color: #ffffff;
   width: 600px;
-  margin: 2rem auto;
+  margin: 0.5rem auto;
   font-size: 1.8em;
-  width: 450px;
+  width: 350px;
   font-size: 1.5em;
 }
 
@@ -8403,7 +8406,8 @@ html {
   text-transform: uppercase;
   letter-spacing: 1.5px;
   padding-bottom: 0;
-  margin-bottom: 2em;
+  margin: 2em auto;
+  align-self: center;
   font-size: 1em;
 }
 
@@ -8421,9 +8425,17 @@ html {
   margin-bottom: 0px;
 }
 
-.full-width-testimonial-source,
-.full-width-testimonial-icon {
+.full-width-testimonial-source {
   padding-bottom: 2rem;
+}
+
+.full-width-testimonial-link {
+  align-self: center;
+}
+
+.full-width-testimonial-icon {
+  padding: 0.5rem;
+  transform: rotate(180deg);
 }
 
 .full-width-testimonial-content {
@@ -8461,6 +8473,7 @@ html {
 
 .gnc-navigation .gnc-navigation-title {
   color: #fefefe;
+  margin-top: 1rem;
   margin-bottom: 1rem;
   font-size: 1.25rem;
 }

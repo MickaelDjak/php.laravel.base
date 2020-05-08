@@ -25,8 +25,8 @@
         </div>
     </div>
 
-    <div class="row post-article-content">
-        <div class="columns large-9  article-content">
+    <div class="row post-article-content ">
+        <div class="columns small-12 medium-9 article-content">
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate accusantium unde culpa est
                 dolorem earum in numquam accusamus, recusandae dolorum. Aperiam nesciunt iste numquam
@@ -128,7 +128,7 @@
             </p>
         </div>
 
-        <div class="columns large-3 article-content">
+        <div class="columns small-12 medium-3 article-content">
             @include('blocks.sidebar.articl_navigation')
 
             @include('blocks.tags.tag')
@@ -136,7 +136,7 @@
     </div>
 
     <div class="row">
-        <div class="columns large-9">
+        <div class="columns small-12 medium-9">
 
             @include('blocks.comments.list')
 

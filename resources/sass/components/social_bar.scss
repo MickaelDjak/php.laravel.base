@@ -23,6 +23,7 @@ $social-brand-pinterest: #cb2027;
     width: $social-bar-width;
     background-color: $social-bar-background;
     position: fixed;
+    z-index: 10000;
 
     @if $social-bar-position == left {
         left: $social-bar-transformation * -1;
