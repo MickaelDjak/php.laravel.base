@@ -18,10 +18,7 @@
 
             </p>
         </div>
-        <a href="{{ route('post_page') }}" class="post-read-more">Read more<span
+        <a href="{{ route('post_page') }}" class="post-read-more">Читать ...<span
                 class="fa fa-chevron-circle-right" aria-hidden="true"></span></a>
-    </div>
-    <div class="post-meta">
-        @include('blocks.author.author')
     </div>
 </div>

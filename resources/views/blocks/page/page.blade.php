@@ -130,18 +130,12 @@
 
         <div class="columns small-12 medium-3 article-content">
             @include('blocks.sidebar.articl')
-
-            @include('blocks.tags.tag')
         </div>
     </div>
 
     <div class="row">
         <div class="columns small-12 medium-9">
-
             @include('blocks.comments.list')
-
-            @include('blocks.comments.form')
-
         </div>
     </div>
 </div>

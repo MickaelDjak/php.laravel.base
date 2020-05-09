@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-s    @component('blocks.title.title', ['link' => url('/#')])
+    @component('blocks.title.title', ['link' => url('/about')])
         @slot('name')
             Служение
         @endslot

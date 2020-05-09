@@ -7779,34 +7779,50 @@ html {
   transition: background 0.15s ease-in, color 0.15s ease-in;
 }
 
-.marketing-site-features {
+.gnc-our-services {
   text-align: center;
   padding: 2rem 0;
 }
 
-.marketing-site-features .fa {
+.gnc-our-services-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gnc-our-services .fa {
   font-size: 2rem;
   margin-bottom: 1rem;
   color: #1b576a;
 }
 
-.marketing-site-features .marketing-site-features-title {
+.gnc-our-services-title {
   font-size: 1.125rem;
   margin-bottom: 1rem;
+  color: #1b576a;
+}
+
+.gnc-our-services-title:hover {
+  color: #5aa11b;
+}
+
+.gnc-our-services-desc {
+  text-align: justify;
+  font-size: 0.75em;
 }
 
 @media screen and (min-width: 40em) {
-  .marketing-site-features {
+  .gnc-our-services {
     text-align: left;
   }
 }
 
-.marketing-site-features-headline {
+.gnc-our-services-headline {
   text-align: center;
   font-size: 24px;
 }
 
-.marketing-site-features-subheadline {
+.gnc-our-services-subheadline {
   margin-bottom: 2rem;
   text-align: center;
 }

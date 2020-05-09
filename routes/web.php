@@ -10,6 +10,7 @@ Route::view('/preachings/page', 'pages.page')->name('preaching_page');
 Route::view('/events', 'pages.events')->name('events');
 Route::view('/events/page', 'pages.page')->name('event_page');
 Route::view('/about', 'pages.about')->name('about');
+Route::view('/subscribe', 'pages.subscribe')->name('subscribe');
 
 //
 //Route::get('/post/{id}/{name?}', function ($id, $name ='undefined') {

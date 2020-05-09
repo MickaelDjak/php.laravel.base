@@ -3,12 +3,12 @@
         <div class="posts-panel grid">
             <div class="panel-content">
                 <section class="pinned-post">
-                    @include('posts.other')
+                    @include('posts.item')
                 </section>
 
                 <section class="posts-list">
                     @for ($i = 0; $i < 3; $i++)
-                        @include('posts.other')
+                        @include('posts.item')
                     @endfor
                 </section>
             </div>
