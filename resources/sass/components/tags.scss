@@ -21,8 +21,8 @@ $tag-cloud-section-width: 800px;
 }
 
 .tag-cloud {
-    margin: 0.5rem;
-    text-align: center;
+    //margin: 0.5rem;
+    //text-align: center;
     list-style: none;
 
     .tag-cloud-individual-tag {
@@ -43,6 +43,7 @@ $tag-cloud-section-width: 800px;
         &:hover {
             background: darken($tag-cloud-tag-color, 25%);
             transition: background-color .2s ease-in;
+            color: $gnc-active-link;
         }
     }
 }

@@ -11,6 +11,8 @@ Route::view('/events', 'pages.events')->name('events');
 Route::view('/events/page', 'pages.page')->name('event_page');
 Route::view('/about', 'pages.about')->name('about');
 Route::view('/subscribe', 'pages.subscribe')->name('subscribe');
+Route::view('/gallery', 'pages.gallery')->name('gallery_list');
+Route::view('/contact', 'pages.contacts')->name('contacts');
 
 //
 //Route::get('/post/{id}/{name?}', function ($id, $name ='undefined') {

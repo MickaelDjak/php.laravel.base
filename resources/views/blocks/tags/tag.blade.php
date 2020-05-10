@@ -1,5 +1,6 @@
+<h4>Теги</h4>
+
 <section class="tag-cloud-section">
-    <h5 class="tag-cloud-title">Теги</h5>
     <div class="tag-cloud">
         <a class="tag-cloud-individual-tag" href="#">Peanut Butter<i class="fa fa-times-circle" aria-hidden="true"></i></a>
         <a class="tag-cloud-individual-tag" href="#">Jelly Jam<i class="fa fa-times-circle" aria-hidden="true"></i></a>

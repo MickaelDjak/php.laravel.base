@@ -17,6 +17,8 @@
 
     @yield('pagination')
 
+    @include('blocks.scroll_to_top.button')
+
     @include('blocks.footer.footer')
 
     @include('blocks.footer.script')

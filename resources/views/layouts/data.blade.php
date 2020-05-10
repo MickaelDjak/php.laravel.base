@@ -13,21 +13,10 @@
 
     <div id="content">
         <div class="row">
-            <div class="small-12 medium-8 large-9 columns">
+            <div class="small-12  columns">
                 @yield('content')
             </div>
-
-            <div class="small-12 medium-4 large-3 columns" data-sticky-container>
-                <div class="sticky" data-sticky data-anchor="content" data-margin-top="8">
-                        @include('blocks.sidebar.catalog')
-
-                        @include('blocks.tags.tag')
-                </div>
-            </div>
         </div>
-
-            @yield('pagination')
-
     </div>
 
     @include('blocks.scroll_to_top.button')

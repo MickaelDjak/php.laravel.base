@@ -1,0 +1,54 @@
+.gnc-image-gallery-grid-header {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gnc-image-gallery {
+
+    margin-bottom: 20px;
+
+    .gnc-image-gallery-title {
+        font-weight: 600;
+        margin-top: 10px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 1em;
+        color: #404040;
+    }
+
+    a:hover {
+        p {
+            color: map-get($foundation-palette, primary);
+        }
+    }
+}
+
+
+
+$masonry-css-column-gap: $global-margin;
+
+.masonry-css {
+    column-count: 1;
+    column-gap: $masonry-css-column-gap;
+
+    //@include breakpoint(400px) {
+    //    column-count: 2;
+    //}
+
+    @include breakpoint(600px) {
+        column-count: 2;
+    }
+
+    @include breakpoint(800px) {
+        column-count: 3;
+    }
+
+    @include breakpoint(1100px) {
+        column-count: 4;
+    }
+}
+
+.masonry-css-item {
+    break-inside: avoid;
+    margin-bottom: $masonry-css-column-gap;
+}

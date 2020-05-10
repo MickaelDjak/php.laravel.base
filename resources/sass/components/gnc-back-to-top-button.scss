@@ -1,0 +1,13 @@
+#gnc-back-top {
+    text-decoration: none;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 9999;
+    padding: 6px 16px;
+    color: $primary;
+    opacity: 0;
+    &:hover {
+        color: $gnc-active-link;
+    }
+}
