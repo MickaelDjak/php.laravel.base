@@ -1,37 +1,52 @@
 <div class="gnc-our-services">
     <div class="row">
-        <div class="small-12 medium-2 medium-offset-1 columns">
+        <div class="small-12 medium-4 large-2 large-offset-1 columns gnc-our-services-item">
+            <div class="gnc-our-services-img">
+                <img src="img/undraw/undraw_children_4rtb.svg" alt="Kiwi standing on oval"/>
+            </div>
             <a href="{{ route('post_page') }}" class="gnc-our-services-link">
-                <i class="fa fa-child" aria-hidden="true"></i>
-                <h4 class="gnc-our-services-title">Для подростков</h4>
+
+                <h4 class="gnc-our-services-title">Подростковое</h4>
             </a>
             <p class="gnc-our-services-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
         </div>
-        <div class="small-12 medium-2 columns">
+        <div class="small-12 medium-4 large-2 columns gnc-our-services-item">
+            <div class="gnc-our-services-img">
+                <img src="img/undraw/undraw_people_tax5.svg" alt="Kiwi standing on oval"/>
+            </div>
             <a href="{{ route('post_page') }}" class="gnc-our-services-link">
-                <i class="fa fa-angellist" aria-hidden="true"></i>
-                <h4 class="gnc-our-services-title">Для молодежи</h4>
+
+                <h4 class="gnc-our-services-title">Молодежное</h4>
             </a>
             <p class="gnc-our-services-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
         </div>
-        <div class="small-12 medium-2 columns">
+        <div class="small-12 medium-4 large-2 columns gnc-our-services-item">
+            <div class="gnc-our-services-img">
+                <img src="img/undraw/undraw_wedding_t1yl.svg" alt="Kiwi standing on oval"/>
+            </div>
             <a href="{{ route('post_page') }}" class="gnc-our-services-link">
-                <i class="fa fa-heart" aria-hidden="true"></i>
-                <h4 class="gnc-our-services-title">Для семьи</h4>
+
+                <h4 class="gnc-our-services-title">Семейное</h4>
             </a>
             <p class="gnc-our-services-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
         </div>
-        <div class="small-12 medium-2 columns">
+        <div class="small-12 medium-4 medium-offset-2 large-2 large-offset-0 columns gnc-our-services-item">
+            <div class="gnc-our-services-img">
+                <img src="img/undraw/undraw_fatherhood_7i19.svg" alt="Kiwi standing on oval"/>
+            </div>
             <a href="{{ route('post_page') }}" class="gnc-our-services-link">
-                <i class="fa fa-male" aria-hidden="true"></i>
-                <h4 class="gnc-our-services-title">Для мужчины</h4>
+
+                <h4 class="gnc-our-services-title">Мужское</h4>
             </a>
             <p class="gnc-our-services-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
         </div>
-        <div class="small-12 medium-2 columns">
+        <div class="small-12 medium-4 large-2 columns gnc-our-services-item">
+            <div class="gnc-our-services-img">
+                <img src="img/undraw/undraw_baby_ja7a.svg" alt="Kiwi standing on oval"/>
+            </div>
             <a href="{{ route('post_page') }}" class="gnc-our-services-link">
-                <i class="fa fa-female" aria-hidden="true"></i>
-                <h4 class="gnc-our-services-title">Для женщины</h4>
+
+                <h4 class="gnc-our-services-title">Женское</h4>
             </a>
             <p class="gnc-our-services-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
         </div>

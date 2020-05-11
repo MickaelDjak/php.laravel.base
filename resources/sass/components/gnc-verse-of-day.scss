@@ -1,0 +1,86 @@
+
+.gnc-verse-of-day {
+    background: url('/img/banners/main.jpg') top right no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+    &-quote {
+        color: $warning-color;
+    }
+
+    &-content,
+    &-icon {
+        text-align: center;
+    }
+
+    &-section {
+        padding-top: 2rem;;
+        padding-bottom: 2rem;;
+        margin-bottom: 2rem;
+        display: flex;
+        flex-direction: column;
+
+
+    }
+    &-text {
+        font-weight: 300;
+        color: #ffffff;
+        width: 600px;
+        margin: 0.5rem auto;
+        font-size: 1.8em;
+
+        @include breakpoint(small) {
+            width: 350px;
+            font-size: 1.5em;
+        }
+    }
+
+    &-source {
+        font-size: 1.2em;
+        font-weight: 600;
+        color: #ffffff;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        padding-bottom: 0;
+        margin: 2em auto;
+        align-self: center;
+
+        @include breakpoint(small) {
+            font-size: 1.0em;
+        }
+    }
+
+    &-source-context {
+        display: block;
+        font-size: 0.9em;
+        font-weight: 500;
+        color: #ffffff;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+
+        @include breakpoint(small) {
+            font-size: 0.8em;
+        }
+    }
+
+    .slick-slider {
+        margin-bottom: 0px;
+    }
+
+    &-source {
+        padding-bottom: 2rem;;
+    }
+
+    &-link {
+        align-self: center;
+    }
+
+    &-icon {
+        padding: 0.5rem;
+        transform: rotate(180deg);
+    }
+
+    &-content {
+        width: 100%;
+    }
+}

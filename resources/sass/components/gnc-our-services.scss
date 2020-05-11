@@ -1,0 +1,51 @@
+.gnc-our-services {
+    text-align: center;
+    //padding: 2rem 0;
+
+    &-img {
+        height: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            max-width: 150px;
+            height: auto;
+        }
+    }
+
+    &-link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &-title {
+        font-size: 1.125rem;
+        margin-bottom: 1rem;
+        color: $primary-color;
+
+        &:hover {
+            color: $gnc-active-link;
+        }
+    }
+
+    &-desc {
+        text-align: justify;
+        font-size: 0.75em;
+    }
+}
+
+
+@media screen and (max-width: 40em) {
+    .gnc-our-services {
+        &-img {
+            height: 320px;
+
+            img {
+                max-width: 300px;
+                height: auto;;
+            }
+        }
+    }
+}

@@ -5,12 +5,6 @@ $gnc-contact-us-bg: $body-background;
     padding: $gnc-contact-us-padding;
     background: $gnc-contact-us-bg;
 
-    &-data {
-        padding-right: $gnc-contact-us-padding;
-        padding-bottom: $gnc-contact-us-padding;
-        margin-bottom: $gnc-contact-us-padding;
-    }
-
     &-header {
         margin-bottom: $gnc-contact-us-padding;
 
@@ -19,43 +13,14 @@ $gnc-contact-us-bg: $body-background;
         }
     }
 
-    &-map {
-        margin-bottom: 0;
-        padding-bottom: 55%;
-    }
-
-    &-list {
-        list-style-type: none;
-        margin: 0;
-
-        li {
-            a {
-                color: $black;
-            }
-        }
-
-        li::before {
-            margin-right: 2rem;
-            font-size: 2rem;
-            vertical-align: middle;
-            color: $dark-gray;
-            font-family: 'FontAwesome';
-        }
-
-        .address::before {
-            content: '\f041';
-            margin-left: 0.4rem;
-            margin-right: 2.3rem;
-        }
-
-        .email::before {
-            content: '\f003';
-        }
-
-        .phone::before {
-            content: '\f098';
+    &-section {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        img {
+            width: 75px;
+            margin-right: 20px;
         }
     }
-
 
 }

@@ -9,7 +9,14 @@
 
     <div class="login-box">
         <div class="row">
-            <div class="small-12 medium-6 medium-offset-6 column ">
+
+            <div class="small-12 medium-6 column ">
+                <div class="gnc-form-box-info-graph">
+                    <img src="img/undraw/undraw_mail_box_kd5i.svg" alt="Kiwi standing on oval"/>
+                </div>
+            </div>
+
+            <div class="small-12 medium-6 column ">
                 <div class="login-box-form-section">
                     <h2 class="login-box-title">{{ __('Сброс пароля') }}</h2>
                     <form method="POST" action="{{ route('password.email') }}">

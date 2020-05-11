@@ -1,7 +1,7 @@
 @extends('layouts.index')
 
 @section('banner')
-    @include('blocks.banners.banner')
+    @include('blocks.banners.verse_of_day')
 @endsection
 
 @section('content')
@@ -43,26 +43,30 @@
         @endslot
     @endcomponent
 
-    <div class="login-box">
+    <div class="gnc-form-box">
         <div class="row">
-            <div class="small-12 medium-8 medium-offset-2 column ">
-                <div class="login-box-form-section">
-                    <h2 class="login-box-title"></h2>
+            <div class="small-12 medium-6 column ">
+                <div class="gnc-form-box-info-graph">
+                    <img src="img/undraw/undraw_faq_rjoy.svg" alt="Kiwi standing on oval"/>
+                </div>
+            </div>
+            <div class="small-12 medium-6 column ">
+                    <h2 class="gnc-form-box-title"></h2>
                     <div class="grid-container">
                         <div class="grid-x grid-padding-x">
                             <div class="medium-12 cell">
                                 <label for="name">{{ __('Имя') }}</label>
-                                <input class="login-box-input" id="name" type="text" name="name" required/>
+                                <input class="gnc-form-box-input" id="name" type="text" name="name" required/>
                             </div>
 
                             <div class="medium-12 cell">
                                 <label for="email">{{ __('E-Mail') }}</label>
-                                <input class="login-box-input" id="email" type="email" required autocomplete="email">
+                                <input class="gnc-form-box-input" id="email" type="email" required autocomplete="email">
                             </div>
 
                             <div class="medium-12 cell">
                                 <label for="question">{{ __('Вопрос') }}</label>
-                                <textarea class="login-box-input" id="question"></textarea>
+                                <textarea class="gnc-form-box-input" id="question"></textarea>
                             </div>
 
                             <div class="medium-12 cell">
@@ -71,7 +75,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
         </div>
     </div>
 

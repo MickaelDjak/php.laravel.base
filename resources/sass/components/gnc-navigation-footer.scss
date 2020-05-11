@@ -1,0 +1,55 @@
+.gnc-navigation-footer {
+    background: $gnc-navigation-background;
+    color: lighten($gnc-navigation-background, 40%);
+    padding: 0;
+
+    &-data {
+        padding: 2rem 0 2rem;
+    }
+
+    &-menu {
+        justify-content: flex-end;
+
+        a {
+            color: lighten($gnc-navigation-background, 40%);
+            &:hover {
+                color: $gnc-active-link;
+            }
+        }
+
+        @include breakpoint(medium down) {
+            justify-content: center;
+        }
+    }
+
+    &-title {
+        color: $white;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        font-size: 1.25rem;
+    }
+
+    &-block {
+        display: flex;
+        margin-bottom: 0.25rem;
+
+        .fa {
+            font-size: 2rem;
+            color: darken($gnc-navigation-background, 20%);
+        }
+
+        p {
+            margin-left: 1rem;
+            line-height: 1.125rem;
+        }
+    }
+
+    &-right {
+        background: darken($gnc-navigation-background, 20%);
+        padding: 1rem 0;
+
+        @include breakpoint(medium down) {
+            text-align: center;
+        }
+    }
+}

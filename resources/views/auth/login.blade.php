@@ -1,11 +1,16 @@
 @extends('layouts.index')
 
 @section('content')
-    <div class="login-box">
+    <div class="gnc-form-box">
         <div class="row">
-            <div class="small-12 medium-6 medium-offset-6 column ">
-                <div class="login-box-form-section">
-                    <h2 class="login-box-title">{{ __('Войти') }}</h2>
+            <div class="small-12 medium-6 column ">
+                <div class="gnc-form-box-info-graph">
+                    <img src="img/undraw/undraw_Login_v483.svg" alt="Kiwi standing on oval"/>
+                </div>
+            </div>
+            <div class="small-12 medium-6 ">
+                <div class="gnc-form-box-form-section">
+                    <h2 class="gnc-form-box-title">{{ __('Войти') }}</h2>
                     <form method="POST" action="{{ route('login') }}">
                         <div class="grid-container">
                             <div class="grid-x grid-padding-x">
@@ -14,7 +19,7 @@
                                 <div class="medium-12 cell">
                                     <label for="email">{{ __('E-Mail') }}</label>
 
-                                    <input class="login-box-input" id="email" type="email" required
+                                    <input class="gnc-form-box-input" id="email" type="email" required
                                            autocomplete="email" autofocus>
 
                                     @error('email')
@@ -28,7 +33,7 @@
                                 <div class="medium-12 cell">
                                     <label for="password">{{ __('Пароль') }}</label>
 
-                                    <input class="login-box-input" id="password" type="password" name="password"
+                                    <input class="gnc-form-box-input" id="password" type="password" name="password"
                                            required
                                            autocomplete="current-password">
 

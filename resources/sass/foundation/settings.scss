@@ -427,8 +427,8 @@ $dropdownmenu-submenu-background: $white;
 $dropdownmenu-padding: $global-menu-padding;
 $dropdownmenu-nested-margin: 0;
 $dropdownmenu-submenu-padding: $gnc-active-link; // $dropdownmenu-padding;
-$dropdownmenu-border:  1px solid $primary;
-$dropdown-menu-item-color-active: inherit; // get-color(primary);
+$dropdownmenu-border:  none; // 1px solid $primary;
+$dropdown-menu-item-color-active: $gnc-active-link; // get-color(primary);
 $dropdown-menu-item-background-active: transparent;
 
 // 19. Flexbox Utilities
