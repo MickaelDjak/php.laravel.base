@@ -17,16 +17,19 @@
                 @yield('content')
             </div>
 
-            <div class="small-12 medium-4 large-3 columns" data-sticky-container>
-                <div class="sticky" data-sticky data-anchor="content" data-margin-top="8">
-                        @include('blocks.sidebar.catalog')
+            <div class="small-12 medium-4 large-3 columns">
+                <div id="gnc-sidebar">
+                    {{--            <div class="small-12 medium-4 large-3 columns" data-sticky-container>--}}
+                    {{--                <div class="sticky" data-sticky data-anchor="content" data-margin-top="8">--}}
+                    @include('blocks.sidebar.catalog')
 
-                        @include('blocks.tags.tag')
+                    @include('blocks.tags.tag')
+                    {{--                </div>--}}
                 </div>
             </div>
         </div>
 
-            @yield('pagination')
+        @yield('pagination')
 
     </div>
 
