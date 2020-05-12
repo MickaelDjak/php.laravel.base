@@ -5,39 +5,47 @@
 @endsection
 
 @section('content')
-    @component('blocks.title.title', ['link' => url('/about')])
+    @component('blocks.title.title')
         @slot('name')
             Служения
         @endslot
+
+        {{ url('/ministry') }}
     @endcomponent
 
     @include('blocks.services.index')
 
-    @component('blocks.title.title', ['link' => url('/events')])
+    @component('blocks.title.title')
         @slot('name')
             @lang('navigation.events')
         @endslot
+
+        {{ url('/events') }}
     @endcomponent
 
     @include('events.home')
 
-    @component('blocks.title.title', ['link' => url('/posts')])
+    @component('blocks.title.title')
         @slot('name')
             @lang('navigation.blog')
         @endslot
+
+        {{ url('/posts')  }}
     @endcomponent
 
     @include('posts.home')
 
-    @component('blocks.title.title', ['link' => url('/preachings')])
+    @component('blocks.title.title')
         @slot('name')
             @lang('navigation.preaching')
         @endslot
+
+        {{ url('/preachings') }}
     @endcomponent
 
     @include("preachings.home")
 
-    @component('blocks.title.title', ['link' => '#'])
+    @component('blocks.title.title')
         @slot('name')
             Задать вопрос пастору
         @endslot

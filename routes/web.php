@@ -14,6 +14,8 @@ Route::view('/subscribe', 'pages.subscribe')->name('subscribe');
 Route::view('/gallery', 'pages.gallery')->name('gallery_list');
 Route::view('/contact', 'pages.contacts')->name('contacts');
 Route::view('/ministry', 'pages.ministry')->name('ministry');
+Route::view('/credo', 'pages.credo')->name('credo');
+
 
 //
 //Route::get('/post/{id}/{name?}', function ($id, $name ='undefined') {

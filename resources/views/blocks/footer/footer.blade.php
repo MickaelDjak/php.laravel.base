@@ -21,7 +21,7 @@
                     <ul class="nested vertical menu">
                         <li><a href="{{ route('contacts') }}">Контакты</a></li>
                         <li><a href="{{ route('ministry') }}">Служение</a></li>
-                        <li><a href="{{ route('post_page') }}">Вероучение</a></li>
+                        <li><a href="{{ route('credo') }}">Вероучение</a></li>
                         <li><a href="{{ route('gallery_list') }}">Галерея</a></li>
                     </ul>
                 </li>

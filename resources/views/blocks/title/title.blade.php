@@ -1,4 +1,10 @@
-<div class="row align-justify align-bottom home-title">
+<div class="row align-center gnc-title">
     <h2 class="column">{{ $name }}</h2>
-    <a class="column shrink" href="{{ $link }}">@lang('navigation.view_all_items')</a>
+    @if($description ?? '' != '')
+        <p>{{$description ?? ''}}</p>
+    @endif
+
+    @if($slot != '')
+        <a class="column shrink" href="{{ $slot }}">@lang('navigation.view_all_items')</a>
+    @endif
 </div>

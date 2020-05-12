@@ -1,0 +1,13 @@
+.gnc-title {
+    color: $primary-color;
+
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.gnc-title-catalog {
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
