@@ -8,7 +8,7 @@
 
                 <h4 class="gnc-our-services-title">Подростковое</h4>
             </a>
-            <p class="gnc-our-services-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+{{--            <p class="gnc-our-services-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>--}}
         </div>
         <div class="small-12 medium-4 large-2 columns gnc-our-services-item">
             <div class="gnc-our-services-img">
@@ -18,7 +18,7 @@
 
                 <h4 class="gnc-our-services-title">Молодежное</h4>
             </a>
-            <p class="gnc-our-services-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+{{--            <p class="gnc-our-services-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>--}}
         </div>
         <div class="small-12 medium-4 large-2 columns gnc-our-services-item">
             <div class="gnc-our-services-img">
@@ -28,7 +28,7 @@
 
                 <h4 class="gnc-our-services-title">Семейное</h4>
             </a>
-            <p class="gnc-our-services-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+{{--            <p class="gnc-our-services-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>--}}
         </div>
         <div class="small-12 medium-4 medium-offset-2 large-2 large-offset-0 columns gnc-our-services-item">
             <div class="gnc-our-services-img">
@@ -38,7 +38,7 @@
 
                 <h4 class="gnc-our-services-title">Мужское</h4>
             </a>
-            <p class="gnc-our-services-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+{{--            <p class="gnc-our-services-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>--}}
         </div>
         <div class="small-12 medium-4 large-2 columns gnc-our-services-item">
             <div class="gnc-our-services-img">
@@ -48,7 +48,7 @@
 
                 <h4 class="gnc-our-services-title">Женское</h4>
             </a>
-            <p class="gnc-our-services-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+{{--            <p class="gnc-our-services-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>--}}
         </div>
     </div>
 </div>

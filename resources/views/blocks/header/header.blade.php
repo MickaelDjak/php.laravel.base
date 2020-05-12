@@ -18,7 +18,7 @@
                         <a href="{{ url('/about') }}">@lang('navigation.about_as')</a>
                         <ul class="menu nested vertical gnc-navigation-nested">
                             <li><a href="{{ route('contacts') }}">Контакты</a></li>
-                            <li><a href="{{ route('post_page') }}">Служение</a></li>
+                            <li><a href="{{ route('ministry') }}">Служение</a></li>
                             <li><a href="{{ route('post_page') }}">Вероучение</a></li>
                             <li><a href="{{ route('gallery_list') }}">Галерея</a></li>
                         </ul>

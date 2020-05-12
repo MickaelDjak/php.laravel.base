@@ -8005,6 +8005,10 @@ html {
   font-size: 1em;
 }
 
+.gnc-verse-of-day-source:hover {
+  color: #5aa11b;
+}
+
 .gnc-verse-of-day-source-context {
   display: block;
   font-size: 0.9em;
@@ -8515,6 +8519,7 @@ html {
 
 .gnc-navigation-footer-block {
   display: flex;
+  flex-direction: column;
   margin-bottom: 0.25rem;
 }
 
@@ -8634,6 +8639,11 @@ html {
 .gnc-contact-us-section img {
   width: 75px;
   margin-right: 20px;
+}
+
+.gnc-ministry-card {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 #gnc-sidebar {

@@ -7,7 +7,7 @@
 @section('content')
     @component('blocks.title.title', ['link' => url('/about')])
         @slot('name')
-            Служение
+            Служения
         @endslot
     @endcomponent
 

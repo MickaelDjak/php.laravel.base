@@ -11,9 +11,7 @@
             quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
             consequat longshoreman... </p>
 
-
-
-        <a href="#" class="round button small">Читать детальнее</a>
+        <a href="{{ route('event_page') }}" class="round button small">Читать детальнее</a>
     </div>
 </div>
 
