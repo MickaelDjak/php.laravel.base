@@ -1,6 +1,3 @@
-$topbar-responsive-bg: #2c3840;
-
-
 .gnc-navigation {
     background: $gnc-navigation-background;
     color: lighten($gnc-navigation-background, 40%);
@@ -12,7 +9,7 @@ $topbar-responsive-bg: #2c3840;
         padding-left: 10px;
         vertical-align: middle;
 
-        @include breakpoint(small down) {
+        @include breakpoint(medium down) {
             width: 230px;
         }
     }
@@ -72,11 +69,11 @@ $topbar-responsive-bg: #2c3840;
     &-container {
         font-size: 1.125em;
         padding: 1rem 0;
-        background: $topbar-responsive-bg;
+        background: $gnc-navigation-background;
 
         .menu {
             margin-bottom: 0;
-            background: $topbar-responsive-bg;
+            background: $gnc-navigation-background;
 
             li:last-of-type {
                 margin-right: 0;

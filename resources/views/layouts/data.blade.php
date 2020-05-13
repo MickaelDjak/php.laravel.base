@@ -14,6 +14,8 @@
     <div id="content">
         <div class="row">
             <div class="small-12  columns">
+                @yield('title')
+
                 @yield('content')
             </div>
         </div>

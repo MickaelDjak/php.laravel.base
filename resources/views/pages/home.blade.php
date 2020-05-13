@@ -20,6 +20,7 @@
         @slot('name')
             Календарь
         @endslot
+        {{ url('/calendar') }}
     @endcomponent
 
     @include('calendar.home.list')

@@ -6495,68 +6495,6 @@ html {
   padding-top: 50px;
 }
 
-.quote-inline-wrap-article-content {
-  max-width: 100%;
-  position: relative;
-}
-
-.quote-inline-wrap {
-  float: left;
-  max-width: 21.875rem;
-  padding: 0 1rem 1rem 0;
-}
-
-.quote-inline-wrap .quote-inline-marks {
-  font-size: 6.25rem;
-  color: #8a8a8a;
-  line-height: 1rem;
-}
-
-.quote-inline-wrap .quote-inline-testimonial {
-  border-radius: 5px;
-}
-
-.quote-inline-wrap .quote-inline-testimonial p {
-  font-weight: 300;
-}
-
-.quote-inline-wrap .quote-inline-person {
-  margin-bottom: 1.5rem;
-}
-
-.quote-inline-wrap .quote-inline-person .quote-inline-photo img {
-  border-radius: 50%;
-  width: 4.375rem;
-  height: 4.375rem;
-  float: left;
-  margin-right: 1rem;
-}
-
-.quote-inline-wrap .quote-inline-person p {
-  position: relative;
-  top: 5px;
-}
-
-.quote-inline-wrap .quote-inline-person p:nth-child(2) {
-  font-size: 1rem;
-  font-weight: 500;
-  margin-bottom: 0;
-}
-
-.quote-inline-wrap .quote-inline-person p:nth-child(3) {
-  font-size: 0.875rem;
-  font-weight: 400;
-  color: #8a8a8a;
-}
-
-@media print, screen and (max-width: 63.99875em) {
-  .quote-inline-wrap {
-    width: 100%;
-    float: none;
-    display: block;
-  }
-}
-
 .marketing-site-three-up {
   text-align: center;
   padding: 2rem 0;
@@ -7666,15 +7604,6 @@ html {
   text-shadow: 1px 1px 2px #0a0a0a;
 }
 
-.input-group-rounded .input-group-field {
-  border-radius: 5000px 0 0 5000px;
-  padding-left: 1rem;
-}
-
-.input-group-rounded .input-group-button .button {
-  border-radius: 0 5000px 5000px 0;
-}
-
 .sticky-social-bar {
   padding: 0;
   margin: 0;
@@ -7796,27 +7725,13 @@ html {
 }
 
 .post-article-container .post-article-content {
-  margin-top: 3rem;
+  margin-top: 1rem;
   text-align: justify;
 }
 
 .post-article-container .post-article-content .article-content {
   color: #0a0a0a;
-  margin-bottom: 3rem;
-}
-
-.gnc-preaching-card {
-  background: url("/img/banners/podcast-1-l.png") top right no-repeat;
-  background-size: cover;
-  background-position: center center;
-  background-color: #fefefe;
-  border: 1px solid #cacaca;
-  padding: 1rem 1rem 0.5rem;
-  margin: 5px 0;
-}
-
-.gnc-preaching-card .gnc-preaching-card--summary {
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
 }
 
 .author-data {
@@ -7935,6 +7850,20 @@ html {
   border-color: #dd4b39;
 }
 
+.gnc-preaching-card {
+  background: url("/img/banners/podcast-1-l.png") top right no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-color: #fefefe;
+  border: 1px solid #cacaca;
+  padding: 1rem 1rem 0.5rem;
+  margin: 5px 0;
+}
+
+.gnc-preaching-card .gnc-preaching-card--summary {
+  margin-bottom: 20px;
+}
+
 /*
  * 	Default theme - Owl Carousel CSS File
  */
@@ -8043,7 +7972,7 @@ html {
 }
 
 .gnc-calendar-day {
-  width: 360px;
+  width: 320px;
   border: 1px solid #71b9b1;
   display: flex;
   flex-direction: column;
@@ -8102,7 +8031,7 @@ html {
   border-bottom: 1px solid #71b9b1;
   display: flex;
   flex-direction: row;
-  margin: 1rem 0;
+  margin-bottom: 1rem;
 }
 
 .gnc-calendar-list-day:last-child {
@@ -8154,14 +8083,12 @@ html {
 .gnc-title {
   color: #1b576a;
   margin-top: 1rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .gnc-title-catalog {
   margin-top: 1rem;
-  margin-bottom: 1.5rem;
-  display: flex;
-  flex-direction: column;
+  margin-bottom: 0.5rem;
 }
 
 .gnc-verse-of-day {
@@ -8545,7 +8472,7 @@ html {
   vertical-align: middle;
 }
 
-@media print, screen and (max-width: 39.99875em) {
+@media print, screen and (max-width: 63.99875em) {
   .gnc-navigation-logo {
     width: 230px;
   }
@@ -8841,7 +8768,19 @@ html {
   margin-bottom: 1rem;
 }
 
-#gnc-sidebar {
+.gnc-sidebar {
   margin-top: 20px;
+}
+
+.gnc-sidebar-section {
+  border-left: 3px solid #2c3840;
+  padding-left: 20px;
+  margin-bottom: 20px;
+  transition: all 500ms ease-in-out;
+}
+
+.gnc-sidebar-section:hover {
+  border-color: #5aa11b;
+  transition: all 500ms ease-in-out;
 }
 

@@ -13,13 +13,13 @@
 
     <div id="content">
         <div class="row">
-            <div class="small-12 medium-8 large-9 columns">
+            <div class="small-12 medium-8 columns">
                 @yield('title')
                 @yield('content')
             </div>
 
-            <div class="small-12 medium-4 large-3 columns">
-                <div id="gnc-sidebar">
+            <div class="small-12 medium-4 columns">
+                <div class="gnc-sidebar">
                     {{--            <div class="small-12 medium-4 large-3 columns" data-sticky-container>--}}
                     {{--                <div class="sticky" data-sticky data-anchor="content" data-margin-top="8">--}}
                     @include('blocks.sidebar.catalog')

@@ -1,13 +1,20 @@
 @extends('layouts.data')
 
-@section('content')
-    <div class="row">
-        <div class="column small-12 large-10 large-offset-1">
-            <h3 style="text-align: justify;"><b>Мы исповедуем следующее</b></h3>
-            <p style="text-align: justify;">Основанный на тексте: Учебная Библия с комментариями Джона Мак-Артура</p>
-        </div>
-    </div>
+@section('title')
+    @component('blocks.title.header_of_catalog')
+        @slot('img')
+            /img/undraw/undraw_solution_mindset_34bi.svg
+        @endslot
+        @slot('name')
+            Круг вероучения
+        @endslot
+        @slot('description')
+            Основанный на тексте: Синодальный перевод (RSB)
+        @endslot
+    @endcomponent
+@endsection
 
+@section('content')
     <div class="row ">
 
         <div class="column small-12 large-10 large-offset-1">

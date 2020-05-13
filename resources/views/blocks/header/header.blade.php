@@ -12,7 +12,7 @@
                              alt="good news church logo text"/>
                     </a>
                 </div>
-                <ul class="gnc-navigation-menu-links dropdown menu vertical medium-horizontal"
+                <ul class="gnc-navigation-links dropdown menu vertical medium-horizontal"
                     data-dropdown-menu id="topbar-responsive">
                     <li>
                         <a href="{{ url('/about') }}">@lang('navigation.about_as')</a>

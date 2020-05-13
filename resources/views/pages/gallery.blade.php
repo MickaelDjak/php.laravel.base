@@ -2,12 +2,15 @@
 
 @section('content')
     @for($j= 2020; $j > 2017; $j--)
-        @component('blocks.title.title')
+        @component('blocks.title.header_of_catalog')
+            @slot('img')
+                /img/undraw/undraw_online_gallery_dmv3.svg
+            @endslot
             @slot('name')
                 Фотографии за {{ $j }}
             @endslot
-            {{--                {{ url('/ministry') }}--}}
         @endcomponent
+
         <div class="row">
             <div class="gnc-image-gallery column">
                 <div class="gnc-image-gallery-grid">

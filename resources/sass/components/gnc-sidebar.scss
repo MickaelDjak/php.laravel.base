@@ -1,3 +1,15 @@
-#gnc-sidebar {
+.gnc-sidebar {
     margin-top: 20px;
+
+    &-section {
+        border-left: 3px solid $gnc-navigation-background;
+        padding-left: 20px;
+        margin-bottom: 20px;
+        transition: all 500ms ease-in-out;
+
+        &:hover {
+            border-color: $gnc-active-link;
+            transition: all 500ms ease-in-out;
+        }
+    }
 }

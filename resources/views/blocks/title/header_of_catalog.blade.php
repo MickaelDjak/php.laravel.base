@@ -1,4 +1,10 @@
 <div class="row align-center gnc-title-catalog">
-    <h2 class="column small-12">{{ $name }}</h2>
-    <p class="column small-12">{{ $description }}</p>
+    <div class="column small-2  gnc-title-img">
+        <img src="{{$img}}" alt=""/>
+    </div>
+
+    <div class="column small-10 gnc-title-text">
+        <h2 class="column">{{ $name }}</h2>
+        <p class="column">{{ $description ?? '' }}</p>
+    </div>
 </div>

@@ -1,10 +1,10 @@
 <div class="gnc-ministry-card">
     <div class="row">
-        <div class="small-12 medium-3 columns flex-container align-middle">
+        <div class="small-12 medium-2 columns flex-container align-middle">
             <img src="{{ $img  }}" alt="n"/>
         </div>
 
-        <div class="small-12 medium-9 columns">
+        <div class="small-12 medium-10 columns">
             <h4 class="article-title">
                 <a href="{{ route('event_page') }}"> {{ $name }} </a>
             </h4>
