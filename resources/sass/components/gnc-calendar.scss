@@ -5,6 +5,7 @@
     flex-direction: column;
 
     &-data {
+        overflow: hidden;
         .owl-stage {
             display: flex;
             flex-direction: row;

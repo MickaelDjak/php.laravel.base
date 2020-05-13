@@ -8003,6 +8003,10 @@ html {
   flex-direction: column;
 }
 
+.gnc-calendar-data {
+  overflow: hidden;
+}
+
 .gnc-calendar-data .owl-stage {
   display: flex;
   flex-direction: row;
