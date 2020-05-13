@@ -52,7 +52,7 @@ $post-item-border-bottom-width: rem-calc(1) !default;
 }
 
 
-/// Adds styles for post-list's elements in small screen and it also could be used for bigger screen in small areas
+/// Adds styles for post-catalog's elements in small screen and it also could be used for bigger screen in small areas
 @mixin small-posts-list {
     .posts-list {
         .post-title {

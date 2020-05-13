@@ -15,6 +15,7 @@ Route::view('/gallery', 'pages.gallery')->name('gallery_list');
 Route::view('/contact', 'pages.contacts')->name('contacts');
 Route::view('/ministry', 'pages.ministry')->name('ministry');
 Route::view('/credo', 'pages.credo')->name('credo');
+Route::view('/calendar', 'pages.calendar')->name('calendar');
 
 
 //
@@ -46,12 +47,12 @@ Route::view('/credo', 'pages.credo')->name('credo');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@home')->name('home');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@home')->name('home');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@home')->name('home');

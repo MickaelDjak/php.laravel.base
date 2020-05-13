@@ -8,7 +8,7 @@
             @endslot
             {{--                {{ url('/ministry') }}--}}
         @endcomponent
-        <div class="row ">
+        <div class="row">
             <div class="gnc-image-gallery column">
                 <div class="gnc-image-gallery-grid">
                     <div class="gnc-image-gallery-item">

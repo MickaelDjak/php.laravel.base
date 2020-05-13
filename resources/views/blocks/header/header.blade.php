@@ -19,6 +19,7 @@
                         <ul class="menu nested vertical gnc-navigation-nested">
                             <li><a href="{{ route('contacts') }}">Контакты</a></li>
                             <li><a href="{{ route('ministry') }}">Служение</a></li>
+                            <li><a href="{{ route('calendar') }}">Календарь</a></li>
                             <li><a href="{{ route('credo') }}">Вероучение</a></li>
                             <li><a href="{{ route('gallery_list') }}">Галерея</a></li>
                         </ul>
