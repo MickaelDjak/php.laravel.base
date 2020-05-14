@@ -55,13 +55,15 @@
 
     @include("preachings.home")
 
-    @component('blocks.title.title')
-        @slot('name')
-            Задать вопрос пастору
-        @endslot
-    @endcomponent
+
 
     <div class="gnc-form-box">
+        @component('blocks.title.title')
+            @slot('name')
+                Задать вопрос пастору
+            @endslot
+        @endcomponent
+
         <div class="row">
             <div class="small-12 medium-6 column ">
                 <div class="gnc-form-box-info-graph">

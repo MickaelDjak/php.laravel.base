@@ -5,8 +5,6 @@
 </head>
 <body>
 <div id="app">
-    @include('blocks.social_bar.social_bar')
-
     @section('navigation')
         @include('blocks.header.header')
     @show
