@@ -20,6 +20,17 @@ $tag-cloud-section-width: 800px;
     margin-bottom: 1rem;
 }
 
+.tag-cloud-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.tag-cloud-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
 .tag-cloud {
     //margin: 0.5rem;
     //text-align: center;
@@ -27,12 +38,13 @@ $tag-cloud-section-width: 800px;
 
     .tag-cloud-individual-tag {
         @include label;
+        padding: 0.25rem 0.75rem;
         border-radius: 5000px;
         background: $tag-cloud-tag-color;
         display: inline-block;
         color: $tag-cloud-type-color;
         margin: 3px;
-        text-transform: uppercase;
+        //text-transform: uppercase;
         font-weight: bold;
 
         .fa {

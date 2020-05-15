@@ -4,4 +4,6 @@
     @for ($i = 0; $i < 5; $i++)
         @include("blocks.comments.item")
     @endfor
+
+    @include('blocks.comments.form')
 </div>

@@ -3,7 +3,7 @@
 @section('title')
     @component('blocks.title.header_of_catalog')
         @slot('img')
-            /img/undraw/undraw_Memory_storage_reh0.svg
+            /img/undraw/undraw_podcast_q6p7.svg
         @endslot
         @slot('name')
             Проповеди
@@ -15,7 +15,12 @@
 @endsection
 
 @section('content')
-    @include('preachings.preachings')
+    @for ($i = 0; $i < 10; $i++)
+        @include("preachings.card", [
+            'src' => '/img/banners/podcast-1.png'
+        ])
+    @endfor
+
 @endsection
 
 @section('pagination')

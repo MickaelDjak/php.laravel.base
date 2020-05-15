@@ -5,10 +5,13 @@ use Illuminate\Support\Facades\Route;
 Route::view('/', 'pages.home')->name('home');
 Route::view('/posts', 'pages.posts')->name('posts');
 Route::view('/posts/page', 'pages.page')->name('post_page');
-Route::view('/preachings', 'pages.preachings')->name('preachings');
-Route::view('/preachings/page', 'pages.page')->name('preaching_page');
+
+Route::view('/preachings', 'preachings.index')->name('preachings');
+Route::view('/preachings/page', 'preachings.page')->name('preaching_page');
+
 Route::view('/events', 'pages.events')->name('events');
 Route::view('/events/page', 'pages.page')->name('event_page');
+
 Route::view('/about', 'pages.about')->name('about');
 Route::view('/subscribe', 'pages.subscribe')->name('subscribe');
 Route::view('/gallery', 'pages.gallery')->name('gallery_list');

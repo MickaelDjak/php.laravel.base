@@ -15,6 +15,8 @@
 
     @yield('content')
 
+    @yield('comments')
+
     @yield('pagination')
 
     @include('blocks.scroll_to_top.button')

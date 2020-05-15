@@ -7548,6 +7548,17 @@ html {
   margin-bottom: 1rem;
 }
 
+.tag-cloud-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.tag-cloud-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
 .tag-cloud {
   list-style: none;
 }
@@ -7560,12 +7571,12 @@ html {
   line-height: 1;
   white-space: nowrap;
   cursor: default;
+  padding: 0.25rem 0.75rem;
   border-radius: 5000px;
   background: #2c3840;
   display: inline-block;
   color: #e6e6e6;
   margin: 3px;
-  text-transform: uppercase;
   font-weight: bold;
 }
 
@@ -7862,6 +7873,39 @@ html {
 
 .gnc-preaching-card .gnc-preaching-card--summary {
   margin-bottom: 20px;
+}
+
+.gnc-preaching {
+  position: relative;
+}
+
+.gnc-preaching-summary {
+  padding: 1rem;
+}
+
+.gnc-preaching-summary p {
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.gnc-preaching-audio audio {
+  width: 100%;
+}
+
+.gnc-preaching-meta {
+  padding: 1rem;
+}
+
+.gnc-preaching-tags {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+@media screen and (max-width: 60em) {
+  .gnc-preaching-tags {
+    position: relative;
+  }
 }
 
 /*

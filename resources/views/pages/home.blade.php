@@ -53,7 +53,15 @@
         {{ url('/preachings') }}
     @endcomponent
 
-    @include("preachings.home")
+    <div class="row ">
+        @for ($i = 0; $i < 6; $i++)
+            <div class="column medium-6">
+            @include("preachings.card", [
+                'src' => '/img/banners/podcast-1.png'
+            ])
+            </div>
+        @endfor
+    </div>
 
     @component('blocks.title.title')
         @slot('name')
