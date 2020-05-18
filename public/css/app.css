@@ -215,7 +215,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background: #fefefe;
+  background: #EEEEEE;
   font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   font-weight: normal;
   line-height: 1.5;
@@ -3471,7 +3471,7 @@ table.hover:not(.unstriped) tr:nth-of-type(even):hover {
   visibility: hidden;
   border: 1px solid #cacaca;
   border-radius: 0;
-  background-color: #fefefe;
+  background-color: #EEEEEE;
   font-size: 1rem;
 }
 
@@ -6481,18 +6481,72 @@ ol.list-upper-roman {
   padding-bottom: 3rem !important;
 }
 
-html {
-  font-family: "Miriam Libre", sans-serif;
-  line-height: 1.5;
+.one_one ul {
+  display: flex;
+  min-height: 100vh;
+  max-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  list-style-type: none;
 }
 
-.logo {
-  height: auto;
-  width: 200px;
+.one_one li {
+  flex: 1;
+  display: flex;
+  align-items: stretch;
+  padding: 20px;
+  background: #E74C3C;
+  cursor: pointer;
+  transition: all 0.5s ease;
 }
 
-.about {
-  padding-top: 50px;
+.one_one li:hover {
+  background: #e53f2e;
+}
+
+.one_one li.active {
+  flex: 5;
+  background: #fff;
+  cursor: default;
+}
+
+.one_one li.active h2 {
+  color: #E74C3C;
+}
+
+.one_one li.active .section-content {
+  flex: 4;
+  opacity: 1;
+  transform: scaleX(1);
+  color: #E74C3C;
+}
+
+.one_one li .section-title {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: white;
+}
+
+.one_one li .section-title h2 {
+  margin: 0;
+  transform: rotate(-90deg);
+  white-space: nowrap;
+}
+
+.one_one li .section-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  transition: all 0.25s 0.1s ease-out;
 }
 
 .marketing-site-three-up {
@@ -6984,90 +7038,6 @@ html {
   flex-direction: column;
   color: #fefefe;
   text-shadow: 1px 1px 2px #0a0a0a;
-}
-
-.sticky-social-bar {
-  padding: 0;
-  margin: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 11.25rem;
-  background-color: #333333;
-  position: fixed;
-  z-index: 10000;
-  left: -8.75rem;
-}
-
-.sticky-social-bar .social-icon {
-  list-style-type: none;
-  color: #fefefe;
-  background-color: inherit;
-  margin: 0;
-  transition: all 0.3s ease-in-out;
-  cursor: pointer;
-  font-size: 1.1rem;
-  padding: 0.25rem 0.25rem 0.5rem;
-}
-
-.sticky-social-bar .social-icon:first-of-type {
-  padding-top: 0.375rem;
-}
-
-.sticky-social-bar .social-icon:last-of-type {
-  padding-bottom: 0.625rem;
-}
-
-.sticky-social-bar .social-icon > a {
-  color: inherit;
-  background-color: inherit;
-}
-
-.sticky-social-bar .social-icon > a > .fa {
-  padding: 0.5rem;
-  width: 2rem;
-  height: 2rem;
-  float: right;
-  margin-left: 0.5rem;
-}
-
-.sticky-social-bar .social-icon > a > .fa.fa-facebook {
-  background-color: #3b5998;
-}
-
-.sticky-social-bar .social-icon > a > .fa.fa-twitter {
-  background-color: #55acee;
-}
-
-.sticky-social-bar .social-icon > a > .fa.fa-linkedin {
-  background-color: #007bb5;
-}
-
-.sticky-social-bar .social-icon > a > .fa.fa-youtube {
-  background-color: #bb0000;
-}
-
-.sticky-social-bar .social-icon > a > .fa.fa-instagram {
-  background-color: #125688;
-}
-
-.sticky-social-bar .social-icon > a > .fa.fa-pinterest-p {
-  background-color: #cb2027;
-}
-
-.sticky-social-bar .social-icon > a > .social-icon-text {
-  font-size: 80%;
-  color: #fefefe;
-  text-transform: uppercase;
-  margin-right: 0.5rem;
-}
-
-.sticky-social-bar .social-icon:hover {
-  transform: translateX(8.75rem);
-}
-
-.sticky-social-bar .social-icon:hover > a {
-  color: inherit;
-  background-color: inherit;
 }
 
 .author-data {
@@ -8317,6 +8287,20 @@ a.icon-link:hover {
   }
 }
 
+html {
+  font-family: "Miriam Libre", sans-serif;
+  line-height: 1.5;
+}
+
+.logo {
+  height: auto;
+  width: 200px;
+}
+
+.about {
+  padding-top: 50px;
+}
+
 .gnc-preaching-card {
   background: url("/img/banners/podcast-1-l.png") top right no-repeat;
   background-size: cover;
@@ -8474,6 +8458,7 @@ a.icon-link:hover {
 .gnc-calendar-day {
   width: 320px;
   border: 1px solid #71b9b1;
+  background: #fff;
   display: flex;
   flex-direction: column;
 }
@@ -9239,7 +9224,7 @@ a.icon-link:hover {
 
 .gnc-contact-us {
   padding: 2rem;
-  background: #fefefe;
+  background: #EEEEEE;
 }
 
 .gnc-contact-us-header {
@@ -9316,77 +9301,5 @@ a.icon-link:hover {
 .gnc-date-wrapper-d4k4 .gnc-date .month,
 .gnc-date-wrapper-d4k4 .gnc-date .year {
   font-size: 12px;
-}
-
-.one_one ul {
-  display: flex;
-  min-height: 100vh;
-  max-height: 100vh;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  list-style-type: none;
-}
-
-.one_one li {
-  flex: 1;
-  display: flex;
-  align-items: stretch;
-  padding: 20px;
-  background: #E74C3C;
-  cursor: pointer;
-  transition: all 0.5s ease;
-}
-
-.one_one li:hover {
-  background: #e53f2e;
-}
-
-.one_one li.active {
-  flex: 5;
-  background: #fff;
-  cursor: default;
-}
-
-.one_one li.active h2 {
-  color: #E74C3C;
-}
-
-.one_one li.active .section-content {
-  flex: 4;
-  opacity: 1;
-  transform: scaleX(1);
-  color: #E74C3C;
-}
-
-.one_one li .section-title {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  color: white;
-}
-
-.one_one li .section-title h2 {
-  margin: 0;
-  transform: rotate(-90deg);
-  white-space: nowrap;
-}
-
-.one_one li .section-content {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  margin: 0;
-  padding: 0;
-  opacity: 0;
-  transition: all 0.25s 0.1s ease-out;
-}
-
-body {
-  background: #eee;
 }
 
