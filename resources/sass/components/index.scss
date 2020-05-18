@@ -20,6 +20,8 @@
 @import "event-card-home";
 @import "event-card-2";
 
+@import "gnc-general";
+
 @import "gnc-preaching-card";
 @import "gnc-calendar";
 @import "gnc-calendar-list";
@@ -34,10 +36,21 @@
 @import "gnc-contact-us";
 @import "gnc-ministry-card";
 @import "gnc-sidebar";
+
 @import "gnc-date";
 @import "one";
 
-
-body{
-    background: #eee;
-}
+@import "main_points";
+@import "cosial";
+@import "post-container";
+@import "news-card";
+@import "event-card";
+@import "events";
+@import "pagintaion";
+@import "event-card-home";
+@import "comments";
+@import "tags";
+@import "about-as";
+@import "post-article";
+@import "author-data";
+@import "social-link";
