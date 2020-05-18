@@ -24,5 +24,5 @@
 @endsection
 
 @section('content')
-    @include('posts.post')
+    @include('posts.card')
 @endsection

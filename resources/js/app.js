@@ -51,3 +51,11 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 
 
+var section = $('.one_one li');
+
+function toggleAccordion() {
+    section.removeClass('active');
+    $(this).addClass('active');
+}
+
+section.on('click', toggleAccordion);

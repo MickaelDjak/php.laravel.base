@@ -1,0 +1,33 @@
+.gnc-date-wrapper-d4k4 {
+    position: relative;
+
+    .gnc-date {
+        z-index: 2;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: $gnc-active-link;
+        color: $white;
+        padding: 0.8em;
+
+        span {
+            display: block;
+            text-align: center;
+        }
+
+        .day {
+            font-weight: 700;
+            font-size: 24px;
+            text-shadow: 2px 3px 2px rgba($black, 0.18);
+        }
+
+        .month {
+            text-transform: uppercase;
+        }
+
+        .month,
+        .year {
+            font-size: 12px;
+        }
+    }
+}

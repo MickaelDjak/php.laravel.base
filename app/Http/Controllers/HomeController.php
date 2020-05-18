@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Event;
+use App\Models\Post;
+use App\Models\Preaching;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -13,7 +16,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+//        $this->middleware('auth');
     }
 
     /**
@@ -23,6 +26,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        return view('pages.home', [
+            'events' => Event::where('status', 1)->limit(4)->get(),
+            'posts' => Post::where('status', 1)->limit(3)->get(),
+            'preachings' => Preaching::where('status', 1)->limit(4)->get(),
+        ]);
     }
 }

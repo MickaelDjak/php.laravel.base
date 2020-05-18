@@ -15,12 +15,9 @@
 @endsection
 
 @section('content')
-    @for ($i = 0; $i < 10; $i++)
-        @include("preachings.card", [
-            'src' => '/img/banners/podcast-1.png'
-        ])
-    @endfor
-
+    @foreach ($preachings as $preaching)
+        @include("preachings.card")
+    @endforeach
 @endsection
 
 @section('pagination')

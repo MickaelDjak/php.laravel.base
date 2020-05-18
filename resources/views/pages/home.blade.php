@@ -33,7 +33,13 @@
         {{ url('/events') }}
     @endcomponent
 
-    @include('events.home')
+    <section class="row">
+        @foreach ($events as $event)
+            <div class="column small-12 medium-12 large-6">
+                @include('events.card')
+            </div>
+        @endforeach
+    </section>
 
     @component('blocks.title.title')
         @slot('name')
@@ -43,7 +49,13 @@
         {{ url('/posts')  }}
     @endcomponent
 
-    @include('posts.home')
+    <div class="row">
+        @foreach ($posts as $post)
+            <div class="column small-12">
+                @include("posts.card")
+            </div>
+        @endforeach
+    </div>
 
     @component('blocks.title.title')
         @slot('name')
@@ -54,13 +66,11 @@
     @endcomponent
 
     <div class="row ">
-        @for ($i = 0; $i < 6; $i++)
-            <div class="column medium-6">
-            @include("preachings.card", [
-                'src' => '/img/banners/podcast-1.png'
-            ])
+        @foreach ($preachings as $preaching)
+            <div class="column medium-6 small-12">
+                @include("preachings.card")
             </div>
-        @endfor
+        @endforeach
     </div>
 
     @component('blocks.title.title')
@@ -103,5 +113,4 @@
             </div>
         </div>
     </div>
-
 @endsection
