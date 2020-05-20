@@ -19,6 +19,6 @@
             <a href="#" class="icon-link"><i class="fa fa-comments-o"></i> 150</a>
         </p>
         <p>{{ $post->preview_text }}</p>
-        <a href="{{ route('post_page') }}" class="btn btn--with-icon"><i class="btn-icon fa fa-long-arrow-right"></i>READ MORE</a>
+        <a href="{{ route('post_page') }}" class="btn btn--with-icon"><i class="btn-icon fa fa-long-arrow-right"></i>Читать полностью</a>
     </div>
 </article>

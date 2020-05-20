@@ -6,9 +6,8 @@ $color_grey_dark: #a2a2a2;
 .gnc-event-card-3g3f {
     display: flex;
     flex-direction: column;
-    margin: 1rem auto;
+    margin: 1rem auto 1.6%;
     box-shadow: 0 3px 7px -1px rgba(#000, .1);
-    margin-bottom: 1.6%;
     background: $color_white;
     line-height: 1.4;
     font-family: sans-serif;
@@ -16,22 +15,20 @@ $color_grey_dark: #a2a2a2;
     overflow: hidden;
     z-index: 0;
     transition: all 200ms;
+
     a {
         color: inherit;
         &:hover {
             color: $color_prime;
         }
     }
-    &:hover {
-        .photo {
-            transform: scale(1.05);
-        }
-    }
+
     .meta {
         position: relative;
         z-index: 0;
         height: 200px;
     }
+
     .photo {
         position: absolute;
         top: 0;
@@ -42,6 +39,7 @@ $color_grey_dark: #a2a2a2;
         background-position: center;
         transition: transform .2s;
     }
+
     .details,
     .details ul {
         margin: auto;
@@ -93,6 +91,7 @@ $color_grey_dark: #a2a2a2;
             }
         }
     }
+
     .description {
         padding: 1rem;
         background: $color_white;
@@ -136,6 +135,7 @@ $color_grey_dark: #a2a2a2;
             }
         }
     }
+
     p {
         position: relative;
         margin: 1rem 0 0;
@@ -152,11 +152,15 @@ $color_grey_dark: #a2a2a2;
             }
         }
     }
+
     &:hover {
         transform: scale(1.025);
         transition: all 200ms;
         .details {
             //left: 0%;
+        }
+        .photo {
+            transform: scale(1.05);
         }
     }
 
