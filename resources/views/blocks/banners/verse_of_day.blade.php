@@ -11,6 +11,4 @@
         <a href="#" class="gnc-verse-of-day-link "><p class="gnc-verse-of-day-source">Евангелие Матфея 11:28-30</p></a>
     </div>
 </div>
-</div>
-
 

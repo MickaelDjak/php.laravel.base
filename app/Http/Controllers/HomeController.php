@@ -27,9 +27,9 @@ class HomeController extends Controller
     public function index()
     {
         return view('pages.home', [
-            'events' => Event::where('status', 1)->limit(4)->get(),
+            'events' => Event::where('status', 1)->limit(3)->get(),
             'posts' => Post::where('status', 1)->limit(3)->get(),
-            'preachings' => Preaching::where('status', 1)->limit(4)->get(),
+            'preachings' => Preaching::where('status', 1)->limit(3)->get(),
         ]);
     }
 }

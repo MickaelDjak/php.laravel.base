@@ -11,15 +11,29 @@
 
     @yield('banner')
 
-    @yield('content')
+    @yield('common_top')
 
-    @yield('comments')
+    <div id="content">
+        <div class="row">
+            <div class="small-12 medium-8 columns">
+                @yield('content')
+            </div>
 
-    @yield('pagination')
+            <div class="small-12 medium-4 columns">
+                <div class="gnc-sidebar">
+                    @include('blocks.sidebar.catalog')
+                </div>
+            </div>
+        </div>
 
-    @include('blocks.scroll_to_top.button')
+        @yield('pagination')
+    </div>
+
+    @yield('common_bottom')
 
     @include('blocks.footer.footer')
+
+    @include('blocks.scroll_to_top.button')
 
     @include('blocks.footer.script')
 </div>

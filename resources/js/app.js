@@ -1,8 +1,8 @@
 window.$ = window.jQuery = require('jquery')
 window._ = require('lodash');
 
-require('./components/backToTopButton')
-require('owl.carousel')
+require('./components/index');
+require('owl.carousel');
 require('foundation-sites');
 
 try {
@@ -49,13 +49,3 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     encrypted: true
 // });
 
-
-
-var section = $('.one_one li');
-
-function toggleAccordion() {
-    section.removeClass('active');
-    $(this).addClass('active');
-}
-
-section.on('click', toggleAccordion);

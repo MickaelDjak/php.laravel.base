@@ -9,7 +9,7 @@
         </div>
         <div class="data">
             <div class="content">
-{{--                <span class="author">Jane Doe</span>--}}
+                {{--                <span class="author">Jane Doe</span>--}}
                 <h3 class="title"><a href="{{route('preaching_page')}}">{{ $preaching->title }}</a></h3>
                 <div class="row align-middle">
                     <div class="column medium-6 small-12">
@@ -30,6 +30,50 @@
             <div class="menu-content">
                 <audio controls src="{{ $preaching->audio_url }}"></audio>
             </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="accordion">
+    <div class="accordion-item">
+        <a>Why is the moon sometimes out during the day?</a>
+        <div class="content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse
+                potenti.</p>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <a>Why is the sky blue?</a>
+        <div class="content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse
+                potenti.</p>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <a>Will we ever discover aliens?</a>
+        <div class="content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse
+                potenti.</p>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <a>How much does the Earth weigh?</a>
+        <div class="content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse
+                potenti.</p>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <a>How do airplanes stay up?</a>
+        <div class="content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse
+                potenti.</p>
         </div>
     </div>
 </div>
