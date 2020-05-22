@@ -34,7 +34,10 @@
         <li class="accordion-item">
             <input id="show-menu-{{$id}}-s1" class="hide" type="checkbox"/>
             <div class="accordion-child">
-                <audio controls src="{{ $preaching->audio_url }}"></audio>
+            	<audio controls>
+					<source src="{{ $preaching->audio_url }}" type="audio/mpeg">
+					Your browser does not support the audio element.
+				</audio>
             </div>
         </li>
         <li class="accordion-item">

@@ -7700,6 +7700,12 @@ input[type=checkbox]:checked ~ .accordion-child {
   width: 55px;
   font-weight: 900;
 }
+.gnc-calendar-list-day--duration {
+    display: inline-block;
+    color: #2c3840;
+    width: 55px;
+    font-weight: 700;
+}
 
 .gnc-title {
   color: #1b576a;

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ChurchMeeting;
 use App\Models\Event;
 use App\Models\Post;
 use App\Models\Preaching;
@@ -30,6 +31,7 @@ class HomeController extends Controller
             'events' => Event::where('status', 1)->limit(3)->get(),
             'posts' => Post::where('status', 1)->limit(3)->get(),
             'preachings' => Preaching::where('status', 1)->limit(3)->get(),
+            'meetings' => ChurchMeeting::getLast()
         ]);
     }
 }

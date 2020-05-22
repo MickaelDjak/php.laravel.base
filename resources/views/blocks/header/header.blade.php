@@ -17,17 +17,21 @@
                     <li>
                         <a href="{{ url('/about') }}">@lang('navigation.about_as')</a>
                         <ul class="menu nested vertical gnc-navigation-nested">
-                            <li><a href="{{ route('contacts') }}">Контакты</a></li>
                             <li><a href="{{ route('ministry') }}">Служение</a></li>
                             <li><a href="{{ route('calendar') }}">Календарь</a></li>
                             <li><a href="{{ route('credo') }}">Вероучение</a></li>
+                            <li><a href="{{ route('contacts') }}">Контакты</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Все ресурсы</a>
+                        <ul class="menu nested vertical gnc-navigation-nested">
+                            <li><a href="{{ url('/events') }}">@lang('navigation.events')</a></li>
+                            <li><a href="{{ url('/posts') }}">@lang('navigation.blog')</a></li>
+                            <li><a href="{{ url('/preachings') }}">@lang('navigation.preaching')</a></li>
                             <li><a href="{{ route('gallery_list') }}">Галерея</a></li>
                         </ul>
                     </li>
-                    <li><a href="{{ url('/events') }}">@lang('navigation.events')</a></li>
-                    <li><a href="{{ url('/posts') }}">@lang('navigation.blog')</a></li>
-                    <li><a href="{{ url('/preachings') }}">@lang('navigation.preaching')</a></li>
-                    <li><a href="{{ url('/subscribe') }}">Присоединиться</a></li>
                 </ul>
             </nav>
         </div>
