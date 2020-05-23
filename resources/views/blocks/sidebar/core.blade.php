@@ -3,16 +3,15 @@
 @yield('sidebar_top')
 
 <div class="gnc-sidebar-section">
-    <h4>Сегодня читаем</h4>
-    <p>Біблія за два роки · Псалми 90-92</p>
-    <a href="#">Читать</a>
+    <h4>Біблія за рік</h4>
+    @foreach($dailyBibleReadingFragments as $fragment)
+        <p>{{$fragment->part_of_day}} <a target="_blank" href="https://bibleonline.ru/bible/rst66/{{$fragment->book_shortcut}}-{{$fragment->text_fragment}}">Читать</a></p>
+    @endforeach
 </div>
 
 <div class="gnc-sidebar-section">
-    <h4>Сегодня молимся</h4>
-    <p>Сьогодні молимось за місію і місіонерів: за утворення нових церков, за місіонерів у небезпеці, за особисте
-        благовістя.</p>
-    <a href="#">Молиться</a>
+    <h4><a href="{{route('prayer_list')}}">Сегодня молимся</a></h4>
+    <p> {{ $biblePrayerNeed->text }}</p>
 </div>
 
 <div class="gnc-sidebar-section">

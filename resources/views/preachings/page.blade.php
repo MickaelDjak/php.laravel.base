@@ -1,5 +1,1 @@
-@extends('layouts.article_page')
-
-@section('content')
-    @include('blocks.page.page')
-@endsection
+@extends('layouts.article_page_real_stub')

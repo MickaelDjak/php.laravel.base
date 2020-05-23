@@ -7643,6 +7643,13 @@ input[type=checkbox]:checked ~ .accordion-child {
   font-weight: 900;
 }
 
+.gnc-calendar-day--duration {
+  display: inline-block;
+  color: #2c3840;
+  width: 70px;
+  font-weight: 900;
+}
+
 .gnc-calendar-list {
   display: flex;
   flex-direction: column;
@@ -7699,12 +7706,6 @@ input[type=checkbox]:checked ~ .accordion-child {
   color: #2c3840;
   width: 55px;
   font-weight: 900;
-}
-.gnc-calendar-list-day--duration {
-    display: inline-block;
-    color: #2c3840;
-    width: 55px;
-    font-weight: 700;
 }
 
 .gnc-title {

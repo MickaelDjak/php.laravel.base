@@ -22,6 +22,7 @@ Route::view('/gallery', 'pages.gallery')->name('gallery_list');
 Route::view('/contact', 'pages.contacts')->name('contacts');
 Route::view('/ministry', 'pages.ministry')->name('ministry');
 Route::view('/credo', 'pages.credo')->name('credo');
+Route::view('/prayer_list', 'pages.prayer_list')->name('prayer_list');
 
 
 
