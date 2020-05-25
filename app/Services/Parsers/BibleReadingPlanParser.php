@@ -1,37 +1,41 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Services\Parsers;
 
 use App\Models\DailyBibleReadingFragment;
-use App\Models\ChurchMeeting;
-use App\Services\Parsers\BibleVersesParser;
 use PHPHtmlParser\Dom;
+use PHPHtmlParser\Exceptions\ChildNotFoundException;
+use PHPHtmlParser\Exceptions\CircularException;
+use PHPHtmlParser\Exceptions\LogicalException;
+use PHPHtmlParser\Exceptions\NotLoadedException;
+use PHPHtmlParser\Exceptions\StrictException;
 
-class CalendarController extends Controller
+/**
+ * Class BibleReadingPlanParser
+ * @package App\Services\Parsers
+ */
+class BibleReadingPlanParser
 {
     /**
-     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     * @throws ChildNotFoundException
+     * @throws CircularException
+     * @throws LogicalException
+     * @throws NotLoadedException
+     * @throws StrictException
      */
-    public function index()
+    public function run()
     {
-//        try {
-//            $p = new BibleVersesParser();
-//            $p->run();
-//
-//        } catch (\Throwable$e) {
-//            print_r($e->getMessage());
-//            print_r($e);
-//        }
-//        exit;
-
-        return view('pages.calendar', ['meetings' => ChurchMeeting::getLast()]);
+        foreach (range(1, 365) as $i) {
+            set_time_limit(60);
+            $this->insert($this->parse($i));
+        }
     }
 
 
     /**
      *
      */
-    public function load()
+    private function read()
     {
         foreach (range(1, 365) as $i) {
             $url = "https://bibleonline.ru/plan/robertson/$i/";
@@ -44,13 +48,13 @@ class CalendarController extends Controller
     /**
      * @param $i
      * @return array
-     * @throws \PHPHtmlParser\Exceptions\ChildNotFoundException
-     * @throws \PHPHtmlParser\Exceptions\CircularException
-     * @throws \PHPHtmlParser\Exceptions\LogicalException
-     * @throws \PHPHtmlParser\Exceptions\NotLoadedException
-     * @throws \PHPHtmlParser\Exceptions\StrictException
+     * @throws ChildNotFoundException
+     * @throws CircularException
+     * @throws LogicalException
+     * @throws NotLoadedException
+     * @throws StrictException
      */
-    public function parse($i)
+    private function parse($i)
     {
         $result = [];
         $result['number'] = $i;
@@ -96,7 +100,7 @@ class CalendarController extends Controller
     /**
      * @param $i
      */
-    public function insert($i)
+    private function insert($i)
     {
         foreach ($i['part_of_day'] as $part_of_day) {
             foreach ($part_of_day['links'] as $links) {

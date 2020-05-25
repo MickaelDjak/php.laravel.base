@@ -8432,3 +8432,7 @@ input[type=checkbox]:checked ~ .accordion-child {
   font-size: 12px;
 }
 
+.list-group.biblebooks {
+    display: flex;
+    flex-direction: column;
+}

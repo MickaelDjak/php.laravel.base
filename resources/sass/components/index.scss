@@ -25,3 +25,7 @@
 @import "gnc-sidebar";
 @import "gnc-date";
 
+.list-group.biblebooks {
+    display: flex;
+    flex-direction: column;
+}

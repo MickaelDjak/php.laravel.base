@@ -14,6 +14,8 @@ Route::view('/preachings/page', 'preachings.page')->name('preaching_page');
 Route::get('/events', 'EventController@index')->name('events');
 Route::view('/events/page', 'events.page')->name('event_page');
 
+Route::view('/bible', 'pages.bible')->name('bible');
+
 Route::get('/calendar', 'CalendarController@index')->name('calendar');
 
 Route::view('/about', 'pages.about')->name('about');
@@ -23,6 +25,7 @@ Route::view('/contact', 'pages.contacts')->name('contacts');
 Route::view('/ministry', 'pages.ministry')->name('ministry');
 Route::view('/credo', 'pages.credo')->name('credo');
 Route::view('/prayer_list', 'pages.prayer_list')->name('prayer_list');
+
 
 
 

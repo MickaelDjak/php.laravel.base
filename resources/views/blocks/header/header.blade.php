@@ -26,6 +26,7 @@
                     <li>
                         <a href="#">Все ресурсы</a>
                         <ul class="menu nested vertical gnc-navigation-nested">
+                            <li><a href="{{ url('/bible') }}">Библия</a></li>
                             <li><a href="{{ url('/events') }}">@lang('navigation.events')</a></li>
                             <li><a href="{{ url('/posts') }}">@lang('navigation.blog')</a></li>
                             <li><a href="{{ url('/preachings') }}">@lang('navigation.preaching')</a></li>
