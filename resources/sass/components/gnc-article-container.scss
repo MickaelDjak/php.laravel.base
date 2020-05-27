@@ -1,0 +1,43 @@
+.gnc-article-container-6ld3 {
+
+    .post-article-image {
+        margin-bottom: 1.5rem;
+        overflow: hidden;
+
+        .article-image {
+            height: 35vh;
+
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+
+            @include breakpoint(medium only) {
+                height: 20vh;
+            }
+
+            @include breakpoint(small only) {
+                height: 15vh;
+            }
+        }
+    }
+
+    .post-article-title {
+        margin-top: 1rem;
+
+        .article-title {
+            color: $black;
+            font-weight: 600;
+        }
+    }
+
+    .post-article-content {
+        margin-top: 1rem;
+        text-align: justify;
+
+        .article-content {
+            color: $black;
+            margin-bottom: 2rem;
+        }
+    }
+}

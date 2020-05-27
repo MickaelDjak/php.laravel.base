@@ -1,47 +1,172 @@
-.gnc-preaching-card {
-    background: url("/img/banners/podcast-1-l.png") top right no-repeat;
-    background-size: cover;
-    background-position: center center;
+.gnc-preaching-card-25d4 {
+    position: relative;
+    max-width: 60em;
+    margin-bottom: 1rem;
+    background-size: auto 10em;
+    background-repeat: repeat-x;
+    background-position: center top;
+    box-shadow: 0 3px 6px 1px rgba(0, 0, 0, 0.16);
 
-    background-color: $white;
-    border: 1px solid $medium-gray;
-    padding: 1rem 1rem 0.5rem;
-    margin: 5px 0;
+    &-header {
+        position: relative;
+        height: 8em;
+        grid-row: 1 / 3;
+        grid-column: 2;
+        background-size: cover;
+        background-position: right center;
 
-    .gnc-preaching-card--summary {
-        margin-bottom: 20px;
+        img {
+            display: block;
+            max-width: 100%;
+        }
+    }
+
+    &-main {
+        padding: 1rem;
+        grid-row: 1;
+        grid-column: 1;
+        background: #fff;
+    }
+
+    &-nav {
+        display: flex;
+        padding: 0 1rem 1rem;
+        grid-row: 2;
+        grid-column: 1 / 2;
+        background: #fff;
+
+        a {
+            display: block;
+            text-decoration: none;
+            border-bottom: 1px solid $gnc-navigation-background;
+        }
+
+        label {
+            font-size: 1rem;
+
+            &:hover {
+                color: $gnc-active-link;
+            }
+        }
+
+        a + a {
+            margin-left: 2em;
+        }
+
+        a:hover,
+        a:focus {
+            border-color: $gnc-active-link;
+            border-width: 2px;
+        }
+
+        a[aria-current] {
+            border-bottom: 2px solid $gnc-active-link;
+        }
+    }
+
+    &-content {
+        margin-bottom: 0;
+        grid-row: 3;
+        grid-column: 1 / 3;
     }
 }
 
-.gnc-preaching {
-    position: relative;
+@media (min-width: 1025px) {
+    .gnc-preaching-card-25d4 {
+        display: grid;
+        grid-template-rows: auto auto auto;
+        grid-template-columns: 1.4fr 1fr;
+        background-size: auto;
+        transition: all 200ms;
 
-    &-summary {
-        padding: 1rem;
+        &:hover {
+            transform: scale(1.025);
+            transition: all 200ms;
+        }
 
-        p {
-            text-overflow: ellipsis;
-            overflow: hidden
+        &-header {
+            height: auto;
+        }
+
+        &-nav {
+            justify-content: flex-start;
+        }
+
+        &-main {
+            min-width: 25em;
+        }
+    }
+}
+
+.hide {
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.accordion {
+    background: #fff;
+    width: 100%;
+    border: 1px solid #e0e0e0;
+
+    &-item {
+        position: relative;
+        width: 100%;
+
+        &:last-child {
+            border-bottom: none;
         }
     }
 
-    &-audio {
+    &-label {
+        padding: 20px 0 20px 30px;
+        display: inline-block;
+
+        &:before {
+            content: '';
+            position: absolute;
+            height: 5px;
+            width: 5px;
+            top: 22px;
+            left: 12px;
+            display: inline-block;
+            border-left: 5px solid #999;
+            border-top: 5px solid transparent;
+            border-bottom: 5px solid transparent;
+        }
+
+        input[type=checkbox]:checked ~ &:before {
+            transform: rotate(90deg);
+        }
+    }
+
+    &-child {
+        margin: 0;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        opacity: 0;
+        height: 0;
+        transform: scale(1, 0);
+        transform-origin: center top;
+
         audio {
-            width: 100%;
+            width: 95%;
+            outline: none;
         }
-    }
 
-    &-meta {
-        padding: 1rem;
-    }
-
-    &-tags {
-        position: absolute;
-        top: 0;
-        right: 0;
-
-        @media screen and (max-width: 60em) {
-            position: relative;
+        input[type=checkbox]:checked ~ & {
+            border: 1px solid #e0e0e0;
+            margin: 7px -15px 7px -15px;
+            background: #fff;
+            padding: 1rem;
+            height: auto;
+            opacity: 1;
+            transform: scale(1, 1);
+            display: flex;
+            justify-content: center;
         }
     }
 }

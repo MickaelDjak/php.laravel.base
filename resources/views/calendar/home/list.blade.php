@@ -1,73 +1,16 @@
-@php($data = [
-    [
-         'date' => '77.99',
-         'name' => 'Суббота',
-         'sheet' => [
-            ['time' => '9:00', 'name' => 'Утренее собрание'],
-            ['time' => '17:00', 'name' => 'Вечернее собрание']
-       ]
-    ],
-    [
-         'date' => '4.04',
-         'name' => 'Суббота',
-         'sheet' => [
-            ['time' => '9:00', 'name' => 'Утренее собрание'],
-            ['time' => '17:00', 'name' => 'Вечернее собрание']
-       ]
-    ],
-    [
-         'date' => '7.04',
-         'name' => 'Четверг',
-         'sheet' => [
-            ['time' => '7:00', 'name' => 'Молитвенное собрание'],
-            ['time' => '19:00', 'name' => 'Молитвенное собрание']
-       ]
-    ],
-    [
-         'date' => '8.04',
-         'name' => 'Пятница',
-         'sheet' => [
-            ['time' => '19:00', 'name' => 'Спевка']
-       ]
-    ],
-    [
-         'date' => '4.04',
-         'name' => 'Суббота',
-         'sheet' => [
-            ['time' => '9:00', 'name' => 'Утренее собрание'],
-            ['time' => '17:00', 'name' => 'Вечернее собрание']
-       ]
-    ],
-    [
-         'date' => '7.04',
-         'name' => 'Четверг',
-         'sheet' => [
-            ['time' => '7:00', 'name' => 'Молитвенное собрание'],
-            ['time' => '19:00', 'name' => 'Молитвенное собрание']
-       ]
-    ],
-    [
-         'date' => '8.04',
-         'name' => 'Пятница',
-         'sheet' => [
-            ['time' => '19:00', 'name' => 'Спевка']
-       ]
-    ],
-])
-
-
 <section id="gnc-calendar">
     <div class="row">
         <div class="large-12 columns">
             <div class="owl-carousel owl-theme gnc-calendar-data">
-                @foreach($data as $item)
-                    @component('calendar.home.item', ['sheet' => $item['sheet']])
+
+                @foreach ($meetings ?? [] as $meeting)
+                    @component('calendar.home.item', ['sheet' => $meeting['list']])
                         @slot('date')
-                            {{$item['date']}}
+                            {{ $meeting['date'] }}
                         @endslot
 
                         @slot('name')
-                            {{$item['name']}}
+                            {{ $meeting['name'] }}
                         @endslot
                     @endcomponent
                 @endforeach

@@ -1,24 +1,13 @@
-@import "one";
-@import "main_points";
-@import "cosial";
-@import "news-card";
 @import "pagintaion";
 @import "comments";
 @import "tags";
-@import "about-as";
 @import "author-data";
+@import "cosial";
 @import "social-link";
 
-@import "podcast-2";
-@import "post-2";
-
-@import "post-container";
-@import "post-article";
-
-@import "events";
-@import "event-card-home";
-@import "event-card-2";
-
+@import "gnc-article-container";
+@import "gnc-event-card";
+@import "gnc-preaching-podcast";
 @import "gnc-general";
 @import "gnc-preaching-card";
 @import "gnc-calendar";
@@ -35,4 +24,5 @@
 @import "gnc-ministry-card";
 @import "gnc-sidebar";
 @import "gnc-date";
+@import "gnc-bible-book";
 

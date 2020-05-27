@@ -4,8 +4,7 @@
     @include('blocks.banners.verse_of_day')
 @endsection
 
-@section('content')
-
+@section('common_top')
     @component('blocks.title.title')
         @slot('name')
             Служения
@@ -24,7 +23,9 @@
     @endcomponent
 
     @include('calendar.home.list')
+@endsection
 
+@section('content')
     @component('blocks.title.title')
         @slot('name')
             @lang('navigation.events')
@@ -35,7 +36,7 @@
 
     <section class="row">
         @foreach ($events as $event)
-            <div class="column small-12 medium-12 large-6">
+            <div class="column small-12">
                 @include('events.card')
             </div>
         @endforeach
@@ -67,14 +68,14 @@
 
     <div class="row ">
         @foreach ($preachings as $preaching)
-            <div class="column medium-6 small-12">
+            <div class="column small-12">
                 @include("preachings.card")
             </div>
         @endforeach
     </div>
+@endsection
 
-
-
+@section('common_bottom')
     <div class="gnc-form-box">
         @component('blocks.title.title')
             @slot('name')

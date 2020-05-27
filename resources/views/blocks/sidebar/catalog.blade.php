@@ -1,6 +1,6 @@
 @extends('blocks.sidebar.core')
 
-@section('current_side_bar')
+@section('sidebar_bottom')
 <div class="gnc-sidebar-section">
     <h4>Последние статьи</h4>
     <ul class="vertical menu">
@@ -10,4 +10,8 @@
         <li><a href="#">Holly</a></li>
     </ul>
 </div>
+@endsection
+
+@section('sidebar_tag_list')
+    @include('blocks.tags.tag')
 @endsection

@@ -1,0 +1,37 @@
+.gnc-bible-book {
+    margin: 20px 0;
+
+    &-translation {
+        font-size: 2em;
+    }
+
+    &-testament-title {
+        padding: 5px 20px;
+        font-size: 1.5em;
+    }
+
+    &-section-title {
+        padding: 5px 20px;
+        font-size: 1.25em;
+    }
+
+    &-group {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+
+    &-item {
+        display: inline-block;
+        width: 80%;
+        padding: 10px 15px;
+        margin-bottom: -1px;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        position: relative;
+    }
+
+    &-info {
+        float: right;
+    }
+}

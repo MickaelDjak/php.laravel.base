@@ -1,10 +1,5 @@
-$comment-form-bg: $light-gray;
-$comment-section-bg: $white;
-$comment-section-padding: $global-padding;
-
 .comment-section-container {
-    background-color: $comment-section-bg;
-    padding: $global-padding;
+    //padding: $global-padding;
 }
 
 .comment-section-author {
@@ -22,7 +17,6 @@ $comment-section-padding: $global-padding;
 }
 
 .comment-section-box {
-    background-color: $comment-form-bg;
     padding: $global-padding;
 }
 

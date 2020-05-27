@@ -4,10 +4,10 @@
         <div class="gnc-calendar-day--name">{{ $name }}</div>
     </div>
     <div class="gnc-calendar-day--details">
-        @foreach($sheet as $item)
+        @foreach($sheet as $meeting)
             <span class="gnc-calendar-day--point">
-                <span class="gnc-calendar-day--time">{{ $item['time'] }}</span>
-                {{$item['name']}}
+                <span class="gnc-calendar-day--time">{{ $meeting->meeting_time->format('H:i') }}</span>
+                {{$meeting->description}}
             </span>
         @endforeach
     </div>

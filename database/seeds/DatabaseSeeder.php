@@ -16,6 +16,8 @@ class DatabaseSeeder extends Seeder
              EventSeeder::class,
              PostSeeder::class,
              PreachingSeeder::class,
+             ChurchMeetingSeeder::class,
+             TagSeeder::class,
          ]);
     }
 }

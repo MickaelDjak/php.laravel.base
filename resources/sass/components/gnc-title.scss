@@ -2,6 +2,8 @@
     color: $primary-color;
     margin-top: 1rem;
     margin-bottom: $header-margin-bottom;
+    display: flex;
+    align-items: center;
 }
 
 .gnc-title-catalog {

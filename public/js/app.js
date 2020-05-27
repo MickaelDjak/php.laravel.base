@@ -46166,7 +46166,7 @@ module.exports = function(module) {
 window.$ = window.jQuery = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 window._ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
 
-__webpack_require__(/*! ./components/backToTopButton */ "./resources/js/components/backToTopButton.js");
+__webpack_require__(/*! ./components/index */ "./resources/js/components/index.js");
 
 __webpack_require__(/*! owl.carousel */ "./node_modules/owl.carousel/dist/owl.carousel.js");
 
@@ -46211,14 +46211,25 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest'; // 
 //     encrypted: true
 // });
 
-var section = $('.one_one li');
+/***/ }),
+
+/***/ "./resources/js/components/accordion.js":
+/*!**********************************************!*\
+  !*** ./resources/js/components/accordion.js ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+var items = document.querySelectorAll(".accordion a");
 
 function toggleAccordion() {
-  section.removeClass('active');
-  $(this).addClass('active');
+  this.classList.toggle('active');
+  this.nextElementSibling.classList.toggle('active');
 }
 
-section.on('click', toggleAccordion);
+items.forEach(function (item) {
+  return item.addEventListener('click', toggleAccordion);
+});
 
 /***/ }),
 
@@ -46249,6 +46260,19 @@ $(window).on('scroll', function () {
     }, 250);
   }
 });
+
+/***/ }),
+
+/***/ "./resources/js/components/index.js":
+/*!******************************************!*\
+  !*** ./resources/js/components/index.js ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(/*! ./accordion */ "./resources/js/components/accordion.js");
+
+__webpack_require__(/*! ./backToTopButton */ "./resources/js/components/backToTopButton.js");
 
 /***/ }),
 
