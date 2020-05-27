@@ -14,8 +14,8 @@ class FillBibleSectionTypesTable extends Migration
     public function up()
     {
         $list = [
-            "INSERT INTO bible_section_types (code, description) VALUES ('historical', 'Пятикнижие');",
-            "INSERT INTO bible_section_types (code, description) VALUES ('pentateuch', 'Исторические');",
+            "INSERT INTO bible_section_types (code, description) VALUES ('pentateuch', 'Пятикнижие');",
+            "INSERT INTO bible_section_types (code, description) VALUES ('historical', 'Исторические');",
             "INSERT INTO bible_section_types (code, description) VALUES ('educational', 'Учительные');",
             "INSERT INTO bible_section_types (code, description) VALUES ('big_prophets', 'Большие пророки');",
             "INSERT INTO bible_section_types (code, description) VALUES ('small_prophets', 'Малые пророки');",

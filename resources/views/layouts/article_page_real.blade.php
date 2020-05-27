@@ -11,25 +11,18 @@
         <div class="row  align-center">
             <div class="large-12 columns post-article-title">
                 <h3 class="article-title">
-                    @yield('title')
+                    @yield('headline_main')
                 </h3>
             </div>
         </div>
 
-        <div class="row align-center">
-            <div class="large-12 columns">
-                @include('blocks.marker.marker')
-            </div>
-        </div>
+        @yield('marker')
 
-        <div class="row align-center">
-            <div class="large-12 columns">
-                @include('blocks.author.author_social')
-            </div>
-        </div>
+        @yield('author')
 
         <div class="row post-article-content ">
             <div class="columns small-12 medium-8 article-content">
+                @yield('headline')
                 <div class="article-content">
                     @yield('slides')
                     @yield('video')

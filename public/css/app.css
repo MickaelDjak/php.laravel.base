@@ -6511,11 +6511,6 @@ ol.list-upper-roman {
   transition: background 0.15s ease-in, color 0.15s ease-in;
 }
 
-.comment-section-container {
-  background-color: #fefefe;
-  padding: 1rem;
-}
-
 .comment-section-author {
   display: flex;
   align-items: center;
@@ -6531,7 +6526,6 @@ ol.list-upper-roman {
 }
 
 .comment-section-box {
-  background-color: #e6e6e6;
   padding: 1rem;
 }
 
@@ -8432,7 +8426,41 @@ input[type=checkbox]:checked ~ .accordion-child {
   font-size: 12px;
 }
 
-.list-group.biblebooks {
-    display: flex;
-    flex-direction: column;
+.gnc-bible-book {
+  margin: 20px 0;
 }
+
+.gnc-bible-book-translation {
+  font-size: 2em;
+}
+
+.gnc-bible-book-testament-title {
+  padding: 5px 20px;
+  font-size: 1.5em;
+}
+
+.gnc-bible-book-section-title {
+  padding: 5px 20px;
+  font-size: 1.25em;
+}
+
+.gnc-bible-book-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.gnc-bible-book-item {
+  display: inline-block;
+  width: 80%;
+  padding: 10px 15px;
+  margin-bottom: -1px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  position: relative;
+}
+
+.gnc-bible-book-info {
+  float: right;
+}
+

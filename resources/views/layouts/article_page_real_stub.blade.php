@@ -8,8 +8,28 @@
     </div>
 @endsection
 
-@section('title')
-    Familiarity Bias is Holding You Back: It’s Time to Embrace Arrow Functions
+@section('headline_main')
+    Familiarity Bias is Holding You Back: It’s Time to Embrace Arrow Functions (main)
+@endsection
+
+@section('headline')
+    Familiarity Bias is Holding You Back)
+@endsection
+
+@section('marker')
+    <div class="row align-center">
+        <div class="large-12 columns">
+            @include('blocks.marker.marker')
+        </div>
+    </div>
+@endsection
+
+@section('author')
+    <div class="row align-center">
+        <div class="large-12 columns">
+            @include('blocks.author.author_social')
+        </div>
+    </div>
 @endsection
 
 @section('slides')

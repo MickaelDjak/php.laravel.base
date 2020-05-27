@@ -24,8 +24,5 @@
 @import "gnc-ministry-card";
 @import "gnc-sidebar";
 @import "gnc-date";
+@import "gnc-bible-book";
 
-.list-group.biblebooks {
-    display: flex;
-    flex-direction: column;
-}
