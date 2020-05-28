@@ -3,7 +3,7 @@
 namespace App\Providers;
 
 use App\Models\DailyBibleReadingFragment;
-use App\MOdels\DailyPrayerNeed;
+use App\Models\DailyPrayerNeed;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
