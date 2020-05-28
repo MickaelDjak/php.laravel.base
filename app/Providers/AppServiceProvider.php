@@ -28,13 +28,13 @@ class AppServiceProvider extends ServiceProvider
     {
         Schema::defaultStringLength(191);
 
-        View::share('dailyBibleReadingFragments', DailyBibleReadingFragment::where([
-            ['month_number',5],
-            ['day_number', 23]
-        ])->get());
-
-        View::share('biblePrayerNeed', DailyPrayerNeed::where([
-            ['day_number', 5]
-        ])->first());
+//        View::share('dailyBibleReadingFragments', DailyBibleReadingFragment::where([
+//            ['month_number',5],
+//            ['day_number', 23]
+//        ])->get());
+//
+//        View::share('biblePrayerNeed', DailyPrayerNeed::where([
+//            ['day_number', 5]
+//        ])->first());
     }
 }
