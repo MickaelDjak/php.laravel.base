@@ -12,7 +12,8 @@ class BibleController extends Controller
 {
     public function index($translation = 'rst66')
     {
-        $bibleTranslation = BibleTranslate::find($translation);
+        $bibleTranslations = BibleTranslate::all();
+        $bibleTranslation = $bibleTranslations->find($translation);
 
         $bookTypes = BibleBookType::with(['book' => function ($query) use ($translation) {
             $query->where('translation_code', $translation);
@@ -25,6 +26,7 @@ class BibleController extends Controller
 
 
         return view('bible.index', [
+            'translations' => $bibleTranslations,
             'translation' => $bibleTranslation,
             'oldTestament' => $bookTypes->filter(function ($bbt) {
                 return $bbt->testament_code === 'old';
@@ -43,6 +45,12 @@ class BibleController extends Controller
 
     public function chapter($translation, $book, $chapter = 1)
     {
+        $bibleTranslations = BibleTranslate::all();
+        $bibleBook = BibleBook::where([
+            ['translation_code', $translation],
+            ['type_code', $book]
+        ])->first();
+
         $verses = BibleVerse::where([
             ['translation_code', $translation],
             ['book_code', $book],
@@ -50,7 +58,10 @@ class BibleController extends Controller
         ])->orderBy('verse_number')->get();
 
         return view('bible.page', [
-            'verses' => $verses
+            'translations' => $bibleTranslations,
+            'verses' => $verses,
+            'bibleBook' => $bibleBook,
+            'chapter' => $chapter
         ]);
     }
 }

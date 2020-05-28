@@ -41,7 +41,7 @@
 
         <div class="row">
             <div class="columns small-12 medium-8">
-                @include('blocks.comments.list')
+                @yield('comments')
             </div>
         </div>
     </div>
