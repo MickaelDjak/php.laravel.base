@@ -5,7 +5,7 @@
 <div class="gnc-sidebar-section">
     <h4>Біблія за рік</h4>
     @foreach($dailyBibleReadingFragments as $fragment)
-        <p>{{$fragment->part_of_day}} <a target="_blank" href="https://bibleonline.ru/bible/rst66/{{$fragment->book_shortcut}}-{{$fragment->text_fragment}}">Читать</a></p>
+        <p>{{$fragment->part_of_day}} <a target="_blank" href="/bible/rst66/{{$fragment->book_shortcut}}/{{$fragment->text_fragment}}">Читать</a></p>
     @endforeach
 </div>
 
