@@ -14,15 +14,15 @@ class CalendarController extends Controller
      */
     public function index()
     {
-        try {
-            $p = new BibleVersesParser();
-            $p->run();
-
-        } catch (\Throwable$e) {
-            print_r($e->getMessage());
-            print_r($e);
-        }
-        exit;
+//        try {
+//            $p = new BibleVersesParser();
+//            $p->run();
+//
+//        } catch (\Throwable$e) {
+//            print_r($e->getMessage());
+//            print_r($e);
+//        }
+//        exit;
 
         return view('pages.calendar', ['meetings' => ChurchMeeting::getLast()]);
     }
