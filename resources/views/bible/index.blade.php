@@ -10,12 +10,12 @@
 
         <div class="row">
             @include('bible.testament_section', [
-        'testamentType' => 'Ветхий Завет',
+        'testamentType' => $oldTestamentName,
         'sectionList' => $oldSection,
         'bootTypeList' => $oldTestament
         ])
             @include('bible.testament_section', [
-        'testamentType' => 'Новый Завет',
+        'testamentType' => $newTestamentName,
         'sectionList' => $newSection,
         'bootTypeList' => $newTestament
         ])

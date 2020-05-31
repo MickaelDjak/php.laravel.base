@@ -17,65 +17,40 @@ class BibleVersesParser
      */
     public function run()
     {
-        $translation = 'rst66';
+        $translation = 'ubio';
         $books = BibleBook::where('translation_code', $translation)
-            ->whereIn('type_code', ['jas',
-                '1pe',
-                '2pe',
-                '1jn',
-                '2jn',
-                '3jn',
-                'jud',
-                'rom',
-                '1co',
-                '2co',
-                'gal',
-                'eph',
-                'php',
-                'col',
-                '1th',
-                '2th',
-                '1ti',
-                '2ti',
-                'tit',
-                'phm',
-                'heb',
-                'rev',])
-//            ->whereIn('type_code', ['oba'])
+            ->whereIn('type_code', [
+'jas',
+'1pe',
+'2pe',
+'1jn',
+'2jn',
+'3jn',
+'jud',
+'rom',
+'1co',
+'2co',
+'gal',
+'eph',
+'php',
+'col',
+'1th',
+'2th',
+'1ti',
+'2ti',
+'tit',
+'phm',
+'heb',
+'rev',
+
+
+
+
+
+            ])
             ->orderBy('id', 'asc')
             ->get();
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// matmrklukjhnact
-
-
-
-
-//        print_r($books->toArray());
-//        exit;
         echo '<pre>';
         foreach ($books as $book) {
             $code = $book->type_code;
@@ -100,7 +75,7 @@ class BibleVersesParser
 
         $response = Http::get('https://api.bibleonline.ru/bible', [
             "trans" => $translation,
-            "q" => in_array($bookCode, ['2jn','3jn','phm','jud'])  ? $bookCode :$bookCode . " " . $chapterNumber
+            "q" => in_array($bookCode, ['2jn','3jn','phm','jud','oba'])  ? $bookCode :$bookCode . " " . $chapterNumber
         ]);
 
         $str = $response->body();

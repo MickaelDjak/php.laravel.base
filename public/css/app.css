@@ -3466,7 +3466,7 @@ table.hover:not(.unstriped) tr:nth-of-type(even):hover {
   position: absolute;
   z-index: 10;
   display: none;
-  width: 300px;
+  width: 400px;
   padding: 1rem;
   visibility: hidden;
   border: 1px solid #cacaca;
@@ -7752,16 +7752,10 @@ input[type=checkbox]:checked ~ .accordion-child {
   font-size: 1.2em;
   font-weight: 600;
   color: #ffffff;
-  text-transform: uppercase;
   letter-spacing: 1.5px;
-  padding-bottom: 0;
-  margin: 2em auto;
   align-self: center;
+  margin: 2rem auto;
   font-size: 1em;
-}
-
-.gnc-verse-of-day-source:hover {
-  color: #5aa11b;
 }
 
 .gnc-verse-of-day-source-context {
@@ -7769,17 +7763,12 @@ input[type=checkbox]:checked ~ .accordion-child {
   font-size: 0.9em;
   font-weight: 500;
   color: #ffffff;
-  text-transform: uppercase;
   letter-spacing: 1.5px;
   font-size: 0.8em;
 }
 
 .gnc-verse-of-day .slick-slider {
   margin-bottom: 0px;
-}
-
-.gnc-verse-of-day-source {
-  padding-bottom: 2rem;
 }
 
 .gnc-verse-of-day-link {
@@ -8078,6 +8067,12 @@ input[type=checkbox]:checked ~ .accordion-child {
   height: auto;
   padding-left: 10px;
   vertical-align: middle;
+  transition: all 200ms;
+}
+
+.gnc-navigation-logo:hover {
+  transform: scale(1.05);
+  transition: all 200ms;
 }
 
 @media print, screen and (max-width: 63.99875em) {
@@ -8462,5 +8457,10 @@ input[type=checkbox]:checked ~ .accordion-child {
 
 .gnc-bible-book-info {
   float: right;
+}
+
+.gnc-bible-chapter-item {
+  display: inline-block;
+  width: 32px;
 }
 

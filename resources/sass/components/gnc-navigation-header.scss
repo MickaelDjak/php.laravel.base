@@ -8,6 +8,12 @@
         height: auto;
         padding-left: 10px;
         vertical-align: middle;
+        transition: all 200ms;
+
+        &:hover {
+            transform: scale(1.05);
+            transition: all 200ms;
+        }
 
         @include breakpoint(medium down) {
             width: 230px;

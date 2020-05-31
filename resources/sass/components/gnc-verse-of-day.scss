@@ -39,16 +39,9 @@
         font-size: 1.2em;
         font-weight: 600;
         color: #ffffff;
-        text-transform: uppercase;
         letter-spacing: 1.5px;
-        padding-bottom: 0;
-        margin: 2em auto;
         align-self: center;
-
-        &:hover {
-            color: $gnc-active-link;
-        }
-
+        margin: 2rem auto;
         @include breakpoint(small) {
             font-size: 1.0em;
         }
@@ -59,7 +52,6 @@
         font-size: 0.9em;
         font-weight: 500;
         color: #ffffff;
-        text-transform: uppercase;
         letter-spacing: 1.5px;
 
         @include breakpoint(small) {
@@ -69,10 +61,6 @@
 
     .slick-slider {
         margin-bottom: 0px;
-    }
-
-    &-source {
-        padding-bottom: 2rem;;
     }
 
     &-link {
