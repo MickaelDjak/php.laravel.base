@@ -22,7 +22,7 @@
 @section('pagination')
     <div class="row ">
         <div class="column">
-            @include('blocks.pagination.pagination')
+            {{$posts->links('blocks.pagination.index')}}
         </div>
     </div>
 @endsection

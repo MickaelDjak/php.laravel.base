@@ -11,7 +11,7 @@
         </ul>
     </div>
     <div class="description">
-        <h1> <a href="{{ route('event_page') }}"> {{$event->title}}</a> </h1>
+        <h1> <a href="{{ route('event_page', ['slug' => $event->slug]) }}"> {{$event->title}}</a> </h1>
         <section class="tag-cloud-section">
             <div class="tag-cloud">
                 <a class="tag-cloud-individual-tag" href="#">Peanut</a>
@@ -21,7 +21,7 @@
         </section>
         <p>{{$event->preview_text}}</p>
         <p class="read-more">
-            <a href="{{ route('event_page') }}">Узнать больше</a>
+            <a href="{{ route('event_page', ['slug' => $event->slug]) }}">Узнать больше</a>
         </p>
     </div>
 </div>

@@ -9,7 +9,7 @@
     <header class="gnc-preaching-card-25d4-header" style="background-image: url('{{ $preaching->image }}')"></header>
 
     <main  class="gnc-preaching-card-25d4-main">
-        <h3 class="title"><a href="{{route('preaching_page')}}">{{ $preaching->title }}</a></h3>
+        <h3 class="title"><a href="{{route('preaching_page', ['slug' => $preaching->slug])}}">{{ $preaching->title }}</a></h3>
         <p>{{ $preaching->preview_text }}</p>
         <p><b>Кто:</b> Смоленников Валерий</p>
         <p><b>Отрывок:</b> Івана 21:1-19</p>
@@ -20,7 +20,7 @@
         <a href="#"><label for="show-menu-{{$id}}-s0">Читать</label></a>
         <a href="#"><label for="show-menu-{{$id}}-s1">Слушать</label></a>
         <a href="#"><label for="show-menu-{{$id}}-s2">Смотреть</label></a>
-        <a href="{{route('preaching_page')}}">Перейти</a>
+        <a href="{{route('preaching_page', ['slug' => $preaching->slug])}}">Перейти</a>
     </nav>
     <ul class="gnc-preaching-card-25d4-content accordion">
         <li class="accordion-item">

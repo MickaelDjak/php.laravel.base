@@ -54,6 +54,7 @@ class BibleController extends Controller
 
     public function chapter($translation, $book, $text = 1)
     {
+
         $fragment = Parser::parse($text);
 
         $bibleTranslations = BibleTranslate::all();

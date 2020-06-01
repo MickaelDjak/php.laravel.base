@@ -13,6 +13,6 @@ $factory->define(Post::class, function (Faker $faker) {
         'image' => 'img/posts/fall-autumn-red-season.jpg',
         'author_id' => null,
         'status' => 1,
-        'slug' => 'slag',
+//        'slug' => 'slag',
     ];
 });

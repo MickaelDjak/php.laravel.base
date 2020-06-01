@@ -6,16 +6,16 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'HomeController@index')->name('home');
 
 Route::get('/posts', 'PostController@index')->name('posts');
-Route::view('/posts/page', 'posts.page')->name('post_page');
+Route::get('/post/{slug}', 'PostController@show')->name('post_page');
 
 Route::get('/preachings', 'PreachingController@index')->name('preachings');
-Route::view('/preachings/page', 'preachings.page')->name('preaching_page');
+Route::get('/preaching/{slug}', 'PreachingController@show')->name('preaching_page');
 
 Route::get('/events', 'EventController@index')->name('events');
-Route::view('/events/page', 'events.page')->name('event_page');
+Route::get('/event/{slug}', 'EventController@show')->name('event_page');
 
-Route::get('/bible/{translation?}', 'BibleController@index')->name('bible');
 Route::get('/bible/{translation}/{book}/{chapter?}', 'BibleController@chapter')->name('bible_page');
+Route::get('/bible/{translation?}', 'BibleController@index')->name('bible');
 
 Route::get('/calendar', 'CalendarController@index')->name('calendar');
 

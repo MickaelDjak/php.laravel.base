@@ -12,9 +12,8 @@ class PostSeeder extends Seeder
     public function run()
     {
         $user = \App\User::all()->first();
-        factory(\App\Models\Post::class, 10)->make()->each(function (\App\Models\Post $post, $key) use ($user) {
+        factory(\App\Models\Post::class, 30)->make()->each(function (\App\Models\Post $post, $key) use ($user) {
             $post->author_id = $user->id;
-            $post->slug .= $key;
             $post->save();
         });
     }

@@ -25,6 +25,5 @@ $factory->define(Event::class, function (Faker $faker) {
         'image' => 'img/events/image-2.jpg',
         'author_id' => null,
         'status' => 1,
-        'slug' => 'slag',
     ];
 });

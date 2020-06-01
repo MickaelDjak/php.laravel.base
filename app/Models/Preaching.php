@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Database\Eloquent\Model;
 
 /**
@@ -22,5 +23,16 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Preaching extends Model
 {
-    //
+    use Sluggable;
+
+    public function sluggable()
+    {
+        return [
+            'slug' => [
+                'source' => 'title',
+                'maxLength' => 50,
+                'maxLengthKeepWords' => true,
+            ]
+        ];
+    }
 }

@@ -23,7 +23,7 @@
 @section('pagination')
     <div class="row ">
         <div class="column">
-            @include('blocks.pagination.pagination')
+            {{$events->links('blocks.pagination.index')}}
         </div>
     </div>
 @endsection

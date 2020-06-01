@@ -3,12 +3,16 @@
 namespace App\Http\Controllers;
 
 use App\Models\Preaching;
-use Illuminate\Http\Request;
 
 class PreachingController extends Controller
 {
     public function index()
     {
-        return view('preachings.index', ['preachings' => Preaching::all()]);
+        return view('preachings.index', ['preachings' => Preaching::paginate(5)]);
+    }
+
+    public function show($slag)
+    {
+        return view('preachings.page', ['preaching' => Preaching::where('slug', $slag)->first()]);
     }
 }

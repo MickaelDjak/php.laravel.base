@@ -14,7 +14,5 @@ $factory->define(Preaching::class, function (Faker $faker) {
         'audio_url' => 'audio/song.mp3',
         'author_id' => null,
         'status' => 1,
-        'slug' => 'slug',
-
     ];
 });

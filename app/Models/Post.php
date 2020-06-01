@@ -3,6 +3,8 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Cviebrock\EloquentSluggable\Sluggable;
+
 
 /**
  * Class Post
@@ -20,5 +22,16 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Post extends Model
 {
-    //
+    use Sluggable;
+
+    public function sluggable()
+    {
+        return [
+            'slug' => [
+                'source' => 'title',
+                'maxLength' => 50,
+                'maxLengthKeepWords' => true,
+            ]
+        ];
+    }
 }
