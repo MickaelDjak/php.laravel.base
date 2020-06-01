@@ -37,16 +37,15 @@ class Parser
      */
     private static function split($fragment)
     {
-        [$chapter, $verses] = [1, 1];
         if (strpos($fragment, '.')) {
-            [$chapter, $verses] = self::explode('.', $fragment);
+            return self::explode('.', $fragment);
         }
 
         if (strpos($fragment, ':')) {
-            [$chapter, $verses] = self::explode(':', $fragment);
+            return self::explode(':', $fragment);
         }
 
-        return [$chapter, $verses];
+        return [$fragment, 1];
     }
 
     /**
