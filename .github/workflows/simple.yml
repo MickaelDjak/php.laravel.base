@@ -1,0 +1,15 @@
+name: Shall command
+
+on: [push]
+
+jobs:
+  run-shell-command:
+    runs_on: ubuntu-latest
+    steps:
+      - name: Echo a string
+        run: echo "Hellow gnc site"
+      - name: multiline script
+        run: |
+          node -v
+          npm -v
+          php --version
