@@ -17,6 +17,8 @@ Route::get('/event/{slug}', 'EventController@show')->name('event_page');
 Route::get('/bible/{translation}/{book}/{chapter?}', 'BibleController@chapter')->name('bible_page');
 Route::get('/bible/{translation?}', 'BibleController@index')->name('bible');
 
+Route::get('/tag/{teg_id}', 'TagController@show')->name('tag_page');
+
 Route::get('/calendar', 'CalendarController@index')->name('calendar');
 
 Route::view('/about', 'pages.about')->name('about');

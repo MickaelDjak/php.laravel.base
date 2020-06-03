@@ -1,14 +1,26 @@
 <?php
 
-/** @var \Illuminate\Database\Eloquent\Factory $factory */
 
-use App\Models\Tag;
-use Faker\Generator as Faker;
+function getTags()
+{
+    $collection = collect([
+        'Иисус Навин',
+        'Судьи',
+        'Руфь',
+        'Деяния',
+        '1 Иоанна',
+        'Иуда',
+        '1 Коринфянам',
+        '2 Фессалоникийцам',
+        'Спасение',
+        'Грех',
+        'Прощение',
+        'Ипытание',
+        'Неудачи',
+        'Соры',
+        'Люовь',
+    ]);
 
-$factory->define(Tag::class, function (Faker $faker) {
-    return [
-//        $name
-//      $slug
-//      $description
-    ];
-});
+
+    return $collection->shuffle()->splice(0, random_int(1, 7));
+}

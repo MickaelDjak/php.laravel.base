@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddOrderingToBibleSectionTypes extends Migration
+class DeleteTagOtherTablePivotTables extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,10 @@ class AddOrderingToBibleSectionTypes extends Migration
      */
     public function up()
     {
-        Schema::table('bible_section_types', function (Blueprint $table) {
-            $table->addColumn('integer', 'ordering')->default(0);
-        });
+        Schema::dropIfExists('event_tag');
+        Schema::dropIfExists('post_tag');
+        Schema::dropIfExists('preaching_tag');
+        Schema::dropIfExists('tags');
     }
 
     /**
@@ -25,8 +26,6 @@ class AddOrderingToBibleSectionTypes extends Migration
      */
     public function down()
     {
-        Schema::table('bible_section_types', function (Blueprint $table) {
-            $table->dropColumn('ordering');
-        });
+        //
     }
 }

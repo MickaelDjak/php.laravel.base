@@ -14,7 +14,7 @@ class AddTestamentCodeToBibleSectionTypes extends Migration
     public function up()
     {
         Schema::table('bible_section_types', function (Blueprint $table) {
-            $table->string('testament_code');
+            $table->string('testament_code')->default('old');
         });
     }
 

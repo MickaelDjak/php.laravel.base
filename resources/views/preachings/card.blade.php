@@ -10,6 +10,7 @@
 
     <main  class="gnc-preaching-card-25d4-main">
         <h3 class="title"><a href="{{route('preaching_page', ['slug' => $preaching->slug])}}">{{ $preaching->title }}</a></h3>
+        @include('blocks.tags.list',['tags' => $preaching->tags])
         <p>{{ $preaching->preview_text }}</p>
         <p><b>Кто:</b> Смоленников Валерий</p>
         <p><b>Отрывок:</b> Івана 21:1-19</p>

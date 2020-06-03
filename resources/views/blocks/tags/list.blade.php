@@ -1,19 +1,8 @@
-@php($list = [
-    'Peanut',
-    'Jelly',
-    'Grapes',
-    'Bread',
-    'Bananas',
-    'Chicken',
-    'LEmonaide',
-    'Cheese',
-    'Mayonaisse',
-    'Lettuce',
-])
-
 <section class="tag-cloud-section">
     <div class="tag-cloud">
-        @each('blocks.tags.item', $list, 'name')
+        @foreach($tags  as $tag)
+            <a class="tag-cloud-individual-tag" href="/tag/{{$tag->tag_id}}">{{$tag->name}}</a>
+        @endforeach
     </div>
 </section>
 
