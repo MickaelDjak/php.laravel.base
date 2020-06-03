@@ -8,7 +8,7 @@ class PreachingController extends Controller
 {
     public function index()
     {
-        return view('preachings.index', ['preachings' => Preaching::paginate(5)]);
+        return view('preachings.index', ['preachings' => Preaching::paginate(5)->onEachSide(3)]);
     }
 
     public function show($slag)

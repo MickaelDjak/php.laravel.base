@@ -8,7 +8,7 @@ class EventController extends Controller
 {
     public function index()
     {
-        return view('events.index', ['events' => Event::paginate(5)]);
+        return view('events.index', ['events' => Event::paginate(5)->onEachSide(3)]);
     }
 
     public function show($slag)

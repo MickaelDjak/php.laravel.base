@@ -9,7 +9,7 @@ class PostController extends Controller
 {
     public function index()
     {
-        return view('posts.index', ['posts' => Post::paginate(5)]);
+        return view('posts.index', ['posts' => Post::paginate(5)->onEachSide(3)]);
     }
 
     public function show($slag)

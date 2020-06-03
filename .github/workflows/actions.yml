@@ -1,0 +1,33 @@
+name: Shall command
+
+on:
+  push:
+  pull_request:
+    types: [closed, opened, reopened, assigned]
+
+jobs:
+  run-shell-command:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Varibles
+        run: |
+          echo $GITHUB_SHA
+          echo $GITHUB_REPOSITORY
+          echo "${{ github.token }}"
+      - name: Greating
+        id: greating
+        uses: actions/hello-world-docker-action@v1
+        with:
+          who-to-greet: Misha Djachenko
+      - name: Output of Greating
+        run: echo "${{ speps.greating.outputs.time }}"
+      - name: Before checkout
+        run: |
+          pwd
+          ls -a
+      - name: Checkout 
+        uses: actions/checkout@v2
+      - name: After checkout
+        run: |
+          pwd
+          ls -a
