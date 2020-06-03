@@ -68,27 +68,27 @@ jobs:
           DB_DATABASE: database/database.sqlite
         run: vendor/bin/phpunit
 
-    deploy:
-      name: Build and Deploy
-      needs: php-tests
-      runs-on: ubuntu-latest
-      steps:
-        - name: Checkout Repository
-          uses: actions/checkout@master
-        - name: Setup Enviroment
-          uses: shivammathur/setup-php@v2
-          with:
-            php-version: '7.4'
-        - name: Speed up the packages installation process
-          run: composer global require hirak/prestissimo
-        - name: Install Packages
-          run: composer install --no-dev
-        - name: Deploy to Server
-          uses: ngocquyhoang/deploy@laravel
-          with:
-            user: user
-            host: host
-            path: path
-            owner: owner
-          env:
-            DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
+  deploy:
+    name: Build and Deploy
+    needs: php-tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@master
+      - name: Setup Enviroment
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '7.4'
+      - name: Speed up the packages installation process
+        run: composer global require hirak/prestissimo
+      - name: Install Packages
+        run: composer install --no-dev
+      - name: Deploy to Server
+        uses: ngocquyhoang/deploy@laravel
+        with:
+          user: user
+          host: host
+          path: path
+          owner: owner
+        env:
+          DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
