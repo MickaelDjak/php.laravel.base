@@ -1,4 +1,4 @@
-name: Shall command
+name: Actions
 
 on:
   push:
