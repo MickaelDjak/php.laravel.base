@@ -20,7 +20,7 @@ jobs:
         with:
           who-to-greet: Misha Djachenko
       - name: Output of Greating
-        run: echo "${{ speps.greating.outputs.time }}"
+        run: echo "${{ steps.greating.outputs.time }}"
       - name: Before checkout
         run: |
           pwd
