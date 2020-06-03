@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Cviebrock\EloquentSluggable\Sluggable;
+use Cviebrock\EloquentTaggable\Taggable;
 use Illuminate\Database\Eloquent\Model;
 
 /**
@@ -24,6 +25,7 @@ use Illuminate\Database\Eloquent\Model;
 class Preaching extends Model
 {
     use Sluggable;
+    use Taggable;
 
     public function sluggable()
     {

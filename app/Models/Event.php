@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Database\Eloquent\Model;
+use Cviebrock\EloquentTaggable\Taggable;
 
 /**
  * Class Events
@@ -21,6 +22,7 @@ use Illuminate\Database\Eloquent\Model;
 class Event extends Model
 {
     use Sluggable;
+    use Taggable;
 
     public function sluggable()
     {

@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Cviebrock\EloquentTaggable\Taggable;
 use Illuminate\Database\Eloquent\Model;
 use Cviebrock\EloquentSluggable\Sluggable;
 
@@ -23,6 +24,7 @@ use Cviebrock\EloquentSluggable\Sluggable;
 class Post extends Model
 {
     use Sluggable;
+    use Taggable;
 
     public function sluggable()
     {
