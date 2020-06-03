@@ -14,7 +14,7 @@
     <div class="blog-card__head"></div>
     <div class="blog-card__info">
         <h5><a href="{{ route('post_page', ['slug' => $post->slug]) }}">{{ $post->title }}</a></h5>
-        @include('blocks.tags.list',['tags' => $event->tags])
+        @include('blocks.tags.list',['tags' => $post->tags])
         <p>
             <a href="#" class="icon-link mr-3"><i class="fa fa-pencil-square-o"></i> Tony Jahson</a>
             <a href="#" class="icon-link"><i class="fa fa-comments-o"></i> 150</a>
