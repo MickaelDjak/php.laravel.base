@@ -9,7 +9,6 @@ jobs:
 
   actions:
     runs-on: ubuntu-latest
-    needs: shell
     steps:
       - name: multiline script
         run: php --version
