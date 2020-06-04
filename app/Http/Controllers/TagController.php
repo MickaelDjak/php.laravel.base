@@ -39,9 +39,15 @@ class TagController extends Controller
         $tag = Tag::find($tagId);
 
 
-        $posts = Post::withAllTags($tag->name)->orderBy('created_at')->get();
-        $events = Event::withAllTags($tag->name)->orderBy('created_at')->get();
-        $preachings = Preaching::withAllTags($tag->name)->orderBy('created_at')->get();
+        $posts = Post::withAllTags($tag->name)
+//            ->orderBy('created_at')
+            ->get();
+        $events = Event::withAllTags($tag->name)
+//            ->orderBy('created_at')
+            ->get();
+        $preachings = Preaching::withAllTags($tag->name)
+//            ->orderBy('created_at')
+            ->get();
 
         $list = collect($posts)->merge($events)->merge($preachings)->sortBy('created_at');
 
