@@ -8464,3 +8464,32 @@ input[type=checkbox]:checked ~ .accordion-child {
   width: 32px;
 }
 
+.gnc-tag-review-34fe {
+  display: flex;
+  flex-direction: column;
+}
+
+.gnc-tag-review-34fe-item {
+  border-bottom: 1px solid #71b9b1;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.gnc-tag-review-34fe-item:last-child {
+  border-bottom: none;
+}
+
+.gnc-tag-review-34fe-item--type {
+  color: #999999;
+  /* margin: 0; */
+  margin-bottom: 4px;
+}
+
+.gnc-tag-review-34fe-item--time {
+  display: inline-block;
+  color: #2c3840;
+  width: 55px;
+  font-weight: 900;
+}
+

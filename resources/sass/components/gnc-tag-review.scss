@@ -1,0 +1,28 @@
+.gnc-tag-review-34fe {
+    display: flex;
+    flex-direction: column;
+
+    &-item {
+        border-bottom: 1px solid $secondary;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1rem;
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+        &--type {
+            color: #999999;
+            /* margin: 0; */
+            margin-bottom: 4px;
+        }
+
+        &--time {
+            display: inline-block;
+            color: $gnc-navigation-background;
+            width: 55px;
+            font-weight: 900;
+        }
+    }
+}

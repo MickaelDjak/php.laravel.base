@@ -45,6 +45,7 @@ class ExampleTest extends TestCase
 
         $response->assertStatus(200);
     }
+
     /**
      * A basic test example.
      *
@@ -53,6 +54,78 @@ class ExampleTest extends TestCase
     public function testPreachingsPageTest()
     {
         $response = $this->get('/preachings');
+
+        $response->assertStatus(200);
+    }
+
+//    /**
+//     * A basic test example.
+//     *
+//     * @return void
+//     */
+//    public function testBiblePageTest()
+//    {
+//        $response = $this->get('/bible');
+//
+//        $response->assertStatus(200);
+//    }
+
+    /**
+     * A basic test example.
+     *
+     * @return void
+     */
+    public function testMinistryPageTest()
+    {
+        $response = $this->get('/ministry');
+
+        $response->assertStatus(200);
+    }
+
+    /**
+     * A basic test example.
+     *
+     * @return void
+     */
+    public function testCredoPageTest()
+    {
+        $response = $this->get('/credo');
+
+        $response->assertStatus(200);
+    }
+
+    /**
+     * A basic test example.
+     *
+     * @return void
+     */
+    public function testContactPageTest()
+    {
+        $response = $this->get('/contact');
+
+        $response->assertStatus(200);
+    }
+
+    /**
+     * A basic test example.
+     *
+     * @return void
+     */
+    public function testAboutPageTest()
+    {
+        $response = $this->get('/about');
+
+        $response->assertStatus(200);
+    }
+
+    /**
+     * A basic test example.
+     *
+     * @return void
+     */
+    public function testGalleryPageTest()
+    {
+        $response = $this->get('/gallery');
 
         $response->assertStatus(200);
     }

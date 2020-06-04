@@ -18,9 +18,8 @@ function getTags()
         'Ипытание',
         'Неудачи',
         'Соры',
-        'Люовь',
+        'Любовь',
     ]);
-
 
     return $collection->shuffle()->splice(0, random_int(1, 7));
 }

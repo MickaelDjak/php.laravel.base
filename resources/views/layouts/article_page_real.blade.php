@@ -16,20 +16,24 @@
             </div>
         </div>
 
-        @yield('marker')
 
-        @yield('author')
 
+
+
+                    @yield('marker')
         <div class="row post-article-content ">
             <div class="columns small-12 medium-8 article-content">
                 @yield('headline')
                 <div class="article-content">
+                    @yield('tags')
                     @yield('slides')
                     @yield('video')
                     @yield('audio')
                 </div>
 
                 @yield('text')
+
+                @yield('author')
             </div>
 
             <div class="columns small-12 medium-4 article-content">

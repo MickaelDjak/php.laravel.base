@@ -10,8 +10,6 @@ jobs:
   actions:
     runs-on: ubuntu-latest
     steps:
-      - name: multiline script
-        run: php --version
       - name: Varibles
         run: |
           echo $GITHUB_SHA
@@ -22,18 +20,12 @@ jobs:
         uses: actions/hello-world-docker-action@v1
         with:
           who-to-greet: Misha Djachenko
-      - name: Output of Greating
-        run: echo "${{ steps.greating.outputs.time }}"
       - name: Before checkout
         run: |
+          php --version
           pwd
           ls -a
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: After checkout
-        run: |
-          pwd
-          ls -a
+          echo "${{ steps.greating.outputs.time }}"
 
   php-tests:
     name: Php unit test
