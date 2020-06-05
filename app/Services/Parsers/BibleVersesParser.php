@@ -17,9 +17,10 @@ class BibleVersesParser
      */
     public function run()
     {
-        $translationInsert = 'ubio';
+        $translation = 'ubio';
+        $translationFetchAs = 'ukr';
 
-        $books = BibleBook::where('translation_code', $translationInsert)
+        $books = BibleBook::where('translation_code', $translation)
             ->whereIn('type_code', [
 'jas',
 '1pe',
@@ -47,20 +48,19 @@ class BibleVersesParser
 
 
 
-
             ])
             ->orderBy('id', 'asc')
             ->get();
 
-                $translationSelect = 'ukr';
+                $translationFetchAs = 'ukr';
         echo '<pre>';
         foreach ($books as $book) {
             $code = $book->type_code;
             print_r($code . '<br/>');
             foreach (range(1, $book->number_of_chapters) as $chapterNumber) {
                 print_r($chapterNumber . '<br/>');
-                $verses = $this->parse($translationSelect, $code, $chapterNumber);
-                $this->insert($verses, $translationInsert, $code);
+                $verses = $this->parse($translationFetchAs, $code, $chapterNumber);
+                $this->insert($verses, $translation, $code);
 
             }
         }
