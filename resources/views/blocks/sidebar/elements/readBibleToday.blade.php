@@ -1,5 +1,5 @@
 <div class="gnc-sidebar-section">
-    <h4>Читаем Библию</h4>
+    <h4>@lang('navigation.read_bible')</h4>
     @foreach($dailyBibleReadingFragments->groupBy('part_of_day') as $fragmentsGroupedByDay)
         <p>{{$fragmentsGroupedByDay->first()->part_of_day}}
             @foreach($fragmentsGroupedByDay->groupBy('book_shortcut') as $fragmentsGroupedByBook)

@@ -6,7 +6,7 @@
         <span class="month">Aug</span>
         <span class="year">2016</span>
     </div>
-    <header class="gnc-preaching-card-25d4-header" style="background-image: url('{{ $preaching->image }}')"></header>
+    <header class="gnc-preaching-card-25d4-header" style="background-image: url('{{ url($preaching->image) }}')"></header>
 
     <main  class="gnc-preaching-card-25d4-main">
         <h3 class="title"><a href="{{route('preaching_page', ['slug' => $preaching->slug])}}">{{ $preaching->title }}</a></h3>

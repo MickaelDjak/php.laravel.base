@@ -6,7 +6,7 @@
     </div>
     <div class="blog-card__background">
         <div class="card__background--wrapper">
-            <div class="card__background--main" style="background-image: url('{{ $post->image }}');">
+            <div class="card__background--main" style="background-image: url('{{ url($post->image) }}');">
                 <div class="card__background--layer"></div>
             </div>
         </div>

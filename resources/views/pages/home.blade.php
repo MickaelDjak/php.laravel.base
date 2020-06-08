@@ -7,19 +7,20 @@
 @section('common_top')
     @component('blocks.title.title')
         @slot('name')
-            Служения
+            @lang('navigation.ministry')
         @endslot
 
-        {{ url('/ministry') }}
+        {{ route('ministry') }}
     @endcomponent
 
     @include('blocks.services.index')
 
     @component('blocks.title.title')
         @slot('name')
-            Календарь
+            @lang('navigation.calendar')
         @endslot
-        {{ url('/calendar') }}
+
+        {{ route('calendar') }}
     @endcomponent
 
     @include('calendar.home.list')
@@ -31,7 +32,7 @@
             @lang('navigation.events')
         @endslot
 
-        {{ url('/events') }}
+        {{ route('events') }}
     @endcomponent
 
     <section class="row">
@@ -47,7 +48,7 @@
             @lang('navigation.blog')
         @endslot
 
-        {{ url('/posts')  }}
+        {{ route('posts')  }}
     @endcomponent
 
     <div class="row">
@@ -63,7 +64,7 @@
             @lang('navigation.preaching')
         @endslot
 
-        {{ url('/preachings') }}
+        {{ route('preachings') }}
     @endcomponent
 
     <div class="row ">
@@ -79,41 +80,10 @@
     <div class="gnc-form-box">
         @component('blocks.title.title')
             @slot('name')
-                Задать вопрос пастору
+                @lang('navigation.ask_question')
             @endslot
         @endcomponent
 
-        <div class="row">
-            <div class="small-12 medium-6 column ">
-                <div class="gnc-form-box-info-graph">
-                    <img src="img/undraw/undraw_faq_rjoy.svg" alt="Kiwi standing on oval"/>
-                </div>
-            </div>
-            <div class="small-12 medium-6 column ">
-                <h2 class="gnc-form-box-title"></h2>
-                <div class="grid-container">
-                    <div class="grid-x grid-padding-x">
-                        <div class="medium-12 cell">
-                            <label for="name">{{ __('Имя') }}</label>
-                            <input class="gnc-form-box-input" id="name" type="text" name="name" required/>
-                        </div>
-
-                        <div class="medium-12 cell">
-                            <label for="email">{{ __('E-Mail') }}</label>
-                            <input class="gnc-form-box-input" id="email" type="email" required autocomplete="email">
-                        </div>
-
-                        <div class="medium-12 cell">
-                            <label for="question">{{ __('Вопрос') }}</label>
-                            <textarea class="gnc-form-box-input" id="question"></textarea>
-                        </div>
-
-                        <div class="medium-12 cell">
-                            <button type="submit" class="button"> Задать вопрос</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        @include('blocks.ask_question.ask_question')
     </div>
 @endsection

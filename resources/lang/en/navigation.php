@@ -1,0 +1,30 @@
+<?php
+
+return [
+    'main' => 'Main',
+    'blog' => 'Blog',
+    'preaching' => 'Preaching',
+    'events' => 'Events',
+    'about_as' => 'About church',
+    'name' => 'Церковь Добрая весть',
+    'address' => 'г Харьков ул Танкопия 88',
+    'mailing' => 'Получать рассылку',
+    'mailing_text' => 'Вы будете получать письма с статьями, новостями, будущими событиями',
+    'mailing_input' => 'Indicate your email',
+    'subscribe' => 'Subscribe',
+    'right' => 'Все права принадлежат Харьковскому ООЦ ЕХБ',
+    'view_all_items' => 'View all',
+
+    'gallery' => 'Gallery',
+    'ministry' => 'Ministry',
+    'calendar' => 'Calendar',
+    'credo' => 'Credo',
+    'contacts' => 'Contacts',
+    'bible' => 'Bible',
+    'language' => 'Language',
+    'all_resources' => 'All resources',
+    'ask_question' => 'Ask a question to the Pastor',
+    'read_bible' => 'Read the Bible',
+    'we_pray' => 'We pray',
+    'sacrifice' => 'Sacrifice',
+];

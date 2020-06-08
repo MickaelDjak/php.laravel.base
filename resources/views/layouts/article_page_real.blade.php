@@ -16,11 +16,8 @@
             </div>
         </div>
 
+        @yield('marker')
 
-
-
-
-                    @yield('marker')
         <div class="row post-article-content ">
             <div class="columns small-12 medium-8 article-content">
                 @yield('headline')
@@ -46,6 +43,7 @@
         <div class="row">
             <div class="columns small-12 medium-8">
                 @yield('comments')
+                @yield('ask_question')
             </div>
         </div>
     </div>

@@ -19,7 +19,7 @@
                                 <div class="medium-12 cell">
                                     <label for="email">{{ __('E-Mail') }}</label>
 
-                                    <input class="gnc-form-box-input" id="email" type="email" required
+                                    <input class="gnc-form-box-input" id="email" name="email" type="email" required
                                            autocomplete="email" autofocus>
 
                                     @error('email')
@@ -56,9 +56,7 @@
 
                                 <div class="medium-12 cell">
                                     @if (Route::has('password.request'))
-                                        <a class="btn btn-link" href="{{ route('password.request') }}">
-                                            {{ __('Забыли пороль?') }}
-                                        </a>
+                                        <a href="{{ route('password.request') }}"> {{ __('Забыли пороль?') }} </a>
                                     @endif
                                 </div>
 

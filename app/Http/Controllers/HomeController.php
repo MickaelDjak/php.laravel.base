@@ -26,8 +26,9 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+    public function home()
     {
+        $a = 1;
         return view('pages.home', [
             'events' => Event::where('status', 1)->limit(3)->get(),
             'posts' => Post::where('status', 1)->limit(3)->get(),

@@ -1,70 +1,44 @@
 <?php
 
+use App\Services\Locale\Locale;
 use Illuminate\Support\Facades\Route;
 
-//Route::view('/', 'pages.home')->name('home');
-Route::get('/', 'HomeController@index')->name('home');
+Route::group([
+    'prefix' => Locale::get()
+], static function () {
 
-Route::get('/posts', 'PostController@index')->name('posts');
-Route::get('/post/{slug}', 'PostController@show')->name('post_page');
+    Route::get('/', [\App\Http\Controllers\HomeController::class, 'home'])->name('home');
+    Route::get('/home', [\App\Http\Controllers\HomeController::class, 'home'])->name('home');
 
-Route::get('/preachings', 'PreachingController@index')->name('preachings');
-Route::get('/preaching/{slug}', 'PreachingController@show')->name('preaching_page');
+    Route::get('/posts', [\App\Http\Controllers\PostController::class, 'index'])->name('posts');
+    Route::get('/post/{slug}', [\App\Http\Controllers\PostController::class, 'show'])->name('post_page');
 
-Route::get('/events', 'EventController@index')->name('events');
-Route::get('/event/{slug}', 'EventController@show')->name('event_page');
+    Route::get('/preachings', [\App\Http\Controllers\PreachingController::class, 'index'])->name('preachings');
+    Route::get('/preaching/{slug}', [\App\Http\Controllers\PreachingController::class, 'show'])->name('preaching_page');
 
-Route::get('/bible/{translation}/{book}/{chapter?}', 'BibleController@chapter')->name('bible_page');
-Route::get('/bible/{translation?}', 'BibleController@index')->name('bible');
+    Route::get('/events', [\App\Http\Controllers\EventController::class, 'index'])->name('events');
+    Route::get('/event/{slug}', [\App\Http\Controllers\EventController::class, 'show'])->name('event_page');
 
-Route::get('/tag/{teg_id}', 'TagController@show')->name('tag_page');
+    Route::get('/bible/{translation}/{book}/{chapter?}', [\App\Http\Controllers\BibleController::class, 'chapter'])->name('bible_page');
+    Route::get('/bible/{translation?}', [\App\Http\Controllers\BibleController::class, 'index'])->name('bible');
 
-Route::get('/calendar', 'CalendarController@index')->name('calendar');
+    Route::get('/tag/{teg_id}', [\App\Http\Controllers\TagController::class, 'show'])->name('tag_page');
 
-Route::view('/about', 'pages.about')->name('about');
-Route::view('/subscribe', 'pages.subscribe')->name('subscribe');
-Route::view('/gallery', 'pages.gallery')->name('gallery_list');
-Route::view('/contact', 'pages.contacts')->name('contacts');
-Route::view('/ministry', 'pages.ministry')->name('ministry');
-Route::view('/credo', 'pages.credo')->name('credo');
-Route::view('/prayer_list', 'pages.prayer_list')->name('prayer_list');
+    Route::get('/calendar', [\App\Http\Controllers\CalendarController::class, 'index'])->name('calendar');
 
+    Route::view('/about', 'pages.about')->name('about');
+    Route::view('/subscribe', 'pages.subscribe')->name('subscribe');
+    Route::view('/gallery', 'pages.gallery')->name('gallery_list');
+    Route::view('/contact', 'pages.contacts')->name('contacts');
+    Route::view('/ministry', 'pages.ministry')->name('ministry');
+    Route::view('/credo', 'pages.credo')->name('credo');
+    Route::view('/prayer_list', 'pages.prayer_list')->name('prayer_list');
 
-//
-//Route::get('/post/{id}/{name?}', function ($id, $name ='undefined') {
-//
-//    return response()->json([
-//        $id,
-//        $name
-//    ]);
-//    $data =  [
-//        null => [
-//            'title' => 'hello undefined'/img/banners/preachings-1.png
-//        ],
-//        1 => [
-//            'title' => 'hello 1'
-//        ],
-//        2 => [
-//            'title' => 'hello 22'
-//        ],
-//    ];
-//
-//    return view('blog', [
-//        'data' => $data[$id]
-//    ]);
-//});
-//
+    Auth::routes(['verify' => true]);
+});
 
-//Route::resource('/news', 'News');
+Route::get('setlocale/{lang}', [\App\Http\Controllers\LocaleController::class, 'index'])->name('setlocale');
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@home')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@home')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@home')->name('home');
+Route::get('/', function () {
+    return redirect('/' . App\Services\Locale\Locale::$mainLanguage);
+});

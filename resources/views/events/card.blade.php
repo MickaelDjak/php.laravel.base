@@ -5,7 +5,7 @@
         <span class="year">2016</span>
     </div>
     <div class="meta">
-        <div class="photo" style="background-image: url({{$event->image}})"></div>
+        <div class="photo" style="background-image: url({{url($event->image)}})"></div>
         <ul class="details">
 
         </ul>
