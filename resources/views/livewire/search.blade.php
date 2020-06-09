@@ -18,7 +18,7 @@
             <div>
                 <h3><a href="{{route('post_page',['slug'=> $post->slug])}}">{{ $post->title }}</a></h3>
                 @include('blocks.tags.list',['tags' => $post->tags])
-                <p>{{ $post->detail_text }}</p>
+                <p>{{ $post->preview_text }}</p>
             </div>
         @empty
             <p class="text-gray-900">No contacts found...</p>
