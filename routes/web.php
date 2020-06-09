@@ -35,6 +35,7 @@ Route::group([
     Route::view('/prayer_list', 'pages.prayer_list')->name('prayer_list');
 
     Auth::routes(['verify' => true]);
+    Route::livewire('/search', 'search')->layout('layouts.catalog')->section('content');
 });
 
 Route::get('setlocale/{lang}', [\App\Http\Controllers\LocaleController::class, 'index'])->name('setlocale');
@@ -42,3 +43,4 @@ Route::get('setlocale/{lang}', [\App\Http\Controllers\LocaleController::class, '
 Route::get('/', function () {
     return redirect('/' . App\Services\Locale\Locale::$mainLanguage);
 });
+
