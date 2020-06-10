@@ -1,11 +1,5 @@
 @extends('layouts.catalog')
 
-@section('sidebar_top')
-    <div class="gnc-sidebar-section gnc-form-box">
-        <h4>  <a href="{{route('search')}}">Перейти к lw поиску</a></h4>
-    </div>
-@endsection
-
 @section('title')
     @component('blocks.title.header_of_catalog')
         @slot('img')

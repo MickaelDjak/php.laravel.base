@@ -2,7 +2,9 @@
 
 namespace App\Http\Livewire;
 
+use App\Models\Event;
 use App\Models\Post;
+use App\Models\Preaching;
 use Illuminate\Pagination\Paginator;
 use Livewire\Component;
 
@@ -13,6 +15,10 @@ class Search extends Component
 
     /** @var int */
     public $currentPage = 1;
+
+
+    /** @var string */
+    public $type = 'Посты';
 
     /**
      *
@@ -28,12 +34,34 @@ class Search extends Component
     public function render()
     {
         $query = '%' . $this->search . '%';
-        return view('livewire.search', [
-            'data' => Post::where('title', 'like', $query)
-                ->orWhere('preview_text', 'like', $query)
-                ->orWhere('detail_text', 'like', $query)
-                ->paginate(10)
-        ]);
+        if($this->type === 'Посты'){
+            return view('livewire.search', [
+                'data' => Post::where('title', 'like', $query)
+                    ->orWhere('preview_text', 'like', $query)
+                    ->orWhere('detail_text', 'like', $query)
+                    ->paginate(10)
+            ]);
+        }
+
+        if($this->type === 'События'){
+            return view('livewire.search', [
+                'data' => Event::where('title', 'like', $query)
+                    ->orWhere('preview_text', 'like', $query)
+                    ->orWhere('detail_text', 'like', $query)
+                    ->paginate(10)
+            ]);
+        }
+
+        if($this->type === 'Проповеди'){
+            return view('livewire.search', [
+                'data' => Preaching::where('title', 'like', $query)
+                    ->orWhere('preview_text', 'like', $query)
+                    ->orWhere('detail_text', 'like', $query)
+                    ->paginate(10)
+            ]);
+        }
+
+        return [];
     }
 
     /**

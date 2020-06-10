@@ -41,6 +41,9 @@
                             <li><a href="{{ route('setlocale', ['lang' => 'en'])  }}">English</a></li>
                         </ul>
                     </li>
+                    <li>
+                        <a href="{{route('search')}}">Поиск</a>
+                    </li>
                 </ul>
             </nav>
         </div>

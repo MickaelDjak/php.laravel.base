@@ -1,4 +1,4 @@
-@include('blocks.search.index')
+{{--@include('blocks.search.index')--}}
 
 @yield('sidebar_top')
 
