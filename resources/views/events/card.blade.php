@@ -13,7 +13,7 @@
     <div class="description">
         <h1> <a href="{{ route('event_page', ['slug' => $event->slug]) }}"> {{$event->title}}</a> </h1>
         @include('blocks.tags.list',['tags' => $event->tags])
-        <p>{{$event->preview_text}}</p>
+        <p>{{$event->overview}}</p>
         <p class="read-more">
             <a href="{{ route('event_page', ['slug' => $event->slug]) }}">Узнать больше</a>
         </p>

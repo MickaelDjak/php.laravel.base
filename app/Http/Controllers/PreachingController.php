@@ -2,17 +2,22 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Preaching;
+use App\Models\Article;
 
 class PreachingController extends Controller
 {
     public function index()
     {
-        return view('preachings.index', ['preachings' => Preaching::with('tags')->paginate(5)->onEachSide(2)]);
+        $articles = Article::with('tags')
+            ->where('type', 'preaching')
+            ->paginate(5)
+            ->onEachSide(2);
+
+        return view('preachings.index', ['preachings' => $articles]);
     }
 
     public function show($slag)
     {
-        return view('preachings.page', ['preaching' => Preaching::where('slug', $slag)->first()]);
+        return view('preachings.page', ['preaching' => Article::where('slug', $slag)->first()]);
     }
 }

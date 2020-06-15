@@ -8,20 +8,24 @@ use Cviebrock\EloquentSluggable\Sluggable;
 
 
 /**
- * Class Post
+ * Class Article
  * @package App\Model
  * @property $id
  * @property $created_at
  * @property $updated_at
  * @property $title
- * @property $preview_text
- * @property $detail_text
+ * @property $overview
+ * @property $text
  * @property $image
+ * @property $audio
+ * @property $video
+ * @property $slides
+ * @property $type
  * @property $author_id
  * @property $status
  * @property $slug
  */
-class Post extends Model
+class Article extends Model
 {
     use Sluggable;
     use Taggable;

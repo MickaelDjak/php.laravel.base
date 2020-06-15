@@ -2,19 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Event;
+use App\Models\Article;
 
 class EventController extends Controller
 {
     public function index()
     {
-
-//        dd(Event::with('tags')->first());
-        return view('events.index', ['events' => Event::with('tags')->paginate(5)->onEachSide(2)]);
+        return view('events.index', ['events' => Article::with('tags')->where('type', 'event')->paginate(5)->onEachSide(2)]);
     }
 
     public function show($slag)
     {
-        return view('events.page', ['event' => Event::where('slug', $slag)->first()]);
+        return view('events.page', ['event' => Article::where('slug', $slag)->first()]);
     }
 }

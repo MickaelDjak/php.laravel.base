@@ -2,12 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\DailyBibleReadingFragment;
+use App\Models\Article;
 use App\Models\ChurchMeeting;
-use App\Models\Event;
-use App\Models\Post;
-use App\Models\Preaching;
-use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
@@ -28,11 +24,10 @@ class HomeController extends Controller
      */
     public function home()
     {
-        $a = 1;
         return view('pages.home', [
-            'events' => Event::where('status', 1)->limit(3)->get(),
-            'posts' => Post::where('status', 1)->limit(3)->get(),
-            'preachings' => Preaching::where('status', 1)->limit(3)->get(),
+            'events' => Article::where('status', 1)->where('type', 'event')->limit(3)->get(),
+            'posts' => Article::where('status', 1)->where('type', 'post')->limit(3)->get(),
+            'preachings' => Article::where('status', 1)->where('type', 'preaching')->limit(3)->get(),
             'meetings' => ChurchMeeting::getLast(),
         ]);
     }

@@ -19,7 +19,7 @@
             <a href="#" class="icon-link mr-3"><i class="fa fa-pencil-square-o"></i> Tony Jahson</a>
             <a href="#" class="icon-link"><i class="fa fa-comments-o"></i> 150</a>
         </p>
-        <p>{{ $post->preview_text }}</p>
+        <p>{{ $post->overview }}</p>
         <a href="{{ route('post_page', ['slug' => $post->slug]) }}" class="btn btn--with-icon"><i class="btn-icon fa fa-long-arrow-right"></i>Читать
             полностью</a>
     </div>

@@ -2,9 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Event;
-use App\Models\Post;
-use App\Models\Preaching;
+use App\Models\Article;
 use Cviebrock\EloquentTaggable\Models\Tag;
 use Cviebrock\EloquentTaggable\Services\TagService;
 
@@ -35,22 +33,13 @@ class TagController extends Controller
      */
     public function show($tagId)
     {
-
         $tag = Tag::find($tagId);
 
-
-        $posts = Post::withAllTags($tag->name)
+        $articles = Article::withAllTags($tag->name)
 //            ->orderBy('created_at')
-            ->get();
-        $events = Event::withAllTags($tag->name)
-//            ->orderBy('created_at')
-            ->get();
-        $preachings = Preaching::withAllTags($tag->name)
-//            ->orderBy('created_at')
-            ->get();
+            ->paginate(10)
+            ->onEachSide(3);
 
-        $list = collect($posts)->merge($events)->merge($preachings)->sortBy('created_at');
-
-        return view('tags.page', ['list' => $list, 'tagName' => $tag]);
+        return view('tags.page', ['articles' => $articles, 'tagName' => $tag]);
     }
 }
