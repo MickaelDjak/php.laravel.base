@@ -1,15 +1,15 @@
 @php($id =  uniqid())
 
 <div class="gnc-preaching-card-25d4 gnc-date-wrapper-d4k4">
-    <div class="gnc-date">
-        <span class="day">12</span>
-        <span class="month">Aug</span>
-        <span class="year">2016</span>
-    </div>
-    <header class="gnc-preaching-card-25d4-header" style="background-image: url('{{ url($preaching->image) }}')"></header>
+    @include('blocks.dateMarker.dateMarker', ['dateTime' => $preaching->created_at])
 
-    <main  class="gnc-preaching-card-25d4-main">
-        <h3 class="title"><a href="{{route('preaching_page', ['slug' => $preaching->slug])}}">{{ $preaching->title }}</a></h3>
+    <header class="gnc-preaching-card-25d4-header"
+            style="background-image: url('{{ url($preaching->image) }}')"></header>
+
+    <main class="gnc-preaching-card-25d4-main">
+        <h3 class="title"><a
+                href="{{route('resource_page', ['type' => 'preaching', 'slug' => $preaching->slug])}}">{{ $preaching->title }}</a>
+        </h3>
         @include('blocks.tags.list',['tags' => $preaching->tags])
         <p>{{ $preaching->overview }}</p>
         <p><b>Кто:</b> Смоленников Валерий</p>
@@ -21,7 +21,7 @@
         <a href="#"><label for="show-menu-{{$id}}-s0">Читать</label></a>
         <a href="#"><label for="show-menu-{{$id}}-s1">Слушать</label></a>
         <a href="#"><label for="show-menu-{{$id}}-s2">Смотреть</label></a>
-        <a href="{{route('preaching_page', ['slug' => $preaching->slug])}}">Перейти</a>
+        <a href="{{route('resource_page', ['type' => 'preaching', 'slug' => $preaching->slug])}}">Перейти</a>
     </nav>
     <ul class="gnc-preaching-card-25d4-content accordion">
         <li class="accordion-item">
@@ -35,10 +35,10 @@
         <li class="accordion-item">
             <input id="show-menu-{{$id}}-s1" class="hide" type="checkbox"/>
             <div class="accordion-child">
-            	<audio controls>
-					<source src="/{{ $preaching->audio }}" type="audio/mpeg">
-					Your browser does not support the audio element.
-				</audio>
+                <audio controls>
+                    <source src="/{{ $preaching->audio }}" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
             </div>
         </li>
         <li class="accordion-item">

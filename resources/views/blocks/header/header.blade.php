@@ -27,9 +27,9 @@
                         <a href="#">@lang('navigation.all_resources')</a>
                         <ul class="menu nested vertical gnc-navigation-nested">
                             <li><a href="{{ route('bible') }}">@lang('navigation.bible')</a></li>
-                            <li><a href="{{ route('events') }}">@lang('navigation.events')</a></li>
-                            <li><a href="{{ route('posts') }}">@lang('navigation.blog')</a></li>
-                            <li><a href="{{ route('preachings') }}">@lang('navigation.preaching')</a></li>
+                            <li><a href="{{ route('resource_list', ['type' => 'event']) }}">@lang('navigation.events')</a></li>
+                            <li><a href="{{ route('resource_list', ['type' => 'post']) }}">@lang('navigation.blog')</a></li>
+                            <li><a href="{{ route('resource_list', ['type' => 'preaching']) }}">@lang('navigation.preaching')</a></li>
                             <li><a href="{{ route('gallery_list') }}">@lang('navigation.gallery') </a></li>
                         </ul>
                     </li>

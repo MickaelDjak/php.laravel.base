@@ -55,7 +55,3 @@
         </p>
     @endforeach
 @endsection
-
-@section('comments')
-    @include('blocks.comments.list')
-@endsection

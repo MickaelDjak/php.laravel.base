@@ -8,26 +8,20 @@
             placeholder="Поисковый запос..."
         />
     </div>
+</div>
+
+<div class="row gnc-form-box">
     <div class="column">
         {{$data->links('blocks.pagination.lw_index')}}
     </div>
+</div>
 
-    <div>
+<div class="row gnc-form-box">
+    <div class="column">
         @forelse ($data as $model)
-            @if($model->type === 'event')
-                @include('events.card',['event' => $model])
-            @endif
-
-            @if($model->type === 'post')
-                @include('posts.card',['post' => $model])
-            @endif
-
-            @if($model->type === 'preaching')
-                @include('preachings.card',['preaching' => $model])
-            @endif
+            @include('blocks.cards.article',['article' => $model])
         @empty
             <p class="text-gray-900">No contacts found...</p>
         @endforelse
     </div>
 </div>
-

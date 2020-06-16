@@ -9,13 +9,13 @@
 @endsection
 
 @section('headline')
-    <h1>{{ $post->title }}</h1>
+    <h2>{{ $article->title }}</h2>
 @endsection
 
 @section('marker')
     <div class="row align-center">
         <div class="large-12 columns">
-            Пост / {{ $post->created_at->format('Y-m-d') }}
+            @include('blocks.marker.marker')
         </div>
     </div>
 @endsection
@@ -29,21 +29,16 @@
 @endsection
 
 @section('slides')
-{{--    @include('blocks.external.slides')--}}
+    @include('blocks.external.slides')
 @endsection
 
 @section('video')
-{{--    <iframe width="560" height="315" src="https://www.youtube.com/embed/8bFMj_6IMDQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>--}}
-@endsection
-
-@section('tags')
-    @include('blocks.tags.list',['tags' => $post->tags])
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/8bFMj_6IMDQ" frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 @endsection
 
 @section('text')
-    {{ $post->detail_text }}
-@endsection
-
-@section('comments')
-    @include('blocks.comments.list')
+    <p>
+        {{ $article->text }}
+    </p>
 @endsection

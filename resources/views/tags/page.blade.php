@@ -7,15 +7,15 @@
 @section('content')
     @foreach($articles as $article)
         @if($article->type === 'event')
-            @include('events.card',['event' => $article])
+            @include('blocks.cards.event',['event' => $article])
         @endif
 
         @if($article->type === 'post')
-            @include('posts.card',['post' => $article])
+            @include('blocks.cards.post',['post' => $article])
         @endif
 
         @if($article->type === 'preaching')
-            @include('preachings.card',['preaching' => $article])
+            @include('blocks.cards.preaching',['preaching' => $article])
         @endif
     @endforeach
 @endsection

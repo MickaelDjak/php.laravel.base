@@ -6,25 +6,25 @@
             <div class="columns small-12 medium-6">
                 <h3 class="gnc-contact-us-header">Церковь "Добрая весть"</h3>
                 <div class="gnc-contact-us-section">
-                    <img src="img/undraw/undraw_map_1r69.svg" alt="Kiwi standing on oval"/>
+                    <img src="/img/undraw/undraw_map_1r69.svg" alt="Kiwi standing on oval"/>
                     <p>г. Харьков, ул. Танкопия 88, 61000</p>
                 </div>
 
                 <div class="gnc-contact-us-section">
-                    <img src="img/undraw/undraw_newsletter_vovu.svg" alt="Kiwi standing on oval"/>
+                    <img src="/img/undraw/undraw_newsletter_vovu.svg" alt="Kiwi standing on oval"/>
                     <p><a href="mailto:">goodnews.ecb@gmail.com</a></p>
                 </div>
 
 
                 <div class="gnc-contact-us-section">
-                    <img src="img/undraw/undraw_calling_kpbp.svg" alt="Kiwi standing on oval"/>
+                    <img src="/img/undraw/undraw_calling_kpbp.svg" alt="Kiwi standing on oval"/>
                     <p> Тел. : (095) 614-60-81 (Михаил)</p>
                 </div>
 
                 <h3>Как добраться</h3>
 
                 <div class="gnc-contact-us-section">
-                    <img src="img/undraw/undraw_navigator_a479.svg" alt="Kiwi standing on oval"/>
+                    <img src="/img/undraw/undraw_navigator_a479.svg" alt="Kiwi standing on oval"/>
                     <p> от Транспорт: маршрут № 3 (Вокзал, Ірпінь – Вокзал, Буча), зупинка “Паспортний стіл”</p>
                 </div>
 

@@ -3,27 +3,27 @@
 @section('title')
     @component('blocks.title.header_of_catalog')
         @slot('img')
-            /img/undraw/undraw_podcast_q6p7.svg
+            {{ $meta['img'] }}
         @endslot
+
         @slot('name')
-            Проповеди
+            {{ $meta['name'] }}
         @endslot
+
         @slot('description')
-            Стрічка проповедей в текстовом, аудио и видео формате.
+            {{ $meta['description'] }}
         @endslot
     @endcomponent
 @endsection
 
 @section('content')
-    @foreach ($preachings as $preaching)
-        @include("preachings.card")
-    @endforeach
+    @each('blocks.cards.article', $articles, 'article')
 @endsection
 
 @section('pagination')
     <div class="row ">
         <div class="column">
-            {{$preachings->links('blocks.pagination.index')}}
+            {{$articles->links('blocks.pagination.index')}}
         </div>
     </div>
 @endsection

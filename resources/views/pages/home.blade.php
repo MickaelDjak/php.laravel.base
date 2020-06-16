@@ -32,13 +32,13 @@
             @lang('navigation.events')
         @endslot
 
-        {{ route('events') }}
+        {{ route('resource_list', ['type' => 'event']) }}
     @endcomponent
 
     <section class="row">
         @foreach ($events as $event)
             <div class="column small-12">
-                @include('events.card')
+                @include('blocks.cards.event')
             </div>
         @endforeach
     </section>
@@ -48,13 +48,13 @@
             @lang('navigation.blog')
         @endslot
 
-        {{ route('posts')  }}
+        {{ route('resource_list', ['type' => 'post'])  }}
     @endcomponent
 
     <div class="row">
         @foreach ($posts as $post)
             <div class="column small-12">
-                @include("posts.card")
+                @include("blocks.cards.post")
             </div>
         @endforeach
     </div>
@@ -64,13 +64,13 @@
             @lang('navigation.preaching')
         @endslot
 
-        {{ route('preachings') }}
+        {{  route('resource_list', ['type' => 'preaching']) }}
     @endcomponent
 
     <div class="row ">
         @foreach ($preachings as $preaching)
             <div class="column small-12">
-                @include("preachings.card")
+                @include("blocks.cards.preaching")
             </div>
         @endforeach
     </div>

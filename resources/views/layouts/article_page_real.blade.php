@@ -16,11 +16,10 @@
             </div>
         </div>
 
-        @yield('marker')
-
         <div class="row post-article-content ">
             <div class="columns small-12 medium-8 article-content">
                 @yield('headline')
+                @yield('marker')
                 <div class="article-content">
                     @yield('tags')
                     @yield('slides')
@@ -42,8 +41,17 @@
 
         <div class="row">
             <div class="columns small-12 medium-8">
-                @yield('comments')
-                @yield('ask_question')
+                @section('ask_question')
+                    <div class="gnc-form-box">
+                        @component('blocks.title.title')
+                            @slot('name')
+                                @lang('navigation.ask_question')
+                            @endslot
+                        @endcomponent
+
+                        @include('blocks.ask_question.ask_question')
+                    </div>
+                @show
             </div>
         </div>
     </div>

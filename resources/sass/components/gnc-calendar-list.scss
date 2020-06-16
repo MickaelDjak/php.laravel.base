@@ -53,6 +53,14 @@
             width: 55px;
             font-weight: 900;
         }
+
+        &:hover {
+            transition: all 200ms;
+            .gnc-calendar-list-day--header {
+                transform: scale(1.05);
+                transition: all 200ms;
+            }
+        }
     }
 }
 
