@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Schema;
 class AddBibleVersesRst66Hosjolamoobajonmicnamhabzephagzecmal extends Migration
 {
 
-return;
+
     /**
      * Run the migrations.
      *
