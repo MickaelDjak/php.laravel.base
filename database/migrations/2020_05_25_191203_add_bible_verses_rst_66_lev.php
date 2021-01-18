@@ -14,6 +14,7 @@ class AddBibleVersesRst66Lev extends Migration
      */
     public function up()
     {
+    	return;
         $list = [
 "INSERT INTO bible_verses (id, translation_code, book_code, chapter, verse_number, verse_text) VALUES (3604, 'rst66', 'lev', 27, 34, 'Вот заповеди, которые заповедал Господь Моисею для сынов Израилевых на горе Синае.');",
 "INSERT INTO bible_verses (id, translation_code, book_code, chapter, verse_number, verse_text) VALUES (3603, 'rst66', 'lev', 27, 33, 'не должно разбирать, хорошее ли то, или худое, и не должно заменять его; если же кто заменит его, то и само оно, и замена его будет святынею и не может быть выкуплено.');",

@@ -15,6 +15,7 @@ return;
      */
     public function up()
     {
+    	return;
         $list = [
 
 "INSERT INTO bible_verses (id, translation_code, book_code, chapter, verse_number, verse_text) VALUES (31209, 'rst66', 'amo', 9, 15, 'И водворю их на земле их, и они не будут более исторгаемы из земли своей, которую Я дал им, говорит Господь Бог твой.');",

@@ -14,6 +14,7 @@ class AddBibleVersesRst66Exo extends Migration
      */
     public function up()
     {
+    	return;
         $list = [
 "INSERT INTO bible_verses (id, translation_code, book_code, chapter, verse_number, verse_text) VALUES (2746, 'rst66', 'exo', 40, 38, 'ибо облако Господне стояло над скиниею днем, и огонь был ночью в ней пред глазами всего дома Израилева во все путешествие их.');",
 "INSERT INTO bible_verses (id, translation_code, book_code, chapter, verse_number, verse_text) VALUES (2745, 'rst66', 'exo', 40, 37, 'если же не поднималось облако, то и они не отправлялись в путь, доколе оно не поднималось,');",

@@ -15,6 +15,7 @@ class AddBibleVersesRst66Psaproeccsng extends Migration
      */
     public function up()
     {
+    	return;
         $list = [
             "INSERT INTO bible_verses (id, translation_code, book_code, chapter, verse_number, verse_text) VALUES (22182, 'rst66', 'psa', 1, 0, 'Псалом Давида.');",
 "INSERT INTO bible_verses (id, translation_code, book_code, chapter, verse_number, verse_text) VALUES (22183, 'rst66', 'psa', 1, 1, 'Блажен муж, который не ходит на совет нечестивых и не стоит на пути грешных и не сидит в собрании развратителей,');",

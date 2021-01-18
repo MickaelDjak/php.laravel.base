@@ -14,6 +14,7 @@ class AddBibleVersesRst66Num extends Migration
      */
     public function up()
     {
+    	return;
         $list = [
             "INSERT INTO  bible_verses (id, translation_code, book_code, chapter, verse_number, verse_text) VALUES (4892, 'rst66', 'num', 36, 13, 'Сии суть заповеди и постановления, которые дал Господь сынам Израилевым чрез Моисея на равнинах Моавитских, у Иордана, против Иерихона.');",
 "INSERT INTO  bible_verses (id, translation_code, book_code, chapter, verse_number, verse_text) VALUES (4891, 'rst66', 'num', 36, 12, 'в племени сынов Манассии, сына Иосифова, они были женами, и остался удел их в колене племени отца их.');",

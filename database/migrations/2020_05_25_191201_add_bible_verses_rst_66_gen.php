@@ -14,6 +14,7 @@ class AddBibleVersesRst66Gen extends Migration
      */
     public function up()
     {
+    	return;
         $list = [
 "INSERT INTO bible_verses (id, translation_code, book_code, chapter, verse_number, verse_text) VALUES (1533, 'rst66', 'gen', 50, 26, 'И умер Иосиф ста десяти лет. И набальзамировали его и положили в ковчег в Египте.');",
 "INSERT INTO bible_verses (id, translation_code, book_code, chapter, verse_number, verse_text) VALUES (1532, 'rst66', 'gen', 50, 25, 'И заклял Иосиф сынов Израилевых, говоря: Бог посетит вас, и вынесите кости мои отсюда.');",

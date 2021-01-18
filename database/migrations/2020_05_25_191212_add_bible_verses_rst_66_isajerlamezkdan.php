@@ -15,6 +15,7 @@ class AddBibleVersesRst66Isajerlamezkdan extends Migration
      */
     public function up()
     {
+    	return ;
         $list = [
             "INSERT INTO bible_verses (id, translation_code, book_code, chapter, verse_number, verse_text) VALUES (30463, 'rst66', 'dan', 12, 13, 'А ты иди к твоему концу и упокоишься, и восстанешь для получения твоего жребия в конце дней».');",
 "INSERT INTO bible_verses (id, translation_code, book_code, chapter, verse_number, verse_text) VALUES (30462, 'rst66', 'dan', 12, 12, 'Блажен, кто ожидает и достигнет тысячи трехсот тридцати пяти дней.');",
