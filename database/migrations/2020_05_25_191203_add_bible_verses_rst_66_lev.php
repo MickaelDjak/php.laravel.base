@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Schema;
 
 class AddBibleVersesRst66Lev extends Migration
 {
+	return;
     /**
      * Run the migrations.
      *
